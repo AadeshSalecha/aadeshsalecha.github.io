@@ -329,6 +329,39 @@ a:focus {
 }
 
 /* ===================================
+   CITATION METRICS
+   =================================== */
+
+.citation-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metrics-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.metric-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ===================================
    PAPERS GRID
    =================================== */
 
@@ -364,6 +397,28 @@ a:focus {
   top: 1rem;
   right: 1rem;
   background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.paper-card.under-review {
+  background: rgba(107, 114, 128, 0.05);
+  border-color: var(--text-secondary);
+  opacity: 0.9;
+}
+
+.paper-card.under-review::before {
+  content: "Under Review";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--text-secondary);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
