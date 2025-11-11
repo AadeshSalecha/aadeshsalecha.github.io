@@ -102,6 +102,69 @@ a:focus {
   color: white;
 }
 
+.splash-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  opacity: 0;
+  animation: fadeInDown 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.splash-position {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.splash-position .position-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.875rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.splash-position .position-separator {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+.splash-focus {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 1.5rem 0 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .rotating-name {
   font-family: 'Poppins', sans-serif;
   font-size: 6rem;
@@ -234,6 +297,14 @@ a:focus {
   align-items: start;
 }
 
+.highlight-text {
+  background: linear-gradient(135deg, var(--accent-color) 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
 .hero-text p {
   margin-bottom: 1rem;
   color: var(--text-secondary);
@@ -332,11 +403,30 @@ a:focus {
    CITATION METRICS
    =================================== */
 
-.citation-metrics {
+.citation-metrics-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.citation-chart-wrapper {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.citation-chart-wrapper canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.citation-stats {
+  display: grid;
   gap: 1.5rem;
-  margin-bottom: 3rem;
 }
 
 .metrics-card {
@@ -345,6 +435,12 @@ a:focus {
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metrics-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .metric-value {
@@ -565,12 +661,30 @@ a:focus {
     margin: 0 auto;
   }
 
+  .splash-name {
+    font-size: 3rem;
+  }
+
+  .splash-position {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .splash-position .position-separator {
+    display: none;
+  }
+
   .section-title {
     font-size: 1.75rem;
   }
 
   .main-container {
     padding: 2rem 1.5rem;
+  }
+
+  .citation-metrics-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .paper-card {
@@ -587,9 +701,16 @@ a:focus {
     font-size: 2.5rem;
   }
 
-  .splash-subtitle {
-    font-size: 0.875rem;
-    padding: 0 1rem;
+  .splash-name {
+    font-size: 2.25rem;
+  }
+
+  .splash-position {
+    font-size: 0.95rem;
+  }
+
+  .splash-focus {
+    font-size: 0.95rem;
   }
 
   .section-title {

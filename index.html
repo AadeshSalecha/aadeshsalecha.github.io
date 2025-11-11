@@ -10,17 +10,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
   <!-- Splash Screen -->
   <div class="splash-screen" id="splash">
     <div class="splash-content">
-      <h1 class="rotating-name">
-        <span class="name-line">Aadesh</span>
-        <span class="name-line">Salecha</span>
-      </h1>
-      <div class="splash-subtitle">AI Researcher • Developer • Stanford MS</div>
+      <h1 class="splash-name">Aadesh Salecha</h1>
+      <p class="splash-position">
+        <span class="position-item">MS @ Stanford</span>
+        <span class="position-separator">•</span>
+        <span class="position-item">AI/ML @ Amazon</span>
+        <span class="position-separator">•</span>
+        <span class="position-item">Ex-DraftKings</span>
+        <span class="position-separator">•</span>
+        <span class="position-item">Multi-published Researcher</span>
+      </p>
+      <p class="splash-focus">
+        Innovating in the <span class="highlight-text">Climate Tech × AI</span> space
+      </p>
       <div class="scroll-indicator">
         <span>Scroll to explore</span>
         <div class="scroll-arrow">↓</div>
@@ -83,18 +92,23 @@
       </p>
 
       <!-- Citation Metrics -->
-      <div class="citation-metrics">
-        <div class="metrics-card">
-          <div class="metric-value">134</div>
-          <div class="metric-label">Total Citations</div>
+      <div class="citation-metrics-section">
+        <div class="citation-chart-wrapper">
+          <canvas id="citationChart" width="400" height="300"></canvas>
         </div>
-        <div class="metrics-card">
-          <div class="metric-value">5</div>
-          <div class="metric-label">h-index</div>
-        </div>
-        <div class="metrics-card">
-          <div class="metric-value">4</div>
-          <div class="metric-label">i10-index</div>
+        <div class="citation-stats">
+          <div class="metrics-card">
+            <div class="metric-value">134</div>
+            <div class="metric-label">Total Citations</div>
+          </div>
+          <div class="metrics-card">
+            <div class="metric-value">5</div>
+            <div class="metric-label">h-index</div>
+          </div>
+          <div class="metrics-card">
+            <div class="metric-value">4</div>
+            <div class="metric-label">i10-index</div>
+          </div>
         </div>
       </div>
 
@@ -423,6 +437,67 @@
     }, observerOptions);
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Citation Chart
+    const ctx = document.getElementById('citationChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+          datasets: [{
+            label: 'Citations',
+            data: [2, 5, 14, 15, 20, 53],
+            backgroundColor: '#2563eb',
+            borderColor: '#1d4ed8',
+            borderWidth: 1,
+            borderRadius: 6,
+            barPercentage: 0.7,
+            categoryPercentage: 0.8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                font: {
+                  family: "'Poppins', sans-serif"
+                },
+                color: '#6b7280'
+              },
+              grid: {
+                color: '#e5e7eb',
+                drawBorder: false
+              },
+              title: {
+                display: true,
+                text: 'Citations'
+              }
+            },
+            x: {
+              ticks: {
+                font: {
+                  family: "'Poppins', sans-serif"
+                },
+                color: '#6b7280'
+              },
+              grid: {
+                display: false,
+                drawBorder: false
+              }
+            }
+          }
+        }
+      });
+    }
   </script>
 </body>
 </html>
