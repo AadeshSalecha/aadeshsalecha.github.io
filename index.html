@@ -445,23 +445,52 @@
         type: 'bar',
         data: {
           labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-          datasets: [{
-            label: 'Citations',
-            data: [2, 5, 14, 15, 20, 53],
-            backgroundColor: '#2563eb',
-            borderColor: '#1d4ed8',
-            borderWidth: 1,
-            borderRadius: 6,
-            barPercentage: 0.7,
-            categoryPercentage: 0.8
-          }]
+          datasets: [
+            {
+              label: 'Citations',
+              data: [2, 5, 14, 15, 20, 53],
+              backgroundColor: '#355070ff',
+              borderColor: '#2a3e54ff',
+              borderWidth: 1,
+              borderRadius: 6,
+              barPercentage: 0.6,
+              categoryPercentage: 0.7,
+              order: 2
+            },
+            {
+              label: 'Cumulative',
+              data: [2, 7, 21, 36, 56, 109],
+              type: 'line',
+              borderColor: '#41bbd9ff',
+              backgroundColor: 'transparent',
+              borderWidth: 3,
+              pointBackgroundColor: '#41bbd9ff',
+              pointBorderColor: '#ffffff',
+              pointBorderWidth: 2,
+              pointRadius: 5,
+              pointHoverRadius: 7,
+              tension: 0.4,
+              order: 1
+            }
+          ]
         },
         options: {
           responsive: true,
           maintainAspectRatio: true,
           plugins: {
             legend: {
-              display: false
+              display: true,
+              position: 'top',
+              labels: {
+                font: {
+                  family: "'Poppins', sans-serif",
+                  size: 12,
+                  weight: '500'
+                },
+                color: '#6b7280',
+                padding: 15,
+                usePointStyle: true
+              }
             }
           },
           scales: {

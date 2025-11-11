@@ -9,15 +9,30 @@
 }
 
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --accent-color: #f59e0b;
+  /* Color Palette */
+  --flax: #ddd78dff;
+  --yinmn-blue: #355070ff;
+  --bright-pink-crayola: #ef798aff;
+  --chocolate-cosmos: #550c18ff;
+  --aero: #41bbd9ff;
+
+  /* Primary Colors */
+  --primary-color: #355070ff;
+  --primary-hover: #2a3e54ff;
+  --accent-color: #41bbd9ff;
+  --accent-secondary: #ef798aff;
+  --highlight-color: #ddd78dff;
+  --dark-accent: #550c18ff;
+
+  /* Text & Background */
   --text-primary: #1f2937;
   --text-secondary: #6b7280;
   --background: #ffffff;
   --surface: #f9fafb;
   --border: #e5e7eb;
-  --highlight: #fef3c7;
+  --highlight: #ddd78dff;
+
+  /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -89,7 +104,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #355070ff 0%, #550c18ff 50%, #41bbd9ff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
