@@ -5,349 +5,300 @@
   <title>Aadesh Salecha</title>
   <meta name="author" content="Aadesh Salecha">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Researcher and Developer specializing in Applied AI and Machine Learning at Stanford University">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Splash Screen -->
-  <div class="splash-screen" id="splash">
-    <div class="splash-content">
-      <h1 class="rotating-name">
-        <span class="name-line">Aadesh</span>
-        <span class="name-line">Salecha</span>
-      </h1>
-      <div class="splash-subtitle">AI Researcher • Developer • Stanford MS</div>
-      <div class="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div class="scroll-arrow">↓</div>
-      </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="logo">Aadesh Salecha</a>
+      <nav class="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="mailto:aadeshsalecha@gmail.com" class="nav-link">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
   <!-- Main Content -->
-  <div class="main-container">
+  <main class="main">
     <!-- Hero Section -->
-    <section class="hero-section fade-in">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h2 class="section-title">About Me</h2>
-          <p class="intro-text">
-            I'm a MS Computer Science student and researcher at <a href="https://stanford.edu">Stanford University</a>,
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="badge">Available for opportunities</span>
+          <h1 class="hero-title">Building intelligent systems that enhance human decision-making</h1>
+          <p class="hero-subtitle">
+            MS Computer Science student and researcher at Stanford University,
             specializing in Applied AI and Machine Learning.
           </p>
-          <p>
-            Currently I work with Prof. Johannes Eichsteadt at the
-            <a href="https://cpwb.stanford.edu/">Computational Psychology and Well-Being Lab</a>,
-            focusing on deploying advanced machine learning models to enhance behavioral insights and well-being outcomes.
-          </p>
-          <p>
-            I am interested in studying all aspects of AI systems, from their training to safe deployment.
-            Check out <a href="https://www.arxiv.org/abs/2405.06058">my latest paper</a> that applies cognitive
-            science and psychometric techniques to detect the presence of human-like fallacies and biases in LLMs.
-          </p>
-          <p>
-            Previously, I worked as a Senior Software Engineer at <a href="https://www.draftkings.com/">DraftKings</a>
-            on the Financial Platform team, where I developed large-scale production-grade systems that served millions
-            of users every minute.
-          </p>
-          <p class="personal-note">
-            Outside of work, I enjoy climbing, strength training, hiking and brewing coffee.
-          </p>
-
-          <div class="social-links">
-            <a href="mailto:aadeshsalecha@gmail.com" class="social-link">Email</a>
-            <a href="data/AadeshSalecha-CV.pdf" class="social-link">CV</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=Cnwzl3oAAAAJ" class="social-link">Scholar</a>
-            <a href="https://github.com/aadeshsalecha/" class="social-link">Github</a>
+          <div class="hero-actions">
+            <a href="#about" class="button button-primary">Learn more</a>
+            <a href="mailto:aadeshsalecha@gmail.com" class="button button-secondary">Get in touch</a>
           </div>
         </div>
 
         <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="images/AadeshSalecha.jpg" alt="Aadesh Salecha" class="profile-photo">
+          <img src="images/AadeshSalecha.jpg" alt="Aadesh Salecha" class="avatar">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="lead">
+              I'm a MS Computer Science student and researcher at <a href="https://stanford.edu">Stanford University</a>,
+              specializing in Applied AI and Machine Learning.
+            </p>
+
+            <p>
+              Currently I work with Prof. Johannes Eichsteadt at the
+              <a href="https://cpwb.stanford.edu/">Computational Psychology and Well-Being Lab</a>,
+              focusing on deploying advanced machine learning models to enhance behavioral insights and well-being outcomes.
+            </p>
+
+            <p>
+              I am interested in studying all aspects of AI systems, from their training to safe deployment.
+              Check out <a href="https://www.arxiv.org/abs/2405.06058">my latest paper</a> that applies cognitive
+              science and psychometric techniques to detect the presence of human-like fallacies and biases in LLMs.
+            </p>
+
+            <h3 class="subsection-title">Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-period">2023 - Present</div>
+                <div class="timeline-content">
+                  <h4>Stanford University</h4>
+                  <p class="timeline-role">Graduate Researcher</p>
+                  <p>Working on LLM evaluation, bias detection, and applied NLP for psychology and social sciences.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-period">2020 - 2023</div>
+                <div class="timeline-content">
+                  <h4>DraftKings</h4>
+                  <p class="timeline-role">Senior Software Engineer</p>
+                  <p>Developed large-scale production-grade systems on the Financial Platform team, serving millions of users every minute.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="subsection-title">Skills</h3>
+            <div class="skills">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">NLP</span>
+              <span class="skill-tag">LLM Evaluation</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">System Design</span>
+              <span class="skill-tag">Applied AI</span>
+            </div>
+
+            <div class="about-links">
+              <a href="mailto:aadeshsalecha@gmail.com" class="about-link">
+                <span>Email</span>
+              </a>
+              <a href="data/AadeshSalecha-CV.pdf" class="about-link">
+                <span>CV</span>
+              </a>
+              <a href="https://scholar.google.com/citations?hl=en&user=Cnwzl3oAAAAJ" class="about-link">
+                <span>Google Scholar</span>
+              </a>
+              <a href="https://github.com/aadeshsalecha/" class="about-link">
+                <span>GitHub</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Research Section -->
-    <section class="research-section fade-in">
-      <h2 class="section-title">Research</h2>
-      <p class="section-description">
-        I'm interested in Generative AI (LLM evaluation, preference tuning, application building),
-        and applied NLP (to psychology and social sciences). Featured publications are <span class="highlight">highlighted</span>.
-      </p>
+    <!-- Research/Work Section -->
+    <section id="work" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
+        <p class="section-description">
+          I'm interested in Generative AI (LLM evaluation, preference tuning, application building),
+          and applied NLP (to psychology and social sciences).
+        </p>
 
-      <div class="papers-grid">
-        <!-- Paper 1 -->
-        <article class="paper-card featured">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/">
-                Large Language Models Show Human-like Social Desirability Biases in Survey Responses
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://www.linkedin.com/in/molly-e-ireland">Molly E. Ireland</a>,
-              <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <a href="https://www.stern.nyu.edu/faculty/bio/joao-sedoc">João Sedoc</a>,
-              <a href="https://www.cis.upenn.edu/~ungar/">Lyle H. Ungar</a>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
+        <div class="projects-grid">
+          <!-- Featured Paper -->
+          <article class="project-card featured">
+            <div class="project-header">
+              <span class="project-badge">Featured</span>
+              <h3 class="project-title">
+                <a href="https://llmsocialbias.github.io/llm-social-desirability-research/">
+                  Large Language Models Show Human-like Social Desirability Biases in Survey Responses
+                </a>
+              </h3>
             </div>
-            <div class="paper-venue">
-              <em>Proceedings of the National Academy of Sciences (PNAS Nexus)</em> (Accepted; pending revisions)
+            <p class="project-authors">
+              <strong>Aadesh Salecha</strong>, Molly E. Ireland, Shashanka Subrahmanya,
+              João Sedoc, Lyle H. Ungar, Johannes C. Eichstaedt
+            </p>
+            <p class="project-venue">PNAS Nexus (Accepted; pending revisions)</p>
+            <div class="project-links">
+              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/" class="project-link">Project page</a>
+              <a href="https://www.arxiv.org/abs/2405.06058" class="project-link">Paper</a>
             </div>
-            <div class="paper-links">
-              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/" class="paper-link">project page</a>
-              <a href="https://www.arxiv.org/abs/2405.06058" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Paper 2 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <!-- Regular Papers -->
+          <article class="project-card">
+            <h3 class="project-title">
               <a href="https://doi.org/10.1007/s13278-022-00890-z">
                 Fake News Spreader Detection using Trust-based strategies in Social Networks with Bot Filtration
               </a>
             </h3>
-            <div class="paper-authors">
-              <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
+            <p class="project-authors">
+              Bhavtosh Rath, <strong>Aadesh Salecha</strong>, Jaideep Srivastava
+            </p>
+            <p class="project-venue">Social Network Analysis and Mining (SNAM), 2022</p>
+            <div class="project-links">
+              <a href="https://doi.org/10.1007/s13278-022-00890-z" class="project-link">Paper</a>
             </div>
-            <div class="paper-venue">
-              <em>Social Network Analysis and Mining (SNAM)</em> (2022)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1007/s13278-022-00890-z" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Paper 3 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               <a href="https://doi.org/10.1080/17512786.2021.1882873">
                 Relationship between Citizen-Eyewitness Images and Audience Engagement with News
               </a>
             </h3>
-            <div class="paper-authors">
-              Jisu Kim, Jisu Huh, <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
+            <p class="project-authors">
+              Jisu Kim, Jisu Huh, Bhavtosh Rath, <strong>Aadesh Salecha</strong>, Jaideep Srivastava
+            </p>
+            <p class="project-venue">Journalism Practice, 2021</p>
+            <div class="project-links">
+              <a href="https://doi.org/10.1080/17512786.2021.1882873" class="project-link">Paper</a>
             </div>
-            <div class="paper-venue">
-              <em>Journalism Practice</em> (2021)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1080/17512786.2021.1882873" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Paper 4 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               <a href="https://link.springer.com/article/10.1007/s42001-024-00282-7">
                 Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak
               </a>
             </h3>
-            <div class="paper-authors">
-              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
+            <p class="project-authors">
+              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, Jaideep Srivastava
+            </p>
+            <p class="project-venue">Journal of Computational Social Science, 7, 1599–1623, October 2024</p>
+            <div class="project-links">
+              <a href="https://doi.org/10.1007/s42001-024-00282-7" class="project-link">Paper</a>
             </div>
-            <div class="paper-venue">
-              <em>Journal of Computational Social Science</em>, 7, 1599–1623 (October 2024)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1007/s42001-024-00282-7" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Paper 5 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               The Language of Conflict Transformation - Assessing Psychological Change Patterns in Israeli-Palestinian Track Two Interactive Problem Solving
             </h3>
-            <div class="paper-authors">
-              Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Negotiation and Conflict Management Research</em> (2024)
-            </div>
-          </div>
-        </article>
+            <p class="project-authors">
+              Oliver Fink, Wilfried Graf, Shashanka Subrahmanya, <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt
+            </p>
+            <p class="project-venue">Negotiation and Conflict Management Research, 2024</p>
+          </article>
 
-        <!-- Paper 6 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               Monitoring the Opioid Epidemic via Social Media Discussions
             </h3>
-            <div class="paper-authors">
+            <p class="project-authors">
               Adam Lavertu, Tymor Hamamsy, <strong>Aadesh Salecha</strong>, Delaney Smistrongh,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>, Russ B Altman
-            </div>
-            <div class="paper-venue">
-              <em>Proceedings of the National Academy of Sciences (PNAS)</em> (Accepted; pending revisions)
-            </div>
-          </div>
-        </article>
+              Johannes C. Eichstaedt, Russ B Altman
+            </p>
+            <p class="project-venue">PNAS (Accepted; pending revisions)</p>
+          </article>
 
-        <!-- Paper 7 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               <a href="https://ieeexplore.ieee.org/abstract/document/9308258">
                 Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines
               </a>
             </h3>
-            <div class="paper-authors">
-              <a href="https://www.linkedin.com/in/jin-hong-kuan">Jin Hong Kuan</a>,
-              <strong>Aadesh Salecha</strong>
+            <p class="project-authors">
+              Jin Hong Kuan, <strong>Aadesh Salecha</strong>
+            </p>
+            <p class="project-venue">IEEE SSCI, 2020</p>
+            <div class="project-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9308258" class="project-link">Paper</a>
             </div>
-            <div class="paper-venue">
-              <em>IEEE Symposium Series on Computational Intelligence (SSCI)</em> (2020)
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9308258" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Paper 8 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               <a href="https://ieeexplore.ieee.org/abstract/document/9381466">
                 Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning
               </a>
             </h3>
-            <div class="paper-authors">
-              <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
+            <p class="project-authors">
+              Bhavtosh Rath, <strong>Aadesh Salecha</strong>, Jaideep Srivastava
+            </p>
+            <p class="project-venue">IEEE/ACM ASONAM, 2020</p>
+            <div class="project-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9381466" class="project-link">Paper</a>
             </div>
-            <div class="paper-venue">
-              <em>IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</em> (2020)
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9381466" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Paper 9 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               Public's Discrete Emotions During the COVID-19 and Impacts on Their Coping Behaviors in the U.S.
             </h3>
-            <div class="paper-authors">
-              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>72nd Annual International Communication Association Conference</em> (2022)
-            </div>
-          </div>
-        </article>
+            <p class="project-authors">
+              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, Jaideep Srivastava
+            </p>
+            <p class="project-venue">72nd Annual ICA Conference, 2022</p>
+          </article>
 
-        <!-- Paper 10 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               No Good Time to Negotiate? Track Two Diplomacy within the Protracted Israel-Palestine Conflict as Strategic Joint Thinking
             </h3>
-            <div class="paper-authors">
-              Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journal of Conflict Resolution</em> (Under review, submitted Dec 2023)
-            </div>
-          </div>
-        </article>
+            <p class="project-authors">
+              Oliver Fink, Wilfried Graf, Shashanka Subrahmanya, <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt
+            </p>
+            <p class="project-venue">Journal of Conflict Resolution (Under review)</p>
+          </article>
 
-        <!-- Paper 11 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
+          <article class="project-card">
+            <h3 class="project-title">
               <a href="https://hdl.handle.net/11299/222250">
                 Empirical Study of the Spread of Misinformation: A Big Data Approach
               </a>
             </h3>
-            <div class="paper-authors">
+            <p class="project-authors">
               <strong>Aadesh Salecha</strong>
+            </p>
+            <p class="project-venue">Undergraduate Thesis (Summa Cum Laude), University of Minnesota, 2021</p>
+            <div class="project-links">
+              <a href="https://hdl.handle.net/11299/222250" class="project-link">Paper</a>
             </div>
-            <div class="paper-venue">
-              <em>Undergraduate Thesis (Summa Cum Laude), University of Minnesota Digital Conservancy</em> (2021)
-            </div>
-            <div class="paper-links">
-              <a href="https://hdl.handle.net/11299/222250" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>Design and source code inspired by <a href="https://jonbarron.info">Jon Barron</a> and <a href="https://github.com/hadleydalt/my-portfolio">Hadley Dalton</a>.</p>
-    </footer>
-  </div>
-
-  <script>
-    // Splash screen animation
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        document.getElementById('splash').classList.add('splash-loaded');
-      }, 100);
-    });
-
-    // Hide splash on scroll
-    window.addEventListener('scroll', function() {
-      const splash = document.getElementById('splash');
-      if (window.scrollY > 50) {
-        splash.style.opacity = '0';
-        splash.style.pointerEvents = 'none';
-      } else {
-        splash.style.opacity = '1';
-        splash.style.pointerEvents = 'auto';
-      }
-    });
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          &copy; 2025 Aadesh Salecha. Design inspired by
+          <a href="https://once-ui.com/products/magic-portfolio">Magic Portfolio</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
