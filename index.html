@@ -1,532 +1,277 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Aadesh Salecha</title>
+  <meta charset="UTF-8">
+  <title>Aadesh Salecha — Founding Engineer @ Hyfin</title>
   <meta name="author" content="Aadesh Salecha">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aadesh Salecha — Founding Engineer at Hyfin, building GAIA, an AI platform for clean energy lending in emerging markets. Stanford MS CS, published researcher.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script src="js/vendor/chart.umd.js" defer></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./js/vendor/three.module.min.js"
+      }
+    }
+  </script>
 </head>
 
 <body>
-  <!-- Splash Screen -->
-  <div class="splash-screen" id="splash">
-    <div class="splash-content">
-      <h1 class="splash-name">Aadesh Salecha</h1>
-      <p class="splash-position">
-        <span class="position-item">MS @ Stanford</span>
-        <span class="position-separator">•</span>
-        <span class="position-item">AI/ML @ Amazon</span>
-        <span class="position-separator">•</span>
-        <span class="position-item">Ex-DraftKings</span>
-        <span class="position-separator">•</span>
-        <span class="position-item">Multi-published Researcher</span>
+
+  <!-- Fixed WebGL background -->
+  <canvas id="webgl" aria-hidden="true"></canvas>
+
+  <!-- Fixed vignette / grain overlay for cinematic feel -->
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Progress rail (scene indicator dots) -->
+  <nav class="scene-rail" aria-label="Section navigation">
+    <button class="rail-dot" data-target="hero" aria-label="Hero"></button>
+    <button class="rail-dot" data-target="problem" aria-label="The problem"></button>
+    <button class="rail-dot" data-target="hyfin" aria-label="Hyfin and GAIA"></button>
+    <button class="rail-dot" data-target="credentials" aria-label="Credentials"></button>
+    <button class="rail-dot" data-target="research" aria-label="Research"></button>
+    <button class="rail-dot" data-target="contact" aria-label="Contact"></button>
+  </nav>
+
+  <!-- Scroll spacer creates the scrollable page height; content is positioned via .content-layer -->
+  <div id="scroll-spacer"></div>
+
+  <!-- Pinned content layer -->
+  <div class="content-layer">
+
+    <!-- HERO -->
+    <section class="panel panel-hero" data-key="hero">
+      <p class="eyebrow">Aadesh Salecha</p>
+      <h1 class="display-name">Financing the<br>climate transition,<br>one loan at a time.</h1>
+      <p class="hero-sub">Founding Engineer building the AI infrastructure that lets lenders in emerging markets say <em>yes</em> to clean energy.</p>
+      <div class="chip-row">
+        <span class="chip">Founding Engineer @ Hyfin</span>
+        <span class="chip">MS CS @ Stanford</span>
+        <span class="chip">Published Researcher</span>
+        <span class="chip">Ex-DraftKings</span>
+      </div>
+      <div class="scroll-cue">
+        <span>Scroll — sunrise begins</span>
+        <div class="scroll-cue-line"></div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="panel panel-left" data-key="problem">
+      <p class="eyebrow">The problem</p>
+      <h2 class="headline">A new asset class with<br>no track record.</h2>
+      <p class="body-text">
+        EVs and solar systems haven't existed long enough to generate decades of default data. So lenders across
+        the Global South stay on the sidelines — even where the climate impact per dollar deployed is highest.
+        That hesitation is a <strong>$4T+ financing gap</strong> standing between proven clean technology and the
+        people who need it.
       </p>
-      <p class="splash-focus">
-        Innovating in the <span class="highlight-text">Climate Tech × AI</span> space
+    </section>
+
+    <!-- HYFIN A -->
+    <section class="panel panel-right" data-key="hyfin-a">
+      <p class="eyebrow">Currently — Founding Engineer @ Hyfin</p>
+      <h2 class="headline">Hyfin turns clean energy<br>into a bankable asset.</h2>
+      <p class="body-text">
+        Hyfin is a climate fintech company unlocking clean energy financing across South &amp; Southeast Asia and
+        Sub-Saharan Africa — through off-balance-sheet SPVs for EV loan receivables (CMRF), first/second-loss
+        guarantee facilities, and blended finance instruments that de-risk lending into a market that's brand new.
       </p>
-      <div class="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div class="scroll-arrow">↓</div>
+    </section>
+
+    <!-- HYFIN B — GAIA -->
+    <section class="panel panel-left" data-key="hyfin-b">
+      <p class="eyebrow">What I'm building — GAIA</p>
+      <h2 class="headline">The confidence decades<br>of history used to provide.</h2>
+      <p class="body-text">
+        I'm building GAIA, an AI platform that gives lenders the data infrastructure and risk tools to originate
+        clean energy loans with confidence. GAIA synthesizes fragmented signals — asset performance, borrower
+        behavior, market conditions — into underwriting intelligence, replacing decades of historical track record
+        that simply doesn't exist yet.
+      </p>
+    </section>
+
+    <!-- HYFIN C — Impact -->
+    <section class="panel panel-right" data-key="hyfin-c">
+      <p class="eyebrow">Why it matters</p>
+      <h2 class="headline">Compressing the timeline<br>to bankability.</h2>
+      <p class="body-text">
+        Every year a lender waits for "enough data" is a year of avoidable emissions. GAIA exists to shrink that
+        timeline — right where the climate impact per financed dollar is highest, and accelerate how fast clean
+        tech adoption can scale.
+      </p>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="panel panel-wide" data-key="credentials">
+      <p class="eyebrow">Before Hyfin</p>
+      <h2 class="headline">A research &amp; engineering path<br>built for this problem.</h2>
+      <div class="credential-grid">
+        <div class="credential-card">
+          <div class="credential-value">MS CS</div>
+          <div class="credential-label">Stanford University — Computational Psychology &amp; Well-Being Lab, w/ Prof. Johannes Eichstaedt</div>
+        </div>
+        <div class="credential-card credential-card--chart">
+          <div class="credential-chart-wrap">
+            <canvas id="citationChart" width="360" height="220" role="img" aria-label="Citations per year, 2020 to 2025"></canvas>
+          </div>
+          <div class="credential-label">134 citations · h-index 5 · i10-index 4 — Google Scholar</div>
+        </div>
+        <div class="credential-card">
+          <div class="credential-value">Featured in WIRED</div>
+          <div class="credential-label">
+            Coverage of my <a href="https://doi.org/10.1093/pnasnexus/pgae533" target="_blank" rel="noopener">PNAS Nexus paper</a> on LLM social-desirability bias —
+            <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/" target="_blank" rel="noopener">"Chatbots, Like the Rest of Us, Just Want to Be Loved"</a>
+          </div>
+        </div>
+        <div class="credential-card">
+          <div class="credential-value">DraftKings</div>
+          <div class="credential-label">Senior Software Engineer, Financial Platform — production systems serving millions of users every minute</div>
+        </div>
+        <div class="credential-card">
+          <div class="credential-value">Summa Cum Laude</div>
+          <div class="credential-label">B.S. Computer Science, University of Minnesota</div>
+        </div>
+        <div class="credential-card">
+          <div class="credential-value">8+ Publications</div>
+          <div class="credential-label">LLM evaluation, computational social science &amp; AI safety — see below</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH (optional) -->
+    <section class="panel panel-center" data-key="research">
+      <p class="eyebrow">Optional deep-dive</p>
+      <h2 class="headline">Publications, for the curious.</h2>
+      <p class="body-text">
+        Generative AI evaluation, applied NLP for psychology &amp; social science, and AI safety —
+        spanning PNAS Nexus, Nature Digital Medicine, and more.
+      </p>
+      <button class="btn-outline" id="research-toggle" aria-expanded="false" aria-controls="research-drawer">
+        Explore the research →
+      </button>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel panel-hero panel-contact" data-key="contact">
+      <p class="eyebrow">Let's talk</p>
+      <h2 class="headline">Climate. AI. Or both.</h2>
+      <p class="body-text">
+        Always happy to talk clean energy finance, applied ML, or trade climbing beta.
+      </p>
+      <div class="social-links">
+        <a href="mailto:aadeshsalecha@gmail.com" class="social-link">Email</a>
+        <a href="https://www.linkedin.com/in/aadesh-salecha" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=Cnwzl3oAAAAJ" target="_blank" rel="noopener" class="social-link">Scholar</a>
+        <a href="https://github.com/aadeshsalecha/" target="_blank" rel="noopener" class="social-link">GitHub</a>
+      </div>
+      <p class="site-footer">Design &amp; 3D world built with Three.js.</p>
+    </section>
+
+  </div>
+
+  <!-- Research drawer (overlay, independent of scroll) -->
+  <div class="research-drawer" id="research-drawer" aria-hidden="true">
+    <div class="research-drawer-inner">
+      <button class="drawer-close" id="research-close" aria-label="Close research list">×</button>
+      <h3 class="drawer-title">Publications</h3>
+      <div class="papers-grid">
+
+        <article class="paper-card featured">
+          <h4 class="paper-title"><a href="https://llmsocialbias.github.io/llm-social-desirability-research/" target="_blank" rel="noopener">Large Language Models Show Human-like Social Desirability Biases in Survey Responses</a></h4>
+          <p class="paper-authors"><strong>Aadesh Salecha</strong>, Molly E. Ireland, Shashanka Subrahmanya, João Sedoc, Lyle H. Ungar, Johannes C. Eichstaedt</p>
+          <p class="paper-venue">PNAS Nexus, Vol. 3, No. 12 (2024)</p>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1093/pnasnexus/pgae533" target="_blank" rel="noopener">journal</a>
+            <a href="https://www.arxiv.org/abs/2405.06058" target="_blank" rel="noopener">arxiv</a>
+            <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/" target="_blank" rel="noopener">wired</a>
+          </div>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title"><a href="https://www.nature.com/articles/s41746-025-01642-x" target="_blank" rel="noopener">Monitoring the Opioid Epidemic via Social Media Discussions</a></h4>
+          <p class="paper-authors">Adam Lavertu, Tymor Hamamsy, <strong>Aadesh Salecha</strong>, Delaney Smith, Johannes C. Eichstaedt, Russ B. Altman</p>
+          <p class="paper-venue">Nature Partner Journals: Digital Medicine (2025)</p>
+          <div class="paper-links"><a href="https://www.nature.com/articles/s41746-025-01642-x" target="_blank" rel="noopener">paper</a></div>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title">Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak</h4>
+          <p class="paper-authors">Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, Jaideep Srivastava</p>
+          <p class="paper-venue">Journal of Computational Social Science, 7, 1599–1623 (2024)</p>
+          <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s42001-024-00282-7" target="_blank" rel="noopener">paper</a></div>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title">The Language of Conflict Transformation — Israeli-Palestinian Track Two Interactive Problem Solving</h4>
+          <p class="paper-authors">Oliver Fink, Wilfried Graf, Shashanka Subrahmanya, <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt</p>
+          <p class="paper-venue">Negotiation and Conflict Management Research (2024)</p>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title">Fake News Spreader Detection using Trust-based Strategies in Social Networks with Bot Filtration</h4>
+          <p class="paper-authors">Bhavtosh Rath, <strong>Aadesh Salecha</strong>, Jaideep Srivastava</p>
+          <p class="paper-venue">Social Network Analysis and Mining (2022)</p>
+          <div class="paper-links"><a href="https://doi.org/10.1007/s13278-022-00890-z" target="_blank" rel="noopener">paper</a></div>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title">Relationship between Citizen-Eyewitness Images and Audience Engagement with News</h4>
+          <p class="paper-authors">Jisu Kim, Jisu Huh, Bhavtosh Rath, <strong>Aadesh Salecha</strong>, Jaideep Srivastava</p>
+          <p class="paper-venue">Journalism Practice (2021)</p>
+          <div class="paper-links"><a href="https://doi.org/10.1080/17512786.2021.1882873" target="_blank" rel="noopener">paper</a></div>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title">Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning</h4>
+          <p class="paper-authors">Bhavtosh Rath, <strong>Aadesh Salecha</strong>, Jaideep Srivastava</p>
+          <p class="paper-venue">IEEE/ACM ASONAM (2020)</p>
+          <div class="paper-links"><a href="https://ieeexplore.ieee.org/abstract/document/9381466" target="_blank" rel="noopener">paper</a></div>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title">Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines</h4>
+          <p class="paper-authors">Jin Hong Kuan, <strong>Aadesh Salecha</strong></p>
+          <p class="paper-venue">IEEE SSCI (2020)</p>
+          <div class="paper-links"><a href="https://ieeexplore.ieee.org/abstract/document/9308258" target="_blank" rel="noopener">paper</a></div>
+        </article>
+
+        <article class="paper-card under-review">
+          <h4 class="paper-title">A Computational Model of Reward Learning and Habits on Social Media</h4>
+          <p class="paper-authors">Georgia Turner, Lukas J. Gunschera, Shashanka Subrahmanya, <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt, Stefano Palminteri, Amy Orben</p>
+          <p class="paper-venue">PsyArXiv Preprints (Under review)</p>
+          <div class="paper-links"><a href="https://osf.io/preprints/psyarxiv/xe25k" target="_blank" rel="noopener">preprint</a></div>
+        </article>
+
+        <article class="paper-card under-review">
+          <h4 class="paper-title">Structured AI Dialogues Can Increase Happiness and Meaning in Life</h4>
+          <p class="paper-authors"><strong>Aadesh Salecha</strong>, Jonas Schöne, Sonja Lyubomirsky, João Sedoc, Johannes Eichstaedt, Robb Willer</p>
+          <p class="paper-venue">Under Review</p>
+        </article>
+
+        <article class="paper-card">
+          <h4 class="paper-title"><a href="https://hdl.handle.net/11299/222250" target="_blank" rel="noopener">Empirical Study of the Spread of Misinformation: A Big Data Approach</a></h4>
+          <p class="paper-authors"><strong>Aadesh Salecha</strong></p>
+          <p class="paper-venue">Undergraduate Thesis, Summa Cum Laude — University of Minnesota Digital Conservancy (2021)</p>
+        </article>
+
       </div>
     </div>
   </div>
 
-  <!-- Main Content -->
-  <div class="main-container">
-    <!-- Hero Section -->
-    <section class="hero-section fade-in">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h2 class="section-title">About Me</h2>
-          <p class="intro-text">
-            I'm a MS Computer Science student and researcher at <a href="https://stanford.edu">Stanford University</a>,
-            specializing in Applied AI and Machine Learning.
-          </p>
-          <p>
-            Currently I work with Prof. Johannes Eichsteadt at the
-            <a href="https://cpwb.stanford.edu/">Computational Psychology and Well-Being Lab</a>,
-            focusing on deploying advanced machine learning models to enhance behavioral insights and well-being outcomes.
-          </p>
-          <p>
-            I am interested in studying all aspects of AI systems, from their training to safe deployment.
-            Check out <a href="https://www.arxiv.org/abs/2405.06058">my latest paper</a> that applies cognitive
-            science and psychometric techniques to detect the presence of human-like fallacies and biases in LLMs.
-          </p>
-          <p>
-            Previously, I worked as a Senior Software Engineer at <a href="https://www.draftkings.com/">DraftKings</a>
-            on the Financial Platform team, where I developed large-scale production-grade systems that served millions
-            of users every minute.
-          </p>
-          <p class="personal-note">
-            Outside of work, I enjoy climbing, strength training, hiking and brewing coffee.
-          </p>
+  <!-- No-JS fallback content is the same DOM, progressively enhanced -->
+  <noscript>
+    <style>.content-layer .panel{position:static;opacity:1;transform:none;min-height:auto;padding:4rem 1.5rem;}#scroll-spacer,canvas#webgl,.vignette,.scene-rail{display:none;}</style>
+  </noscript>
 
-          <div class="social-links">
-            <a href="mailto:aadeshsalecha@gmail.com" class="social-link">Email</a>
-            <a href="data/AadeshSalecha-CV.pdf" class="social-link">CV</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=Cnwzl3oAAAAJ" class="social-link">Scholar</a>
-            <a href="https://github.com/aadeshsalecha/" class="social-link">Github</a>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="images/AadeshSalecha.jpg" alt="Aadesh Salecha" class="profile-photo">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Research Section -->
-    <section class="research-section fade-in">
-      <h2 class="section-title">Research</h2>
-      <p class="section-description">
-        I'm interested in Generative AI (LLM evaluation, preference tuning, application building),
-        and applied NLP (to psychology and social sciences). Featured publications are <span class="highlight">highlighted</span>.
-      </p>
-
-      <!-- Citation Metrics -->
-      <div class="citation-metrics-section">
-        <div class="citation-chart-wrapper">
-          <canvas id="citationChart" width="400" height="300"></canvas>
-        </div>
-        <div class="citation-stats">
-          <div class="metrics-card">
-            <div class="metric-value">134</div>
-            <div class="metric-label">Total Citations</div>
-          </div>
-          <div class="metrics-card">
-            <div class="metric-value">5</div>
-            <div class="metric-label">h-index</div>
-          </div>
-          <div class="metrics-card">
-            <div class="metric-value">4</div>
-            <div class="metric-label">i10-index</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Publication Categories -->
-      <div class="papers-grid">
-        <!-- Paper 1 -->
-        <article class="paper-card featured">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/">
-                Large Language Models Show Human-like Social Desirability Biases in Survey Responses
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://www.linkedin.com/in/molly-e-ireland">Molly E. Ireland</a>,
-              <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <a href="https://www.stern.nyu.edu/faculty/bio/joao-sedoc">João Sedoc</a>,
-              <a href="https://www.cis.upenn.edu/~ungar/">Lyle H. Ungar</a>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Proceedings of the National Academy of Sciences (PNAS Nexus)</em>, Vol. 3, No. 12 (2024)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1093/pnasnexus/pgae533" class="paper-link">journal</a>
-              <a href="https://www.arxiv.org/abs/2405.06058" class="paper-link">arxiv</a>
-              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/" class="paper-link">project</a>
-              <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/" class="paper-link">wired</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 2 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://doi.org/10.1007/s13278-022-00890-z">
-                Fake News Spreader Detection using Trust-based strategies in Social Networks with Bot Filtration
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>Social Network Analysis and Mining (SNAM)</em> (2022)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1007/s13278-022-00890-z" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 3 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://doi.org/10.1080/17512786.2021.1882873">
-                Relationship between Citizen-Eyewitness Images and Audience Engagement with News
-              </a>
-            </h3>
-            <div class="paper-authors">
-              Jisu Kim, Jisu Huh, <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journalism Practice</em> (2021)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1080/17512786.2021.1882873" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 4 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://link.springer.com/article/10.1007/s42001-024-00282-7">
-                Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak
-              </a>
-            </h3>
-            <div class="paper-authors">
-              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journal of Computational Social Science</em>, 7, 1599–1623 (October 2024)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1007/s42001-024-00282-7" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 5 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              The Language of Conflict Transformation - Assessing Psychological Change Patterns in Israeli-Palestinian Track Two Interactive Problem Solving
-            </h3>
-            <div class="paper-authors">
-              Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Negotiation and Conflict Management Research</em> (2024)
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 6 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://www.nature.com/articles/s41746-025-01642-x">
-                Monitoring the Opioid Epidemic via Social Media Discussions
-              </a>
-            </h3>
-            <div class="paper-authors">
-              Adam Lavertu, Tymor Hamamsy, <strong>Aadesh Salecha</strong>, Delaney Smith,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>, Russ B Altman
-            </div>
-            <div class="paper-venue">
-              <em>Nature Partner Journals: Digital Medicine</em> (2025)
-            </div>
-            <div class="paper-links">
-              <a href="https://www.nature.com/articles/s41746-025-01642-x" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 7 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9308258">
-                Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <a href="https://www.linkedin.com/in/jin-hong-kuan">Jin Hong Kuan</a>,
-              <strong>Aadesh Salecha</strong>
-            </div>
-            <div class="paper-venue">
-              <em>IEEE Symposium Series on Computational Intelligence (SSCI)</em> (2020)
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9308258" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 8 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9381466">
-                Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</em> (2020)
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9381466" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 9 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              Public's Discrete Emotions During the COVID-19 and Impacts on Their Coping Behaviors in the U.S.
-            </h3>
-            <div class="paper-authors">
-              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>72nd Annual International Communication Association Conference</em> (2022)
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 10 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              No Good Time to Negotiate? Track Two Diplomacy within the Protracted Israel-Palestine Conflict as Strategic Joint Thinking
-            </h3>
-            <div class="paper-authors">
-              Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journal of Conflict Resolution</em> (Under review, submitted Dec 2023)
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 11 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://hdl.handle.net/11299/222250">
-                Empirical Study of the Spread of Misinformation: A Big Data Approach
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>
-            </div>
-            <div class="paper-venue">
-              <em>Undergraduate Thesis (Summa Cum Laude), University of Minnesota Digital Conservancy</em> (2021)
-            </div>
-            <div class="paper-links">
-              <a href="https://hdl.handle.net/11299/222250" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 12 - Under Review -->
-        <article class="paper-card under-review">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              A Computational Model of Reward Learning and Habits on Social Media
-            </h3>
-            <div class="paper-authors">
-              Georgia Turner, Lukas J. Gunschera, Shashanka Subrahmanya,
-              <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt, Stefano Palminteri, Amy Orben
-            </div>
-            <div class="paper-venue">
-              <em>PsyArXiv Preprints</em> (Under review)
-            </div>
-            <div class="paper-links">
-              <a href="https://osf.io/preprints/psyarxiv/xe25k" class="paper-link">preprint</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 13 - Under Review -->
-        <article class="paper-card under-review">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              The Answer to the Mental Health Crisis: Examining Media Bias Regarding Psychedelic Treatments for Depression and PTSD Using Natural Language Processing
-            </h3>
-            <div class="paper-authors">
-              Audrey Evers, Elizabeth C. Stade,
-              <strong>Aadesh Salecha</strong>, Zoe Tait, Gabriela Khazanov
-            </div>
-            <div class="paper-venue">
-              <em>Under Review</em>
-            </div>
-          </div>
-        </article>
-
-        <!-- Paper 14 - Under Review -->
-        <article class="paper-card under-review">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              Structured AI Dialogues Can Increase Happiness and Meaning in Life
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>, Jonas Schöne, Sonja Lyubomirsky, João Sedoc,
-              Johannes Eichstaedt, Robb Willer
-            </div>
-            <div class="paper-venue">
-              <em>Under Review</em>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>Design and source code inspired by <a href="https://jonbarron.info">Jon Barron</a> and <a href="https://github.com/hadleydalt/my-portfolio">Hadley Dalton</a>.</p>
-    </footer>
-  </div>
-
-  <script>
-    // Splash screen animation
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        document.getElementById('splash').classList.add('splash-loaded');
-      }, 100);
-    });
-
-    // Hide splash on scroll
-    window.addEventListener('scroll', function() {
-      const splash = document.getElementById('splash');
-      if (window.scrollY > 50) {
-        splash.style.opacity = '0';
-        splash.style.pointerEvents = 'none';
-      } else {
-        splash.style.opacity = '1';
-        splash.style.pointerEvents = 'auto';
-      }
-    });
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Citation Chart
-    const ctx = document.getElementById('citationChart');
-    if (ctx) {
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-          datasets: [
-            {
-              label: 'Citations',
-              data: [2, 5, 14, 15, 20, 53],
-              backgroundColor: '#355070ff',
-              borderColor: '#2a3e54ff',
-              borderWidth: 1,
-              borderRadius: 6,
-              barPercentage: 0.6,
-              categoryPercentage: 0.7,
-              order: 2
-            },
-            {
-              label: 'Cumulative',
-              data: [2, 7, 21, 36, 56, 109],
-              type: 'line',
-              borderColor: '#41bbd9ff',
-              backgroundColor: 'transparent',
-              borderWidth: 3,
-              pointBackgroundColor: '#41bbd9ff',
-              pointBorderColor: '#ffffff',
-              pointBorderWidth: 2,
-              pointRadius: 5,
-              pointHoverRadius: 7,
-              tension: 0.4,
-              order: 1
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'top',
-              labels: {
-                font: {
-                  family: "'Poppins', sans-serif",
-                  size: 12,
-                  weight: '500'
-                },
-                color: '#6b7280',
-                padding: 15,
-                usePointStyle: true
-              }
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              ticks: {
-                font: {
-                  family: "'Poppins', sans-serif"
-                },
-                color: '#6b7280'
-              },
-              grid: {
-                color: '#e5e7eb',
-                drawBorder: false
-              },
-              title: {
-                display: true,
-                text: 'Citations'
-              }
-            },
-            x: {
-              ticks: {
-                font: {
-                  family: "'Poppins', sans-serif"
-                },
-                color: '#6b7280'
-              },
-              grid: {
-                display: false,
-                drawBorder: false
-              }
-            }
-          }
-        }
-      });
-    }
-  </script>
+  <script type="module" src="js/experience.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
