@@ -32,22 +32,38 @@ jobs:
       - name: Refresh citation stats + publication list from Google Scholar
         run: python scripts/update_cv.py
 
-      - name: Compile CV to PDF
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: aadesh-salecha-cv.tex
-          working_directory: cv
+      # The CV uses fontspec (XeLaTeX) with pgfplots, FontAwesome and Source Sans Pro —
+      # this exact package set was verified locally to compile resume/cv.tex cleanly.
+      - name: Install LaTeX toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-fonts-extra texlive-xetex \
+            texlive-pictures texlive-science
+
+      - name: Register the CV's bundled fonts (Roboto, FontAwesome) for fontspec
+        run: |
+          mkdir -p ~/.fonts
+          cp resume/fonts/*.ttf ~/.fonts/
+          fc-cache -f
+
+      - name: Compile CV to PDF (two passes for cross-references)
+        working-directory: resume
+        run: |
+          xelatex -interaction=nonstopmode cv.tex
+          xelatex -interaction=nonstopmode cv.tex
 
       - name: Publish compiled PDF into data/
         run: |
           mkdir -p data
-          mv cv/aadesh-salecha-cv.pdf data/AadeshSalecha-CV.pdf
+          mv resume/cv.pdf data/AadeshSalecha-CV.pdf
 
       - name: Commit if changed
         run: |
           git config user.name "cv-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add cv/aadesh-salecha-cv.tex data/AadeshSalecha-CV.pdf
+          git add resume/cv/publications_harvard.tex data/AadeshSalecha-CV.pdf
           git diff --cached --quiet && echo "No changes." && exit 0
           git commit -m "Auto-update CV from Google Scholar"
           git push

@@ -1,12 +1,13 @@
-# LaTeX build artifacts (cv/aadesh-salecha-cv.tex is the tracked source; the
-# compiled PDF is published to data/AadeshSalecha-CV.pdf by the update-cv workflow)
-cv/*.aux
-cv/*.log
-cv/*.out
-cv/*.pdf
-cv/*.fls
-cv/*.fdb_latexmk
-cv/*.synctex.gz
+# LaTeX build artifacts (resume/cv.tex + resume/cv/*.tex are the tracked source;
+# the compiled PDF is published to data/AadeshSalecha-CV.pdf by the update-cv workflow)
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.pdf
+resume/*.fls
+resume/*.fdb_latexmk
+resume/*.synctex.gz
+resume/missfont.log
 
 # Python
 __pycache__/
