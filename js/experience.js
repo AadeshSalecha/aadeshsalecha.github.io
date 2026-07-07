@@ -26,13 +26,14 @@ function roadPoint(t) {
   return new THREE.Vector3(x, heightAt(x, z) + 0.35, z);
 }
 
+// Bright, sun-drenched throughout (matching the EV Highway hero video's daytime look) — no
+// night/dawn phase, since the hero video already covers progress 0 and any handoff seam should
+// never read as "the world went dark." Only drifts warmer toward a golden-hour close.
 const SKY_STOPS = [
-  { p: 0.00, top: 0x05060f, bottom: 0x1a1440, horizon: 0x241a3a, fog: 0x0a0a18, sun: 0xbfc8ff, ambient: 0x22264a, ambientI: 0.35, sunI: 0.15 },
-  { p: 0.14, top: 0x141033, bottom: 0x4a2f5e, horizon: 0x8a4a63, fog: 0x2a1e3a, sun: 0xffb27a, ambient: 0x4a3a55, ambientI: 0.55, sunI: 0.6 },
-  { p: 0.30, top: 0x2f4a7a, bottom: 0xd97a4a, horizon: 0xf4a95c, fog: 0x8a6a5a, sun: 0xffd39a, ambient: 0x8a7a70, ambientI: 0.85, sunI: 1.1 },
-  { p: 0.55, top: 0x4a90d9, bottom: 0xbfe0f0, horizon: 0xeaf4ff, fog: 0xcfe6f2, sun: 0xffffff, ambient: 0xcfd9e6, ambientI: 1.1, sunI: 1.4 },
-  { p: 0.75, top: 0x3f86d6, bottom: 0xaad4ea, horizon: 0xe2f0f8, fog: 0xc4dfec, sun: 0xffffff, ambient: 0xd6e0ea, ambientI: 1.15, sunI: 1.35 },
-  { p: 1.00, top: 0x3a5fae, bottom: 0xf4a35c, horizon: 0xffce8a, fog: 0xe7b988, ambient: 0xffe0b8, ambientI: 1.0, sunI: 1.2, sun: 0xffcf8a },
+  { p: 0.00, top: 0x3f86d6, bottom: 0xcfe8f5, horizon: 0xeaf3ea, fog: 0xd6e6ea, sun: 0xfff6df, ambient: 0xdfe8ea, ambientI: 0.95, sunI: 1.25 },
+  { p: 0.72, top: 0x3f86d6, bottom: 0xbfe0f0, horizon: 0xeef2df, fog: 0xcfe3ea, sun: 0xffffff, ambient: 0xe6ecec, ambientI: 1.05, sunI: 1.35 },
+  { p: 0.88, top: 0x4a90d9, bottom: 0xf0e2b8, horizon: 0xf7dfa0, fog: 0xe6d8b0, sun: 0xffe9b0, ambient: 0xf0e6cc, ambientI: 1.05, sunI: 1.3 },
+  { p: 1.00, top: 0x5f86bc, bottom: 0xf4a35c, horizon: 0xffce8a, fog: 0xe7b988, sun: 0xffcf8a, ambient: 0xffe0b8, ambientI: 0.95, sunI: 1.15 },
 ];
 
 function lerpSkyStops(p) {
@@ -89,7 +90,6 @@ export class Experience {
     this.camera = new THREE.PerspectiveCamera(52, window.innerWidth / window.innerHeight, 0.1, 400);
 
     this._buildSky();
-    this._buildStars();
     this._buildLights();
     this._buildTerrain();
     this._buildSolarPanels();
@@ -125,38 +125,17 @@ export class Experience {
     this.scene.add(this.sky);
   }
 
-  _buildStars() {
-    const count = isMobile ? 500 : 1400;
-    const positions = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      const r = 250 + Math.random() * 40;
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.random() * Math.PI * 0.5;
-      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-      positions[i * 3 + 1] = Math.abs(r * Math.cos(phi)) * 0.9 + 10;
-      positions[i * 3 + 2] = r * Math.sin(phi) * Math.sin(theta);
-    }
-    const geo = new THREE.BufferGeometry();
-    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    const mat = new THREE.PointsMaterial({
-      color: 0xffffff, size: isMobile ? 1.1 : 1.4, transparent: true, opacity: 1,
-      depthWrite: false, sizeAttenuation: true,
-    });
-    this.stars = new THREE.Points(geo, mat);
-    this.scene.add(this.stars);
-  }
-
   _buildLights() {
-    this.ambient = new THREE.AmbientLight(0x22264a, 0.35);
+    this.ambient = new THREE.AmbientLight(0xdfe8ea, 0.95);
     this.scene.add(this.ambient);
 
-    this.sunLight = new THREE.DirectionalLight(0xbfc8ff, 0.15);
-    this.sunLight.position.set(-30, 10, 20);
+    this.sunLight = new THREE.DirectionalLight(0xfff6df, 1.25);
+    this.sunLight.position.set(-30, 60, 20);
     this.scene.add(this.sunLight);
 
     this.sunMesh = new THREE.Mesh(
       new THREE.SphereGeometry(4, 16, 16),
-      new THREE.MeshBasicMaterial({ color: 0xffe4b0 })
+      new THREE.MeshBasicMaterial({ color: 0xfff6df })
     );
     this.scene.add(this.sunMesh);
   }
@@ -166,8 +145,8 @@ export class Experience {
     geo.rotateX(-Math.PI / 2);
     const pos = geo.attributes.position;
     const colors = new Float32Array(pos.count * 3);
-    const low = new THREE.Color(0x1c1638);
-    const high = new THREE.Color(0x3a2f52);
+    const low = new THREE.Color(0x9c8a56);
+    const high = new THREE.Color(0x6d8a52);
     const tmp = new THREE.Color();
     for (let i = 0; i < pos.count; i++) {
       const x = pos.getX(i);
@@ -198,7 +177,7 @@ export class Experience {
     for (let i = 0; i <= 40; i++) roadPts.push(roadPoint(i / 40));
     const roadCurve = new THREE.CatmullRomCurve3(roadPts);
     const roadGeo = new THREE.TubeGeometry(roadCurve, 80, 0.55, 6, false);
-    const roadMat = new THREE.MeshStandardMaterial({ color: 0x1a1622, roughness: 1 });
+    const roadMat = new THREE.MeshStandardMaterial({ color: 0x4a4a4e, roughness: 1 });
     this.road = new THREE.Mesh(roadGeo, roadMat);
     this.scene.add(this.road);
     this.roadCurve = roadCurve;
@@ -242,7 +221,7 @@ export class Experience {
     }
     const poleMat = new THREE.MeshStandardMaterial({ color: 0xd8dbe0, roughness: 0.6 });
     const bladeMat = new THREE.MeshStandardMaterial({
-      color: 0xe8eaf0, emissive: 0x2fd9c4, emissiveIntensity: 0, roughness: 0.5,
+      color: 0xe8eaf0, emissive: 0xffe9b0, emissiveIntensity: 0, roughness: 0.5,
     });
 
     this.turbines = positions.map((p) => {
@@ -400,20 +379,17 @@ export class Experience {
     this.sunLight.intensity = a.sunI + (b.sunI - a.sunI) * t;
     this.sunMesh.material.color.copy(this.sunLight.color);
 
-    // Sun arcs up and slightly forward as progress advances.
-    const sunAngle = -0.15 + p * 1.15;
+    // Sun stays high and bright throughout, drifting lower/warmer toward a golden-hour close —
+    // it never dips toward the horizon, so there's no "the world went dark" moment mid-scroll.
+    const sunAngle = 1.0 - p * 0.55;
     const sunDist = 120;
     const sunPos = new THREE.Vector3(
       Math.cos(sunAngle * 1.3) * sunDist * 0.6,
-      Math.max(2, Math.sin(sunAngle) * sunDist * 0.7),
+      Math.sin(sunAngle) * sunDist * 0.7,
       -Math.sin(sunAngle * 0.7) * sunDist * 0.5
     );
     this.sunLight.position.copy(sunPos);
     this.sunMesh.position.copy(sunPos);
-
-    // Stars fade out as dawn arrives.
-    this.stars.material.opacity = 1 - smoothstep(mapRange(p, 0.0, 0.16));
-    this.stars.visible = this.stars.material.opacity > 0.01;
 
     // --- World "coming alive" during the Hyfin/GAIA arc ---
     const hyfinT = smoothstep(mapRange(p, HYFIN_RANGE.start, HYFIN_RANGE.end));
@@ -450,7 +426,7 @@ export class Experience {
       }
       posAttr.needsUpdate = true;
     }
-    this.particles.material.opacity = 0.35 + hyfinT * 0.4;
+    this.particles.material.opacity = 0.16 + hyfinT * 0.3;
 
     // --- Camera ---
     const { pos, look } = this._sampleCameraPath(p);

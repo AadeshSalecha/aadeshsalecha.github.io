@@ -59,7 +59,31 @@ a:hover, a:focus-visible {
   height: 100%;
   z-index: 0;
   display: block;
-  background: linear-gradient(180deg, #05060f 0%, #101533 55%, #1c1030 100%);
+  background: linear-gradient(180deg, #3f86d6 0%, #8fc3ea 55%, #eaf0e0 100%);
+}
+
+.hero-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 1;
+  will-change: opacity;
+}
+
+.hero-video-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 1;
+  will-change: opacity;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 62%, rgba(5, 8, 16, 0.5) 0%, rgba(5, 8, 16, 0.18) 55%, transparent 100%),
+    linear-gradient(180deg, rgba(5,8,16,0.32) 0%, transparent 26%, transparent 68%, rgba(5,8,16,0.4) 100%);
 }
 
 .vignette {
@@ -67,15 +91,17 @@ a:hover, a:focus-visible {
   inset: 0;
   z-index: 5;
   pointer-events: none;
+  /* Tuned light — the scene is a bright daytime sky now, not a dark night one, so this only
+     needs to add a faint cinematic edge, not the heavier darkening the old night scene wanted. */
   background:
-    radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.45) 100%),
-    linear-gradient(180deg, rgba(0,0,0,0.25) 0%, transparent 15%, transparent 85%, rgba(0,0,0,0.35) 100%);
+    radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 15%, transparent 85%, rgba(0,0,0,0.16) 100%);
   mix-blend-mode: normal;
 }
 
 /* No-WebGL fallback: static gradient world */
 body.no-webgl #webgl {
-  background: linear-gradient(180deg, #1b1035 0%, #4a2f5e 35%, #d97a4a 65%, #f4c76b 100%);
+  background: linear-gradient(180deg, #3f86d6 0%, #bfe0f0 45%, #f4d9a0 80%, #f0a45c 100%);
 }
 
 body.no-webgl .panel {

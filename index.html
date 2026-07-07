@@ -27,6 +27,14 @@
   <!-- Fixed WebGL background -->
   <canvas id="webgl" aria-hidden="true"></canvas>
 
+  <!-- Hero video loop — fades out once the user scrolls past the hero, handing off to the WebGL scene -->
+  <video id="hero-video" class="hero-video" aria-hidden="true" autoplay muted loop playsinline preload="auto"
+    poster="images/hero/ev-highway-poster.jpg">
+    <source src="images/hero/ev-highway-loop.webm" type="video/webm">
+    <source src="images/hero/ev-highway-loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-scrim" aria-hidden="true"></div>
+
   <!-- Fixed vignette / grain overlay for cinematic feel -->
   <div class="vignette" aria-hidden="true"></div>
 
@@ -58,7 +66,7 @@
         <span class="chip">Ex-DraftKings</span>
       </div>
       <div class="scroll-cue">
-        <span>Scroll — sunrise begins</span>
+        <span>Scroll — the journey begins</span>
         <div class="scroll-cue-line"></div>
       </div>
     </section>
@@ -269,7 +277,7 @@
 
   <!-- No-JS fallback content is the same DOM, progressively enhanced -->
   <noscript>
-    <style>.content-layer .panel{position:static;opacity:1;transform:none;min-height:auto;padding:4rem 1.5rem;}#scroll-spacer,canvas#webgl,.vignette,.scene-rail{display:none;}</style>
+    <style>.content-layer .panel{position:static;opacity:1;transform:none;min-height:auto;padding:4rem 1.5rem;}#scroll-spacer,canvas#webgl,.vignette,.scene-rail,.hero-video,.hero-video-scrim{display:none;}</style>
   </noscript>
 
   <script type="module" src="js/experience.js"></script>

@@ -117,6 +117,26 @@ if (openBtn && drawer && closeBtn) {
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
 }
 
+/* ---------------- Hero video ---------------- */
+
+const heroVideo = document.getElementById('hero-video');
+const heroScrim = document.querySelector('.hero-video-scrim');
+const heroSection = SECTIONS.find((s) => s.key === 'hero');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (prefersReducedMotion && heroVideo) heroVideo.pause();
+
+function updateHeroVideo(progress) {
+  if (!heroVideo || !heroSection) return;
+  const op = 1 - smoothstep(mapRange(progress, heroSection.start, heroSection.end));
+  heroVideo.style.opacity = op.toFixed(3);
+  if (heroScrim) heroScrim.style.opacity = op.toFixed(3);
+  if (!prefersReducedMotion) {
+    if (op > 0.02 && heroVideo.paused) heroVideo.play().catch(() => {});
+    else if (op <= 0.02 && !heroVideo.paused) heroVideo.pause();
+  }
+}
+
 /* ---------------- Citation chart ---------------- */
 
 function initChart() {
@@ -197,6 +217,7 @@ if (webglOK) {
     experience.render(delta);
     updatePanels(progress);
     updateRail(progress);
+    updateHeroVideo(progress);
     rafId = requestAnimationFrame(loop);
   }
 
