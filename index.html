@@ -19,9 +19,11 @@
     <div class="splash-content">
       <h1 class="splash-name">Aadesh Salecha</h1>
       <p class="splash-position">
-        <span class="position-item">MS @ Stanford</span>
+        <span class="position-item">Founding Engineer @ Hyfin</span>
         <span class="position-separator">•</span>
-        <span class="position-item">AI/ML @ Amazon</span>
+        <span class="position-item">MS CS @ Stanford</span>
+        <span class="position-separator">•</span>
+        <span class="position-item">Ex-AWS</span>
         <span class="position-separator">•</span>
         <span class="position-item">Ex-DraftKings</span>
         <span class="position-separator">•</span>
@@ -44,25 +46,68 @@
       <div class="hero-content">
         <div class="hero-text">
           <h2 class="section-title">About Me</h2>
-          <p class="intro-text">
-            I'm a MS Computer Science student and researcher at <a href="https://stanford.edu">Stanford University</a>,
-            specializing in Applied AI and Machine Learning.
-          </p>
-          <p>
-            Currently I work with Prof. Johannes Eichsteadt at the
-            <a href="https://cpwb.stanford.edu/">Computational Psychology and Well-Being Lab</a>,
-            focusing on deploying advanced machine learning models to enhance behavioral insights and well-being outcomes.
-          </p>
-          <p>
-            I am interested in studying all aspects of AI systems, from their training to safe deployment.
-            Check out <a href="https://www.arxiv.org/abs/2405.06058">my latest paper</a> that applies cognitive
-            science and psychometric techniques to detect the presence of human-like fallacies and biases in LLMs.
-          </p>
-          <p>
-            Previously, I worked as a Senior Software Engineer at <a href="https://www.draftkings.com/">DraftKings</a>
-            on the Financial Platform team, where I developed large-scale production-grade systems that served millions
-            of users every minute.
-          </p>
+          <div class="bio-toggle" role="group" aria-label="Bio length">
+            <button type="button" class="bio-toggle-btn active" data-bio="short" aria-pressed="true">Short</button>
+            <button type="button" class="bio-toggle-btn" data-bio="long" aria-pressed="false">Long</button>
+          </div>
+
+          <!-- Short bio (default) -->
+          <div class="bio bio-short" id="bio-short">
+            <p class="intro-text">
+              I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a>, where I'm building GAIA,
+              a platform that synthesizes asset performance and market data to power clean energy loan origination.
+              I design the agentic data pipelines and risk intelligence tools aimed at closing the $4T+ clean energy
+              financing gap across South Asia and Africa.
+            </p>
+            <p>
+              I recently finished my MS in Computer Science at <a href="https://stanford.edu">Stanford</a>, where I built
+              geospatial ML for carbon sequestration with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>'s
+              lab at the <a href="https://sustainability.stanford.edu/">Doerr School of Sustainability</a>, and studied
+              human-like biases in LLMs (<a href="https://doi.org/10.1093/pnasnexus/pgae533">PNAS Nexus</a>,
+              <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>).
+              Before that, I worked on AI/ML at <a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">AWS</a> and
+              large-scale financial systems at <a href="https://www.draftkings.com/">DraftKings</a>.
+            </p>
+          </div>
+
+          <!-- Long bio -->
+          <div class="bio bio-long" id="bio-long" hidden>
+            <p class="intro-text">
+              I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a> in San Francisco, where I'm building
+              GAIA, a fintech platform that synthesizes asset performance and market data for clean energy loan origination.
+              I design agentic data enrichment pipelines that combine LLMs and web scraping to create data for a new asset
+              class with no track record, and I'm architecting risk intelligence tools aimed at the $4T+ clean energy
+              financing gap across South Asia and Africa. I also lead the rollout of AI-native workflows across the team.
+            </p>
+            <p>
+              I completed my MS in Computer Science at <a href="https://stanford.edu">Stanford University</a> in 2026.
+              There, I worked as an AI/ML researcher with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>
+              and the <a href="https://fse.fsi.stanford.edu/">Center on Food Security and the Environment</a> at the
+              <a href="https://sustainability.stanford.edu/">Stanford Doerr School of Sustainability</a>, building geospatial
+              ML pipelines on Google Earth Engine, Landsat, and Sentinel-2 imagery to detect tree species across cropland in
+              the Global South. This work supports verification of the 5+ Gt CO<sub>2</sub>/year sequestration potential
+              of integrating trees into global cropland. I also won Stanford's first Green AI Hackathon by building a
+              <a href="https://findgeothermal.com/">geothermal site prediction system</a> on AlphaEarth satellite
+              embeddings (93% AUC).
+            </p>
+            <p>
+              Earlier at Stanford, I worked with Prof. <a href="https://jeichstaedt.com/">Johannes Eichstaedt</a> on applying
+              cognitive science and psychometrics to evaluate LLMs. Our paper showing that
+              <a href="https://doi.org/10.1093/pnasnexus/pgae533">LLMs exhibit human-like social desirability biases</a>
+              was published in PNAS Nexus and covered by
+              <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>.
+            </p>
+            <p>
+              In 2025, I was an AI/ML Engineer at <a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">Amazon Web Services</a>,
+              where I designed an agentic AI system that combines telemetry, time-series signals, and RAG-based diagnosis
+              to auto-resolve ML infrastructure failures, and cut GPU energy waste by about 200 kg CO<sub>2</sub>e per day.
+              Before Stanford, I was a Senior Software Engineer on the Financial Platform team at
+              <a href="https://www.draftkings.com/">DraftKings</a>, building production systems that handled billions
+              of requests for millions of users. I received my BS in Computer Science, summa cum laude, from the
+              <a href="https://twin-cities.umn.edu/">University of Minnesota</a>.
+            </p>
+          </div>
+
           <p class="personal-note">
             Outside of work, I enjoy climbing, strength training, hiking and brewing coffee.
           </p>
@@ -87,8 +132,8 @@
     <section class="research-section fade-in">
       <h2 class="section-title">Research</h2>
       <p class="section-description">
-        I'm interested in Generative AI (LLM evaluation, preference tuning, application building),
-        and applied NLP (to psychology and social sciences). Featured publications are <span class="highlight">highlighted</span>.
+        I'm interested in applied AI for climate and energy (geospatial ML, remote sensing), Generative AI
+        (LLM evaluation, preference tuning, application building), and applied NLP (to psychology and social sciences). Featured publications are <span class="highlight">highlighted</span>.
       </p>
 
       <!-- Citation Metrics -->
@@ -98,16 +143,16 @@
         </div>
         <div class="citation-stats">
           <div class="metrics-card">
-            <div class="metric-value">134</div>
+            <div class="metric-value">320</div>
             <div class="metric-label">Total Citations</div>
           </div>
           <div class="metrics-card">
-            <div class="metric-value">5</div>
+            <div class="metric-value">6</div>
             <div class="metric-label">h-index</div>
           </div>
           <div class="metrics-card">
-            <div class="metric-value">4</div>
-            <div class="metric-label">i10-index</div>
+            <div class="metric-value">16</div>
+            <div class="metric-label">Publications</div>
           </div>
         </div>
       </div>
@@ -422,6 +467,20 @@
       }
     });
 
+    // Bio length toggle (short by default)
+    document.querySelectorAll('.bio-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const which = btn.dataset.bio;
+        document.getElementById('bio-short').hidden = which !== 'short';
+        document.getElementById('bio-long').hidden = which !== 'long';
+        document.querySelectorAll('.bio-toggle-btn').forEach(function(b) {
+          const on = b === btn;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      });
+    });
+
     // Intersection Observer for fade-in animations
     const observerOptions = {
       threshold: 0.1,
@@ -444,11 +503,11 @@
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+          labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
           datasets: [
             {
               label: 'Citations',
-              data: [2, 5, 14, 15, 20, 53],
+              data: [2, 5, 14, 16, 21, 113, 145],
               backgroundColor: '#355070ff',
               borderColor: '#2a3e54ff',
               borderWidth: 1,
@@ -459,7 +518,7 @@
             },
             {
               label: 'Cumulative',
-              data: [2, 7, 21, 36, 56, 109],
+              data: [2, 7, 21, 37, 58, 171, 316],
               type: 'line',
               borderColor: '#41bbd9ff',
               backgroundColor: 'transparent',
