@@ -427,6 +427,26 @@ mark.m-sage { background: linear-gradient(transparent 55%, var(--sage) 55%, var(
 .h-red { background: var(--red-soft); }
 .h-flax a { color: #7d1418; }
 
+/* press clippings */
+.clippings {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 5vw, 64px); align-items: start;
+  max-width: 980px; margin: 8px auto 40px;
+}
+.clipping { position: relative; margin: 0; }
+.clipping > a { display: block; background: none; }
+.clipping > a:hover { background: none; }
+.clipping img { display: block; width: 100%; height: auto; }
+.clip-left { transform: rotate(-1.8deg); }
+.clip-right { transform: rotate(1.4deg); margin-top: 28px; }
+.clipping .tape { top: 0; left: 50%; transform: translateX(-50%) rotate(-4deg); }
+.clip-right .tape { background: rgba(159, 207, 230, .75); transform: translateX(-50%) rotate(5deg); }
+.clipping figcaption { text-align: center; font-size: 22px; margin-top: 2px; line-height: 1.2; }
+@media (max-width: 720px) {
+  .clippings { grid-template-columns: 1fr; max-width: 460px; }
+  .clip-right { margin-top: 0; }
+}
+
 /* ---------- Research ---------- */
 .metrics-wrap { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: center; }
 .metrics { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; justify-items: center; }
@@ -561,6 +581,8 @@ mark.m-sage { background: linear-gradient(transparent 55%, var(--sage) 55%, var(
   .paper:not(.featured):hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: rgba(31, 42, 50, .28); }
   .sticker, .honor, .metric { transition: transform .25s cubic-bezier(.2,.8,.2,1.4); }
   .stickers .sticker:hover, .honor:hover { transform: rotate(0deg) scale(1.05); }
+  .clipping { transition: transform .3s cubic-bezier(.2,.8,.2,1.2); }
+  .clipping:hover { transform: rotate(0deg) scale(1.02); }
   .metric:hover { transform: rotate(0deg) scale(1.05); }
   .btn { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
   .btn:hover { transform: translate(-1px, -2px); }
