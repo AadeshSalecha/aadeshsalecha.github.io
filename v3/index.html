@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aadesh Salecha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Aadesh Salecha">
+  <meta name="description" content="Aadesh Salecha: applied AI for climate, energy finance and planetary intelligence. Founding Engineer at Hyfin; MS CS, Stanford.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#060b16">
+  <link rel="icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="switcher" aria-label="Site versions">
+    <a href="../">Main</a><span aria-hidden="true">·</span><a href="../v1/">v1</a><span aria-hidden="true">·</span><a href="../v2/">v2</a><span aria-hidden="true">·</span><a href="../v3/" aria-current="page">v3</a><span aria-hidden="true">·</span><a href="../v4/">v4</a>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap topbar">
+      <span class="mono brand"><span class="dot" aria-hidden="true"></span>AS / planetary-intelligence</span>
+      <nav class="toplinks" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#now">Now</a>
+        <a href="#career">Career</a>
+        <a href="#publications">Publications</a>
+      </nav>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="mono kicker">37.4275° N, 122.1697° W <span class="sep">/</span> SF Bay Area</p>
+        <h1>Aadesh<br>Salecha</h1>
+        <p class="tagline">Applied AI for climate, energy finance &amp; planetary intelligence</p>
+        <ul class="chips" aria-label="Highlights">
+          <li class="chip chip-now">Founding Engineer @ Hyfin</li>
+          <li class="chip">MS CS @ Stanford</li>
+          <li class="chip">Ex-Amazon</li>
+          <li class="chip">Ex-DraftKings</li>
+          <li class="chip">Published researcher</li>
+        </ul>
+      </div>
+
+      <figure class="globe-fig" aria-hidden="true">
+        <canvas id="globe"></canvas>
+        <div class="hud hud-tl mono">
+          <span class="hud-k">ORBIT</span> SSO-98°<br>
+          <span class="hud-k">SUB-SAT</span> <span id="subsat">—</span>
+        </div>
+        <div class="hud hud-br mono">
+          <span class="lg lg-site"></span> places I've worked<br>
+          <span class="lg lg-focus"></span> Hyfin focus: South Asia · Africa
+        </div>
+      </figure>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="wrap about" aria-labelledby="about-h">
+      <figure class="portrait">
+        <div class="frame">
+          <img src="../images/AadeshSalecha.jpg" width="900" height="1200" alt="Aadesh Salecha in a white shirt and red Stanford graduation stole, with Hoover Tower behind him">
+          <span class="corner c1" aria-hidden="true"></span><span class="corner c2" aria-hidden="true"></span>
+          <span class="corner c3" aria-hidden="true"></span><span class="corner c4" aria-hidden="true"></span>
+        </div>
+        <figcaption class="mono">IMG · Stanford, CA<br>37.4275° N, 122.1697° W</figcaption>
+      </figure>
+
+      <div class="bio-card card">
+        <div class="card-head">
+          <h2 id="about-h" class="label mono">00 · About</h2>
+          <div class="toggle" role="group" aria-label="Bio length">
+            <button type="button" class="toggle-btn" data-bio="short" aria-pressed="true">Short</button>
+            <button type="button" class="toggle-btn" data-bio="long" aria-pressed="false">Long</button>
+          </div>
+        </div>
+
+        <div class="bio prose" id="bio-short">
+          <p class="lead">I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a>, where I'm building GAIA, a platform that synthesizes asset performance and market data to power clean energy loan origination. I design the agentic data pipelines and risk intelligence tools aimed at closing the $4T+ clean energy financing gap across South Asia and Africa.</p>
+          <p>I recently finished my MS in Computer Science at Stanford, where I built geospatial ML for carbon sequestration with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>'s lab at the <a href="https://sustainability.stanford.edu/">Doerr School of Sustainability</a>, and studied human-like biases in LLMs (<a href="https://doi.org/10.1093/pnasnexus/pgae533">PNAS Nexus</a>, <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>). Before that, I worked on AI/ML at <a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">Amazon</a> and large-scale financial systems at <a href="https://www.draftkings.com/">DraftKings</a>.</p>
+        </div>
+
+        <div class="bio prose" id="bio-long" hidden>
+          <p class="lead">I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a> in San Francisco, where I'm building GAIA, a fintech platform that synthesizes asset performance and market data for clean energy loan origination. I design agentic data enrichment pipelines that combine LLMs and web scraping to create data for a new asset class with no track record, and I'm architecting risk intelligence tools aimed at the $4T+ clean energy financing gap across South Asia and Africa. I also lead the rollout of AI-native workflows across the team.</p>
+          <p>I completed my MS in Computer Science at Stanford University in 2026. There, I worked as an AI/ML researcher with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a> and the <a href="https://fse.fsi.stanford.edu/">Center on Food Security and the Environment</a> at the <a href="https://sustainability.stanford.edu/">Stanford Doerr School of Sustainability</a>, building geospatial ML pipelines on Google Earth Engine, Landsat, and Sentinel-2 imagery to detect tree species across cropland in the Global South. This work supports verification of the 5+ Gt CO<sub>2</sub>/year sequestration potential of integrating trees into global cropland. I also won Stanford's first Green AI Hackathon by building a <a href="https://findgeothermal.com/">geothermal site prediction system</a> on AlphaEarth satellite embeddings (93% AUC).</p>
+          <p>Earlier at Stanford, I worked with <a href="https://jeichstaedt.com/">Prof. Johannes Eichstaedt</a> on applying cognitive science and psychometrics to evaluate LLMs. Our paper showing that <a href="https://doi.org/10.1093/pnasnexus/pgae533">LLMs exhibit human-like social desirability biases</a> was published in PNAS Nexus and covered by <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>.</p>
+          <p>In 2025, I was an AI/ML Engineer at Amazon (<a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">AWS SageMaker HyperPod</a>), where I designed an agentic AI system that combines telemetry, time-series signals, and RAG-based diagnosis to auto-resolve ML infrastructure failures, and cut GPU energy waste by about 200 kg CO<sub>2</sub>e per day. Before Stanford, I was a Senior Software Engineer on the Financial Platform team at <a href="https://www.draftkings.com/">DraftKings</a>, building production systems that handled billions of requests for millions of users. I received my BS in Computer Science, summa cum laude, from the <a href="https://twin-cities.umn.edu/">University of Minnesota</a>.</p>
+          <p>Outside of work, I enjoy climbing, strength training, hiking and brewing coffee.</p>
+        </div>
+
+        <ul class="icons" aria-label="Contact and profiles">
+          <li><a href="mailto:aadeshsalecha@gmail.com" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a></li>
+          <li><a href="https://scholar.google.com/citations?hl=en&amp;user=Cnwzl3oAAAAJ" title="Google Scholar" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a></li>
+          <li><a href="https://github.com/aadeshsalecha/" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/aadesh-salecha" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BENTO ============ -->
+    <div class="wrap bento">
+
+      <!-- NOW -->
+      <section id="now" class="card now" aria-labelledby="now-h">
+        <div class="card-head">
+          <h2 id="now-h" class="label mono">01 · Now</h2>
+          <span class="meta mono">37.7749° N, 122.4194° W</span>
+        </div>
+        <a class="logo-chip logo-chip-lg" href="https://www.hyfin.capital/" aria-label="Hyfin">
+          <img class="logo-hyfin" src="../images/logos/hyfin.png" alt="Hyfin" width="1406" height="484">
+        </a>
+        <h3 class="card-title">Founding Engineer, building GAIA</h3>
+        <p class="mono sub">Hyfin · San Francisco · May 2026 – present</p>
+        <p>GAIA synthesizes asset performance and market data to power clean energy loan origination, aimed at the $4T+ clean energy financing gap across South Asia and Africa.</p>
+        <ul class="ticks">
+          <li>Agentic data enrichment pipelines combining LLMs and web scraping, creating data for a new asset class with no track record</li>
+          <li>Risk intelligence tools for clean energy lending</li>
+          <li>Leading the rollout of AI-native workflows across the team</li>
+        </ul>
+        <ol class="flow mono" aria-label="How GAIA fits together">
+          <li><span class="step">in</span>Asset performance + market data</li>
+          <li><span class="step">enrich</span>Agentic pipelines: LLMs + web scraping</li>
+          <li><span class="step">assess</span>Risk intelligence</li>
+          <li><span class="step">out</span>Clean energy loan origination</li>
+        </ol>
+      </section>
+
+      <!-- RESEARCH -->
+      <section id="research" class="card research" aria-labelledby="research-h">
+        <div class="card-head">
+          <h2 id="research-h" class="label mono">02 · Research</h2>
+          <span class="meta mono">37.4275° N, 122.1697° W</span>
+        </div>
+        <figure class="tile" aria-hidden="true">
+          <canvas id="mosaic"></canvas>
+          <span class="scan"></span>
+          <span class="tile-tag mono">procedural tile · cropland + tree crowns</span>
+        </figure>
+        <h3 class="card-title">Geospatial ML for trees in cropland</h3>
+        <p class="mono sub">Lobell lab · FSE · Stanford Doerr School · May 2023 – May 2026</p>
+        <p>With <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a> and the <a href="https://fse.fsi.stanford.edu/">Center on Food Security and the Environment</a>: ML pipelines on Google Earth Engine, Landsat and Sentinel-2 imagery that detect tree species across cropland in the Global South, supporting verification of the sequestration potential of integrating trees into global cropland.</p>
+        <ul class="tags mono" aria-label="Tools and data">
+          <li>Google Earth Engine</li><li>Landsat</li><li>Sentinel-2</li><li>AlphaEarth embeddings</li>
+        </ul>
+      </section>
+
+      <!-- IMPACT -->
+      <section class="impact" aria-labelledby="impact-h">
+        <h2 id="impact-h" class="visually-hidden">Impact in numbers</h2>
+        <div class="card stat stat-green">
+          <span class="label mono">Sequestration potential</span>
+          <p class="num">5+<span class="unit">Gt CO<sub>2</sub>/yr</span></p>
+          <p class="cap">from integrating trees into global cropland; my tree-detection work supports its verification</p>
+        </div>
+        <div class="card stat stat-cyan">
+          <span class="label mono">GPU energy waste cut</span>
+          <p class="num">~200<span class="unit">kg CO<sub>2</sub>e/day</span></p>
+          <p class="cap">agentic auto-resolution of ML infrastructure failures at Amazon SageMaker HyperPod</p>
+        </div>
+        <div class="card stat stat-cyan">
+          <span class="label mono">Financing gap targeted</span>
+          <p class="num">$4T+</p>
+          <p class="cap">clean energy financing gap across South Asia and Africa, the market GAIA is built for</p>
+        </div>
+        <div class="card stat stat-green">
+          <span class="label mono">Geothermal prediction</span>
+          <p class="num">93%<span class="unit">AUC</span></p>
+          <p class="cap"><a href="https://findgeothermal.com/">findgeothermal.com</a>, on AlphaEarth satellite embeddings; won Stanford's first Green AI Hackathon</p>
+        </div>
+      </section>
+
+      <!-- CAREER -->
+      <section id="career" class="card career" aria-labelledby="career-h">
+        <div class="card-head">
+          <h2 id="career-h" class="label mono">03 · Career track</h2>
+          <span class="meta mono">2018 → 2026</span>
+        </div>
+        <div class="axis mono" aria-hidden="true">
+          <span style="--t:0">2018</span><span style="--t:2">2020</span><span style="--t:4">2022</span><span style="--t:6">2024</span><span style="--t:8">2026</span>
+        </div>
+        <ol class="track">
+          <li class="row" style="--s:8.33;--e:8.77">
+            <a class="logo-chip" href="https://www.hyfin.capital/"><img class="logo-hyfin" src="../images/logos/hyfin.png" alt="Hyfin" width="1406" height="484"></a>
+            <div class="role"><strong>Founding Engineer</strong><span class="mono">May 2026 – present · San Francisco</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg seg-now"></span></div>
+          </li>
+          <li class="row" style="--s:7.33;--e:7.67">
+            <a class="logo-chip" href="https://aws.amazon.com/sagemaker/ai/hyperpod/"><img class="logo-amazon" src="../images/logos/amazon.svg" alt="Amazon"></a>
+            <div class="role"><strong>AI/ML Engineer, SageMaker HyperPod</strong><span class="mono">May 2025 – Sept 2025 · Seattle</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg"></span></div>
+          </li>
+          <li class="row" style="--s:6.67;--e:8.33">
+            <a class="logo-chip" href="https://www.stanford.edu/"><img class="logo-stanford" src="../images/logos/stanford.svg" alt="Stanford University"></a>
+            <div class="role"><strong>MS Computer Science</strong><span class="mono">2024 – 2026 · Stanford, CA</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg seg-edu"></span></div>
+          </li>
+          <li class="row" style="--s:5.33;--e:8.33">
+            <a class="logo-chip" href="https://sustainability.stanford.edu/"><img class="logo-stanford" src="../images/logos/stanford.svg" alt="Stanford Doerr School of Sustainability"></a>
+            <div class="role"><strong>AI/ML Researcher, Doerr School · Lobell lab</strong><span class="mono">May 2023 – May 2026 · geospatial ML, LLM evaluation</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg seg-green"></span></div>
+          </li>
+          <li class="row" style="--s:5.33;--e:8.33">
+            <a class="logo-chip chip-mark" href="https://hai.stanford.edu/"><img class="logo-tree" src="../images/logos/stanford-tree.svg" alt=""><span class="wordmark">HAI</span><span class="visually-hidden">Stanford HAI</span></a>
+            <div class="role"><strong>Affiliated researcher, Stanford HAI</strong><span class="mono">May 2023 – May 2026</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg seg-green"></span></div>
+          </li>
+          <li class="row" style="--s:3.92;--e:6.42">
+            <a class="logo-chip chip-mark" href="https://www.draftkings.com/"><img class="logo-crown" src="../images/logos/draftkings-crown.png" alt="" width="64" height="64"><span class="wordmark">DraftKings</span></a>
+            <div class="role"><strong>Senior Software Engineer, Financial Platform</strong><span class="mono">Dec 2021 – Jun 2024 · Boston</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg"></span></div>
+          </li>
+          <li class="row" style="--s:0;--e:3.42">
+            <a class="logo-chip chip-mark chip-text" href="https://twin-cities.umn.edu/"><span class="wordmark">University of Minnesota</span></a>
+            <div class="role"><strong>BS Computer Science, summa cum laude</strong><span class="mono">2018 – 2021 · 4.0 GPA</span></div>
+            <div class="bar-track" aria-hidden="true"><span class="seg seg-edu"></span></div>
+          </li>
+        </ol>
+        <p class="legend mono" aria-hidden="true"><span><span class="lg lg-work"></span>industry</span><span><span class="lg lg-res"></span>research</span><span><span class="lg lg-edu"></span>education</span></p>
+      </section>
+
+      <!-- CITATIONS -->
+      <section id="citations" class="card cites" aria-labelledby="cites-h">
+        <div class="card-head">
+          <h2 id="cites-h" class="label mono">04 · Citations per year</h2>
+          <span class="meta mono">src: Google Scholar</span>
+        </div>
+        <dl class="metrics">
+          <div><dt class="mono">Citations</dt><dd>320</dd></div>
+          <div><dt class="mono">h-index</dt><dd>6</dd></div>
+          <div><dt class="mono">Publications</dt><dd>16</dd></div>
+        </dl>
+        <figure class="chart">
+          <svg viewBox="0 0 600 256" role="group" aria-labelledby="chart-t" aria-describedby="chart-d">
+            <title id="chart-t">Citations per year, 2020 to 2026</title>
+            <desc id="chart-d">Bar chart. 2020: 2, 2021: 5, 2022: 14, 2023: 16, 2024: 21, 2025: 113, 2026 year to date: 145.</desc>
+            <defs>
+              <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="6" height="6" fill="var(--bar-ytd-bg)"/>
+                <line x1="0" y1="0" x2="0" y2="6" stroke="var(--cyan)" stroke-width="3"/>
+              </pattern>
+            </defs>
+            <g aria-hidden="true">
+              <line class="grid" x1="40" x2="592" y1="158.7" y2="158.7"/><text class="tick" x="32" y="162.7" text-anchor="end">50</text>
+              <line class="grid" x1="40" x2="592" y1="91.3" y2="91.3"/><text class="tick" x="32" y="95.3" text-anchor="end">100</text>
+              <line class="grid" x1="40" x2="592" y1="24.0" y2="24.0"/><text class="tick" x="32" y="28.0" text-anchor="end">150</text>
+              <line class="base" x1="40" x2="592" y1="226" y2="226"/><text class="tick" x="32" y="230" text-anchor="end">0</text>
+            </g>
+            <g role="list">
+<g class="bar" tabindex="0" role="listitem" aria-label="2020: 2 citations"><title>2020: 2 citations</title><rect class="hit" x="40.0" y="4" width="78.9" height="222"/><path class="mark" d="M60.4,226 V226.0 Q60.4,223.3 63.1,223.3 H95.7 Q98.4,223.3 98.4,226.0 V226 Z"/><text class="val" x="79.4" y="215.3" text-anchor="middle">2</text><text class="yr" x="79.4" y="246" text-anchor="middle">2020</text></g>
+<g class="bar" tabindex="0" role="listitem" aria-label="2021: 5 citations"><title>2021: 5 citations</title><rect class="hit" x="118.9" y="4" width="78.9" height="222"/><path class="mark" d="M139.3,226 V223.3 Q139.3,219.3 143.3,219.3 H173.3 Q177.3,219.3 177.3,223.3 V226 Z"/><text class="val" x="158.3" y="211.3" text-anchor="middle">5</text><text class="yr" x="158.3" y="246" text-anchor="middle">2021</text></g>
+<g class="bar" tabindex="0" role="listitem" aria-label="2022: 14 citations"><title>2022: 14 citations</title><rect class="hit" x="197.7" y="4" width="78.9" height="222"/><path class="mark" d="M218.1,226 V211.1 Q218.1,207.1 222.1,207.1 H252.1 Q256.1,207.1 256.1,211.1 V226 Z"/><text class="val" x="237.1" y="199.1" text-anchor="middle">14</text><text class="yr" x="237.1" y="246" text-anchor="middle">2022</text></g>
+<g class="bar" tabindex="0" role="listitem" aria-label="2023: 16 citations"><title>2023: 16 citations</title><rect class="hit" x="276.6" y="4" width="78.9" height="222"/><path class="mark" d="M297.0,226 V208.5 Q297.0,204.5 301.0,204.5 H331.0 Q335.0,204.5 335.0,208.5 V226 Z"/><text class="val" x="316.0" y="196.5" text-anchor="middle">16</text><text class="yr" x="316.0" y="246" text-anchor="middle">2023</text></g>
+<g class="bar" tabindex="0" role="listitem" aria-label="2024: 21 citations"><title>2024: 21 citations</title><rect class="hit" x="355.4" y="4" width="78.9" height="222"/><path class="mark" d="M375.9,226 V201.7 Q375.9,197.7 379.9,197.7 H409.9 Q413.9,197.7 413.9,201.7 V226 Z"/><text class="val" x="394.9" y="189.7" text-anchor="middle">21</text><text class="yr" x="394.9" y="246" text-anchor="middle">2024</text></g>
+<g class="bar show" tabindex="0" role="listitem" aria-label="2025: 113 citations"><title>2025: 113 citations</title><rect class="hit" x="434.3" y="4" width="78.9" height="222"/><path class="mark" d="M454.7,226 V77.8 Q454.7,73.8 458.7,73.8 H488.7 Q492.7,73.8 492.7,77.8 V226 Z"/><text class="val" x="473.7" y="65.8" text-anchor="middle">113</text><text class="yr" x="473.7" y="246" text-anchor="middle">2025</text></g>
+<g class="bar ytd show" tabindex="0" role="listitem" aria-label="2026: 145 citations (year to date)"><title>2026: 145 citations (year to date)</title><rect class="hit" x="513.1" y="4" width="78.9" height="222"/><path class="mark" d="M533.6,226 V34.7 Q533.6,30.7 537.6,30.7 H567.6 Q571.6,30.7 571.6,34.7 V226 Z"/><text class="val" x="552.6" y="22.7" text-anchor="middle">145</text><text class="yr" x="552.6" y="246" text-anchor="middle">2026*</text></g>
+            </g>
+          </svg>
+          <figcaption class="mono"><span class="lg lg-ytd" aria-hidden="true"></span>* 2026 is year to date. Hover, tap or focus a bar for its value.</figcaption>
+        </figure>
+      </section>
+
+      <!-- HONORS & PRESS -->
+      <section id="honors" class="card honors" aria-labelledby="honors-h">
+        <div class="card-head">
+          <h2 id="honors-h" class="label mono">05 · Honors &amp; press</h2>
+        </div>
+        <ul class="list">
+          <li><span class="badge mono">Winner</span> Stanford's first Green AI Hackathon: <a href="https://findgeothermal.com/">findgeothermal.com</a></li>
+          <li><span class="badge mono badge-press">Press</span> <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED: "Chatbots, Like the Rest of Us, Just Want to Be Loved"</a></li>
+          <li><span class="badge mono badge-press">Press</span> <a href="https://stanforddaily.com/2025/11/02/ai-into-the-wild-connects-stanford-to-local-flora-and-fauna-at-jasper-ridge/">Stanford Daily: "'AI Into the Wild' connects Stanford to local flora and fauna at Jasper Ridge"</a></li>
+          <li><span class="badge mono badge-muted">Awards</span> ExxonMobil Scholarship · UROP Research Scholarship · Tom Niccum Grant · Google Research Mentorship nominee · Dean's List 2018–2020</li>
+        </ul>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="card pubs" aria-labelledby="pubs-h">
+        <div class="card-head">
+          <h2 id="pubs-h" class="label mono">06 · Publications</h2>
+          <span class="meta mono">14 listed</span>
+        </div>
+        <p class="pubs-intro">Applied AI for climate and energy (geospatial ML, remote sensing), generative AI (LLM evaluation, preference tuning, application building), and applied NLP for psychology and the social sciences.</p>
+
+        <article class="featured">
+          <div class="featured-meta mono"><span class="badge">Featured</span> PNAS Nexus · 2024</div>
+          <h3><a href="https://llmsocialbias.github.io/llm-social-desirability-research/">Large Language Models Show Human-like Social Desirability Biases in Survey Responses</a></h3>
+          <p class="authors"><strong>Aadesh Salecha</strong>, <a href="https://www.linkedin.com/in/molly-e-ireland">Molly E. Ireland</a>, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>, <a href="https://www.stern.nyu.edu/faculty/bio/joao-sedoc">João Sedoc</a>, <a href="https://www.cis.upenn.edu/~ungar/">Lyle H. Ungar</a>, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a></p>
+          <p class="venue"><em>Proceedings of the National Academy of Sciences (PNAS Nexus)</em>, Vol. 3, No. 12 (2024)</p>
+          <p class="plinks mono"><a href="https://doi.org/10.1093/pnasnexus/pgae533">journal</a><a href="https://www.arxiv.org/abs/2405.06058">arxiv</a><a href="https://llmsocialbias.github.io/llm-social-desirability-research/">project</a><a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">wired</a></p>
+        </article>
+
+        <ol class="publist">
+          <li>
+            <span class="yr mono">2025</span>
+            <div>
+              <h3><a href="https://www.nature.com/articles/s41746-025-01642-x">Monitoring the Opioid Epidemic via Social Media Discussions</a></h3>
+              <p class="authors">Adam Lavertu, Tymor Hamamsy, <strong>Aadesh Salecha</strong>, Delaney Smith, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>, Russ B Altman</p>
+              <p class="venue"><em>Nature Partner Journals: Digital Medicine</em> (2025)</p>
+              <p class="plinks mono"><a href="https://www.nature.com/articles/s41746-025-01642-x">paper</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2024</span>
+            <div>
+              <h3><a href="https://link.springer.com/article/10.1007/s42001-024-00282-7">Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak</a></h3>
+              <p class="authors">Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+              <p class="venue"><em>Journal of Computational Social Science</em>, 7, 1599–1623 (October 2024)</p>
+              <p class="plinks mono"><a href="https://doi.org/10.1007/s42001-024-00282-7">paper</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2024</span>
+            <div>
+              <h3>The Language of Conflict Transformation - Assessing Psychological Change Patterns in Israeli-Palestinian Track Two Interactive Problem Solving</h3>
+              <p class="authors">Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>, <strong>Aadesh Salecha</strong>, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a></p>
+              <p class="venue"><em>Negotiation and Conflict Management Research</em> (2024)</p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2022</span>
+            <div>
+              <h3><a href="https://doi.org/10.1007/s13278-022-00890-z">Fake News Spreader Detection using Trust-based strategies in Social Networks with Bot Filtration</a></h3>
+              <p class="authors"><a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+              <p class="venue"><em>Social Network Analysis and Mining (SNAM)</em> (2022)</p>
+              <p class="plinks mono"><a href="https://doi.org/10.1007/s13278-022-00890-z">paper</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2022</span>
+            <div>
+              <h3>Public's Discrete Emotions During the COVID-19 and Impacts on Their Coping Behaviors in the U.S.</h3>
+              <p class="authors">Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+              <p class="venue"><em>72nd Annual International Communication Association Conference</em> (2022)</p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2021</span>
+            <div>
+              <h3><a href="https://doi.org/10.1080/17512786.2021.1882873">Relationship between Citizen-Eyewitness Images and Audience Engagement with News</a></h3>
+              <p class="authors">Jisu Kim, Jisu Huh, <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+              <p class="venue"><em>Journalism Practice</em> (2021)</p>
+              <p class="plinks mono"><a href="https://doi.org/10.1080/17512786.2021.1882873">paper</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2021</span>
+            <div>
+              <h3><a href="https://hdl.handle.net/11299/222250">Empirical Study of the Spread of Misinformation: A Big Data Approach</a></h3>
+              <p class="authors"><strong>Aadesh Salecha</strong></p>
+              <p class="venue"><em>Undergraduate Thesis (Summa Cum Laude), University of Minnesota Digital Conservancy</em> (2021)</p>
+              <p class="plinks mono"><a href="https://hdl.handle.net/11299/222250">paper</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2020</span>
+            <div>
+              <h3><a href="https://ieeexplore.ieee.org/abstract/document/9308258">Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines</a></h3>
+              <p class="authors"><a href="https://www.linkedin.com/in/jin-hong-kuan">Jin Hong Kuan</a>, <strong>Aadesh Salecha</strong></p>
+              <p class="venue"><em>IEEE Symposium Series on Computational Intelligence (SSCI)</em> (2020)</p>
+              <p class="plinks mono"><a href="https://ieeexplore.ieee.org/abstract/document/9308258">paper</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr mono">2020</span>
+            <div>
+              <h3><a href="https://ieeexplore.ieee.org/abstract/document/9381466">Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning</a></h3>
+              <p class="authors"><a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+              <p class="venue"><em>IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</em> (2020)</p>
+              <p class="plinks mono"><a href="https://ieeexplore.ieee.org/abstract/document/9381466">paper</a></p>
+            </div>
+          </li>
+          <li class="review">
+            <span class="yr mono">Review</span>
+            <div>
+              <h3>No Good Time to Negotiate? Track Two Diplomacy within the Protracted Israel-Palestine Conflict as Strategic Joint Thinking</h3>
+              <p class="authors">Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>, <strong>Aadesh Salecha</strong>, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a></p>
+              <p class="venue"><em>Journal of Conflict Resolution</em> (Under review, submitted Dec 2023)</p>
+            </div>
+          </li>
+          <li class="review">
+            <span class="yr mono">Review</span>
+            <div>
+              <h3>A Computational Model of Reward Learning and Habits on Social Media</h3>
+              <p class="authors">Georgia Turner, Lukas J. Gunschera, Shashanka Subrahmanya, <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt, Stefano Palminteri, Amy Orben</p>
+              <p class="venue"><em>PsyArXiv Preprints</em> (Under review)</p>
+              <p class="plinks mono"><a href="https://osf.io/preprints/psyarxiv/xe25k">preprint</a></p>
+            </div>
+          </li>
+          <li class="review">
+            <span class="yr mono">Review</span>
+            <div>
+              <h3>The Answer to the Mental Health Crisis: Examining Media Bias Regarding Psychedelic Treatments for Depression and PTSD Using Natural Language Processing</h3>
+              <p class="authors">Audrey Evers, Elizabeth C. Stade, <strong>Aadesh Salecha</strong>, Zoe Tait, Gabriela Khazanov</p>
+              <p class="venue"><em>Under Review</em></p>
+            </div>
+          </li>
+          <li class="review">
+            <span class="yr mono">Review</span>
+            <div>
+              <h3>Structured AI Dialogues Can Increase Happiness and Meaning in Life</h3>
+              <p class="authors"><strong>Aadesh Salecha</strong>, Jonas Schöne, Sonja Lyubomirsky, João Sedoc, Johannes Eichstaedt, Robb Willer</p>
+              <p class="venue"><em>Under Review</em></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="wrap footer">
+    <p class="mono">© Aadesh Salecha · End of transmission</p>
+    <p>Design inspired by <a href="https://jonbarron.info">Jon Barron</a> and <a href="https://github.com/hadleydalt/my-portfolio">Hadley Dalton</a>. Globe and imagery are drawn procedurally.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
