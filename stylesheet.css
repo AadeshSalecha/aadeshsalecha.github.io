@@ -31,6 +31,8 @@
   --surface: #f9fafb;
   --border: #e5e7eb;
   --highlight: #ddd78dff;
+  --link: #0b6a94;
+  --link-hover: #550c18;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -94,6 +96,38 @@ a:focus {
   color: var(--accent-color);
 }
 
+/* In-text links: color + underline so they are obvious */
+.hero-text p a,
+.section-description a,
+.paper-authors a,
+.site-footer a {
+  display: inline;
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(11, 106, 148, 0.45);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.hero-text p a:hover,
+.section-description a:hover,
+.paper-authors a:hover,
+.site-footer a:hover,
+.hero-text p a:focus-visible,
+.section-description a:focus-visible,
+.paper-authors a:focus-visible,
+.site-footer a:focus-visible {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+}
+
+.paper-title a:hover,
+.paper-title a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ===================================
    SPLASH SCREEN
    =================================== */
@@ -104,7 +138,10 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #355070ff 0%, #550c18ff 50%, #41bbd9ff 100%);
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 20%, rgba(65, 187, 217, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 55% at 85% 85%, rgba(53, 80, 112, 0.9) 0%, transparent 65%),
+    linear-gradient(160deg, #0f2a3d 0%, #13344a 45%, #0b1d2c 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +158,9 @@ a:focus {
   font-family: 'Poppins', sans-serif;
   font-size: 4.5rem;
   font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
   margin: 0 0 1.5rem 0;
   opacity: 0;
   animation: fadeInDown 0.8s ease forwards;
@@ -142,10 +182,10 @@ a:focus {
 }
 
 .splash-position .position-item {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   padding: 0.5rem 0.875rem;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   font-weight: 600;
   color: white;
   backdrop-filter: blur(10px);
@@ -160,8 +200,9 @@ a:focus {
   font-family: 'Poppins', sans-serif;
   font-size: 1.05rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.95);
-  margin: 1.5rem 0 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 1.5rem auto 0;
+  max-width: 36rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   opacity: 0;
@@ -232,6 +273,7 @@ a:focus {
 }
 
 .scroll-indicator {
+  color: rgba(255, 255, 255, 0.85);
   position: absolute;
   bottom: 3rem;
   left: 50%;
@@ -313,7 +355,7 @@ a:focus {
 }
 
 .highlight-text {
-  background: linear-gradient(135deg, var(--accent-color) 0%, #f97316 100%);
+  background: linear-gradient(135deg, #7fd8ee 0%, #ddd78d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -366,9 +408,6 @@ a:focus {
   display: none;
 }
 
-.bio a {
-  display: inline;
-}
 
 .personal-note {
   font-style: italic;
@@ -399,6 +438,139 @@ a:focus {
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+/* Contact icons (al-folio style) */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.contact-icons a {
+  color: var(--text-secondary);
+  display: inline-flex;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-icons a:hover,
+.contact-icons a:focus-visible {
+  color: var(--link);
+  transform: translateY(-2px);
+}
+
+.contact-icons svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.contact-note {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* ===================================
+   EXPERIENCE LOGOS
+   =================================== */
+
+.experience-section {
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.experience-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  padding: 1.25rem 0.75rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.logo-card:hover,
+.logo-card:focus-visible {
+  color: var(--text-primary);
+  transform: translateY(-3px);
+  border-color: var(--link);
+  box-shadow: var(--shadow-lg);
+}
+
+.logo-box {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-wordmark {
+  max-height: 34px;
+  max-width: 140px;
+  width: auto;
+}
+
+.logo-amazon {
+  max-height: 30px;
+  margin-top: 8px;
+}
+
+.logo-mark {
+  height: 36px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1f2937;
+}
+
+.logo-text-hai {
+  color: #8c1515;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.logo-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.logo-dates {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* ===================================
