@@ -1,10 +1,10 @@
-/* Aadesh Salecha — v4 interactions (no dependencies) */
+/* Aadesh Salecha — site interactions (no dependencies) */
 (function () {
   'use strict';
 
   /* ------------------------------------------------------------------
      Illustration slots.
-     Drop generated images into v4/assets/ using the filenames named in
+     Drop generated images into assets/ using the filenames named in
      each element's data-illustration attribute, then set this to true.
      Each slot keeps its inline SVG doodles if its image is missing.
      ------------------------------------------------------------------ */

@@ -1,5 +1,5 @@
 /* ==========================================================
-   Aadesh Salecha — v4 "Playful, illustrated, personal"
+   Aadesh Salecha — "Playful, illustrated, personal"
    Cream paper, flax/sunflower, Stanford-ish red, sky, ink.
    ========================================================== */
 
@@ -51,7 +51,6 @@ body {
   font-size: 17px;
   line-height: 1.65;
   overflow-x: hidden;
-  padding-bottom: 72px; /* room for the version switcher */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -397,6 +396,8 @@ mark.m-sage { background: linear-gradient(transparent 55%, var(--sage) 55%, var(
 .logo-amazon { height: 32px; width: auto; margin-top: 6px; }
 .logo-tree { height: 44px; width: auto; }
 .logo-crown { width: 36px; height: 36px; }
+.logo-umn { height: 34px; width: auto; }
+.logo-lockup .lockup-umn { font-size: 19px; line-height: 1.15; text-align: left; }
 .lockup-text { font-family: var(--f-body); font-weight: 700; font-size: 24px; letter-spacing: -0.01em; color: var(--ink); }
 .logo-lockup .lockup-text { border-left: 2px solid var(--line); padding-left: 10px; }
 .logo-text { font-family: var(--f-display); font-weight: 700; font-size: 21px; line-height: 1.15; }
@@ -552,19 +553,6 @@ mark.m-sage { background: linear-gradient(transparent 55%, var(--sage) 55%, var(
 .footer-credit { font-size: 14px; color: var(--muted); }
 
 /* ---------- Version switcher ---------- */
-.versions {
-  position: fixed; z-index: 50; left: 50%; bottom: 14px; transform: translateX(-50%);
-  display: flex; align-items: center; gap: 2px;
-  background: var(--ink); color: #c9c3b0;
-  padding: 5px 8px; border-radius: 999px;
-  font-size: 13.5px; font-weight: 500;
-  box-shadow: 0 10px 24px -10px rgba(0,0,0,.5);
-  white-space: nowrap;
-}
-.versions a { color: #fff; text-decoration: none; padding: 4px 9px; border-radius: 999px; }
-.versions a:hover { background: rgba(255,255,255,.14); color: #fff; text-decoration: underline; }
-.versions a[aria-current="page"] { background: var(--flax); color: var(--ink); font-weight: 700; }
-.versions a:focus-visible { outline-color: var(--flax); }
 
 /* ---------- Motion (only when allowed) ---------- */
 @media (prefers-reduced-motion: no-preference) {
@@ -641,8 +629,6 @@ mark.m-sage { background: linear-gradient(transparent 55%, var(--sage) 55%, var(
   .sticky-note { transform: rotate(1deg); }
   .paper { padding: 18px 16px 16px; }
   .icon-row a { width: 48px; height: 48px; }
-  .versions { font-size: 13px; padding: 4px 6px; bottom: 10px; }
-  .versions a { padding: 4px 7px; }
 }
 
 @media (forced-colors: active) {
@@ -651,7 +637,7 @@ mark.m-sage { background: linear-gradient(transparent 55%, var(--sage) 55%, var(
 }
 
 @media print {
-  .versions, .topbar, .hero-scene, .skip { display: none; }
+  .topbar, .hero-scene, .skip { display: none; }
   body { background: #fff; padding: 0; }
   .bio[hidden] { display: block !important; }
 }

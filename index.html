@@ -1,620 +1,545 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aadesh Salecha</title>
   <meta name="author" content="Aadesh Salecha">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta name="description" content="Aadesh Salecha: Founding Engineer at Hyfin. Applied AI for climate, energy finance and planetary intelligence.">
+  <meta name="theme-color" content="#fbf5e6">
+  <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght,SOFT@9..144,500;9..144,700;9..144,800,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Splash Screen -->
-  <div class="splash-screen" id="splash">
-    <div class="splash-content">
-      <h1 class="splash-name">Aadesh Salecha</h1>
-      <p class="splash-position">
-        <span class="position-item">Founding Engineer @ Hyfin</span>
-        <span class="position-item">MS CS @ Stanford</span>
-        <span class="position-item">Ex-Amazon</span>
-        <span class="position-item">Ex-DraftKings</span>
-        <span class="position-item">Multi-published Researcher</span>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ Doodle sprite (hand-drawn-feel, stroke = currentColor) ============ -->
+<svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="d-sun" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="12.5" fill="var(--flax)"/>
+      <path d="M32 6.5v8M32 49.5v8M6.5 32h8M49.5 32h8M14 14l5.5 5.5M44.5 44.5 50 50M50 14l-5.5 5.5M19.5 44.5 14 50"/>
+      <path d="M27.5 30.5h.1M36.5 30.5h.1" stroke-width="3.2"/>
+      <path d="M27.5 35.5c2.6 2.6 6.4 2.6 9 0"/>
+    </symbol>
+    <symbol id="d-panel" viewBox="0 0 64 64">
+      <path d="M9 22.5 46 14l10.5 24.5L20 46.5Z" fill="var(--sky-soft)"/>
+      <path d="M21.3 19.7 31.5 43.8M33.7 16.8l10.6 24.3M14.4 34.5 51.2 26.3"/>
+      <path d="M37 43l1.5 12.5M29 56.5h18"/>
+    </symbol>
+    <symbol id="d-leaf" viewBox="0 0 64 64">
+      <path d="M11 53C10 30 26 12 54 9.5 53 37 37 53 11 53Z" fill="var(--sage)"/>
+      <path d="M11 53C24 40 36 27 49 15M24 40l-2-9M32 32l-1-10M28 36.5l10 2M37 27l10 1"/>
+    </symbol>
+    <symbol id="d-satellite" viewBox="0 0 64 64">
+      <g transform="rotate(-28 32 34)">
+        <rect x="26" y="28" width="12" height="12" rx="2.5" fill="var(--red-soft)"/>
+        <rect x="5" y="30" width="16" height="8" rx="1.5" fill="var(--sky-soft)"/>
+        <rect x="43" y="30" width="16" height="8" rx="1.5" fill="var(--sky-soft)"/>
+        <path d="M13 30v8M51 30v8M21 34h5M38 34h5M32 28v-7"/>
+        <circle cx="32" cy="18.5" r="2.5"/>
+      </g>
+      <path d="M44 7.5c4 1 7 4 8 8M45.5 2.5c6.5 1.5 11 6 12.5 12.5"/>
+    </symbol>
+    <symbol id="d-coffee" viewBox="0 0 64 64">
+      <path d="M13 27h31v14c0 7-5.5 12.5-12.5 12.5h-6C18.5 53.5 13 48 13 41Z" fill="var(--red-soft)"/>
+      <path d="M44 31h3.5a6 6 0 0 1 0 12H44M9 58.5h40M21 21c-3-4 3-6 0-11M29 21c-3-4 3-6 0-11M37 21c-3-4 3-6 0-11"/>
+    </symbol>
+    <symbol id="d-hold" viewBox="0 0 64 64">
+      <path d="M13 37C9 22 25 9.5 40 13.5s19 21 8.5 32.5S17.5 52 13 37Z" fill="var(--flax)"/>
+      <circle cx="33" cy="31" r="4.5" fill="var(--paper)"/>
+      <path d="M20 41h.1M45 22h.1M43 41h.1M24 24h.1" stroke-width="3"/>
+    </symbol>
+    <symbol id="d-dumbbell" viewBox="0 0 64 64">
+      <rect x="11" y="21" width="8" height="22" rx="2" fill="var(--sky-soft)"/>
+      <rect x="45" y="21" width="8" height="22" rx="2" fill="var(--sky-soft)"/>
+      <path d="M19 32h26M6.5 26.5v11M57.5 26.5v11" stroke-width="3.2"/>
+    </symbol>
+    <symbol id="d-mountain" viewBox="0 0 64 64">
+      <path d="M5 52 24 21l10 15 8-10 17 26Z" fill="var(--sage)"/>
+      <path d="M18.5 30 24 21l5.5 8.5-3.2 2-2.3-2.5-2.6 2.6Z" fill="var(--paper)"/>
+      <path d="M30 52c2-4 8-5 6-9" stroke-dasharray="2 4"/>
+    </symbol>
+    <symbol id="d-sparkle" viewBox="0 0 64 64">
+      <path d="M32 6c2 18 6 23 26 26-20 3-24 8-26 26-2-18-6-23-26-26 20-3 24-8 26-26Z" fill="var(--flax)"/>
+    </symbol>
+    <symbol id="d-squiggle" viewBox="0 0 120 16">
+      <path d="M3 10c10-8 18 6 28-1s18-7 28 0 18 7 28 0 19-6 30 0"/>
+    </symbol>
+    <symbol id="d-arrow" viewBox="0 0 64 64">
+      <path d="M8 14c14 2 34 8 40 34M40 42l8 7 5-9"/>
+    </symbol>
+    <symbol id="d-pin" viewBox="0 0 64 64">
+      <circle cx="32" cy="24" r="12" fill="var(--red-sticker)"/>
+      <circle cx="28" cy="20" r="3" fill="#fff" stroke="none" opacity=".7"/>
+      <path d="M32 36v18"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Aadesh Salecha, back to top">
+    <span class="brand-mark" aria-hidden="true">AS</span>
+    <span class="brand-name">Aadesh Salecha</span>
+  </a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#path">Path</a>
+    <a href="#research">Research</a>
+    <a href="#papers">Papers</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ======================= HERO ======================= -->
+  <section class="hero" id="top" aria-labelledby="hero-name">
+    <div class="hero-text">
+      <p class="hand hello">hi there, I'm
+        <svg class="doodle doodle-inline" aria-hidden="true"><use href="#d-sparkle"/></svg>
       </p>
-      <p class="splash-focus">
-        Innovating in the <span class="highlight-text">Climate Tech × AI</span> space
-      </p>
-      <div class="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div class="scroll-arrow">↓</div>
+      <h1 id="hero-name">Aadesh<br>Salecha</h1>
+      <p class="tagline">Applied AI for <mark>climate</mark>, <mark class="m-sky">energy finance</mark> &amp; <mark class="m-sage">planetary intelligence</mark>.</p>
+      <ul class="stickers" aria-label="Highlights">
+        <li class="sticker s-red">Founding Engineer @ Hyfin</li>
+        <li class="sticker s-flax">MS CS @ Stanford</li>
+        <li class="sticker s-sky">Ex-Amazon</li>
+        <li class="sticker s-paper">Ex-DraftKings</li>
+        <li class="sticker s-sage">Published researcher</li>
+      </ul>
+      <div class="hero-cta">
+        <a class="btn btn-ink" href="#about">Read my story</a>
+        <a class="btn btn-ghost" href="#papers">See the papers</a>
       </div>
     </div>
-  </div>
 
-  <!-- Main Content -->
-  <div class="main-container">
-    <!-- Hero Section -->
-    <section class="hero-section fade-in">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h2 class="section-title">About Me</h2>
-          <div class="bio-toggle" role="group" aria-label="Bio length">
-            <button type="button" class="bio-toggle-btn active" data-bio="short" aria-pressed="true">Short</button>
-            <button type="button" class="bio-toggle-btn" data-bio="long" aria-pressed="false">Long</button>
-          </div>
+    <div class="hero-art">
+      <!-- ILLUSTRATION SLOT: assets/illustration-hero.png (transparent PNG, ~1200x1200).
+           Replaces the doodle scene behind the polaroid when ENABLE_ILLUSTRATIONS is true in script.js. -->
+      <div class="hero-scene" data-illustration="assets/illustration-hero.png" aria-hidden="true">
+        <span class="blob blob-sky"></span>
+        <span class="blob blob-flax"></span>
+        <svg class="doodle d-pos-sun"><use href="#d-sun"/></svg>
+        <svg class="doodle d-pos-sat"><use href="#d-satellite"/></svg>
+        <svg class="doodle d-pos-leaf"><use href="#d-leaf"/></svg>
+        <svg class="doodle d-pos-panel"><use href="#d-panel"/></svg>
+        <svg class="doodle d-pos-spark"><use href="#d-sparkle"/></svg>
+        <svg class="orbit" viewBox="0 0 200 120"><path d="M10 80C40 10 160 0 190 50"/></svg>
+      </div>
+      <figure class="polaroid">
+        <span class="tape tape-top" aria-hidden="true"></span>
+        <img src="images/AadeshSalecha.jpg" width="900" height="1200" alt="Aadesh Salecha smiling in a white shirt and red graduation stole, with Stanford's Hoover Tower behind him">
+        <figcaption class="hand">Stanford, MS CS &rsquo;26</figcaption>
+      </figure>
+    </div>
+  </section>
 
-          <!-- Short bio (default) -->
-          <div class="bio bio-short" id="bio-short">
-            <p class="intro-text">
-              I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a>, where I'm building GAIA,
-              a platform that synthesizes asset performance and market data to power clean energy loan origination.
-              I design the agentic data pipelines and risk intelligence tools aimed at closing the $4T+ clean energy
-              financing gap across South Asia and Africa.
-            </p>
-            <p>
-              I recently finished my MS in Computer Science at <a href="https://stanford.edu">Stanford</a>, where I built
-              geospatial ML for carbon sequestration with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>'s
-              lab at the <a href="https://sustainability.stanford.edu/">Doerr School of Sustainability</a>, and studied
-              human-like biases in LLMs (<a href="https://doi.org/10.1093/pnasnexus/pgae533">PNAS Nexus</a>,
-              <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>).
-              Before that, I worked on AI/ML at <a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">Amazon</a> and
-              large-scale financial systems at <a href="https://www.draftkings.com/">DraftKings</a>.
-            </p>
-          </div>
+  <!-- ======================= ABOUT ======================= -->
+  <section class="section about" id="about" aria-labelledby="about-h">
+    <div class="section-head">
+      <p class="eyebrow hand">a little about me</p>
+      <h2 id="about-h"><span class="hl">About</span></h2>
+    </div>
 
-          <!-- Long bio -->
-          <div class="bio bio-long" id="bio-long" hidden>
-            <p class="intro-text">
-              I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a> in San Francisco, where I'm building
-              GAIA, a fintech platform that synthesizes asset performance and market data for clean energy loan origination.
-              I design agentic data enrichment pipelines that combine LLMs and web scraping to create data for a new asset
-              class with no track record, and I'm architecting risk intelligence tools aimed at the $4T+ clean energy
-              financing gap across South Asia and Africa. I also lead the rollout of AI-native workflows across the team.
-            </p>
-            <p>
-              I completed my MS in Computer Science at <a href="https://stanford.edu">Stanford University</a> in 2026.
-              There, I worked as an AI/ML researcher with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>
-              and the <a href="https://fse.fsi.stanford.edu/">Center on Food Security and the Environment</a> at the
-              <a href="https://sustainability.stanford.edu/">Stanford Doerr School of Sustainability</a>, building geospatial
-              ML pipelines on Google Earth Engine, Landsat, and Sentinel-2 imagery to detect tree species across cropland in
-              the Global South. This work supports verification of the 5+ Gt CO<sub>2</sub>/year sequestration potential
-              of integrating trees into global cropland. I also won Stanford's first Green AI Hackathon by building a
-              <a href="https://findgeothermal.com/">geothermal site prediction system</a> on AlphaEarth satellite
-              embeddings (93% AUC).
-            </p>
-            <p>
-              Earlier at Stanford, I worked with Prof. <a href="https://jeichstaedt.com/">Johannes Eichstaedt</a> on applying
-              cognitive science and psychometrics to evaluate LLMs. Our paper showing that
-              <a href="https://doi.org/10.1093/pnasnexus/pgae533">LLMs exhibit human-like social desirability biases</a>
-              was published in PNAS Nexus and covered by
-              <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>.
-            </p>
-            <p>
-              In 2025, I was an AI/ML Engineer at <a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">Amazon</a>,
-              where I designed an agentic AI system that combines telemetry, time-series signals, and RAG-based diagnosis
-              to auto-resolve ML infrastructure failures, and cut GPU energy waste by about 200 kg CO<sub>2</sub>e per day.
-              Before Stanford, I was a Senior Software Engineer on the Financial Platform team at
-              <a href="https://www.draftkings.com/">DraftKings</a>, building production systems that handled billions
-              of requests for millions of users. I received my BS in Computer Science, summa cum laude, from the
-              <a href="https://twin-cities.umn.edu/">University of Minnesota</a>.
-            </p>
-          </div>
-
-          <p class="personal-note">
-            Outside of work, I enjoy climbing, strength training, hiking and brewing coffee.
-          </p>
-
-          <div class="contact-icons">
-            <a href="mailto:aadeshsalecha@gmail.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.3-.5 7.7 6.2L19.7 5H4.3ZM20 6.6l-7.37 5.93a1 1 0 0 1-1.26 0L4 6.6v11.9c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V6.6Z"/></svg></a>
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=Cnwzl3oAAAAJ" title="Google Scholar" aria-label="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
-            <a href="https://github.com/aadeshsalecha/" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-            <a href="https://www.linkedin.com/in/aadesh-salecha" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          </div>
-          <p class="contact-note">Feel free to reach out by email or connect on LinkedIn.</p>
+    <div class="about-grid">
+      <div class="bio-card card">
+        <div class="bio-toggle" role="group" aria-label="Bio length">
+          <button type="button" class="toggle-btn" data-bio="short" aria-pressed="true" aria-controls="bio-short">Short</button>
+          <button type="button" class="toggle-btn" data-bio="long" aria-pressed="false" aria-controls="bio-long">Long</button>
         </div>
 
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="images/AadeshSalecha.jpg" alt="Aadesh Salecha" class="profile-photo">
-          </div>
+        <div class="bio" id="bio-short">
+          <p class="lead">I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a>, where I'm building GAIA, a platform that synthesizes asset performance and market data to power clean energy loan origination. I design the agentic data pipelines and risk intelligence tools aimed at closing the $4T+ clean energy financing gap across South Asia and Africa.</p>
+          <p>I recently finished my MS in Computer Science at <a href="https://www.stanford.edu/">Stanford</a>, where I built geospatial ML for carbon sequestration with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>'s lab at the <a href="https://sustainability.stanford.edu/">Doerr School of Sustainability</a>, and studied human-like biases in LLMs (<a href="https://doi.org/10.1093/pnasnexus/pgae533">PNAS Nexus</a>, <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>). Before that, I worked on AI/ML at <a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">Amazon</a> and large-scale financial systems at <a href="https://www.draftkings.com/">DraftKings</a>.</p>
+        </div>
+
+        <div class="bio" id="bio-long" hidden>
+          <p class="lead">I'm a Founding Engineer at <a href="https://www.hyfin.capital/">Hyfin</a> in San Francisco, where I'm building GAIA, a fintech platform that synthesizes asset performance and market data for clean energy loan origination. I design agentic data enrichment pipelines that combine LLMs and web scraping to create data for a new asset class with no track record, and I'm architecting risk intelligence tools aimed at the $4T+ clean energy financing gap across South Asia and Africa. I also lead the rollout of AI-native workflows across the team.</p>
+          <p>I completed my MS in Computer Science at <a href="https://www.stanford.edu/">Stanford University</a> in 2026. There, I worked as an AI/ML researcher with <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a> and the <a href="https://fse.fsi.stanford.edu/">Center on Food Security and the Environment</a> at the <a href="https://sustainability.stanford.edu/">Stanford Doerr School of Sustainability</a>, building geospatial ML pipelines on Google Earth Engine, Landsat, and Sentinel-2 imagery to detect tree species across cropland in the Global South. This work supports verification of the 5+ Gt CO<sub>2</sub>/year sequestration potential of integrating trees into global cropland. I also won Stanford's first Green AI Hackathon by building a <a href="https://findgeothermal.com/">geothermal site prediction system</a> on AlphaEarth satellite embeddings (93% AUC).</p>
+          <p>Earlier at Stanford, I worked with <a href="https://jeichstaedt.com/">Prof. Johannes Eichstaedt</a> on applying cognitive science and psychometrics to evaluate LLMs. Our paper showing that <a href="https://doi.org/10.1093/pnasnexus/pgae533">LLMs exhibit human-like social desirability biases</a> was published in PNAS Nexus and covered by <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>.</p>
+          <p>In 2025, I was an AI/ML Engineer at Amazon (<a href="https://aws.amazon.com/sagemaker/ai/hyperpod/">AWS SageMaker HyperPod</a>), where I designed an agentic AI system that combines telemetry, time-series signals, and RAG-based diagnosis to auto-resolve ML infrastructure failures, and cut GPU energy waste by about 200 kg CO<sub>2</sub>e per day. Before Stanford, I was a Senior Software Engineer on the Financial Platform team at <a href="https://www.draftkings.com/">DraftKings</a>, building production systems that handled billions of requests for millions of users. I received my BS in Computer Science, summa cum laude, from the <a href="https://twin-cities.umn.edu/">University of Minnesota</a>.</p>
+        </div>
+
+        <div class="offline">
+          <p class="offline-label">Outside of work, I enjoy climbing, strength training, hiking and brewing coffee.</p>
+          <ul class="hobbies" aria-label="Hobbies">
+            <li><span class="hobby-art" data-illustration="assets/sticker-climbing.png"><svg class="doodle"><use href="#d-hold"/></svg></span><span class="hand">climbing</span></li>
+            <li><span class="hobby-art" data-illustration="assets/sticker-strength.png"><svg class="doodle"><use href="#d-dumbbell"/></svg></span><span class="hand">lifting</span></li>
+            <li><span class="hobby-art" data-illustration="assets/sticker-hiking.png"><svg class="doodle"><use href="#d-mountain"/></svg></span><span class="hand">hiking</span></li>
+            <li><span class="hobby-art" data-illustration="assets/sticker-coffee.png"><svg class="doodle"><use href="#d-coffee"/></svg></span><span class="hand">coffee</span></li>
+          </ul>
+        </div>
+
+        <ul class="icon-row" aria-label="Contact and profiles">
+          <li><a href="mailto:aadeshsalecha@gmail.com" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a></li>
+          <li><a href="https://scholar.google.com/citations?hl=en&amp;user=Cnwzl3oAAAAJ" title="Google Scholar" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a></li>
+          <li><a href="https://github.com/aadeshsalecha/" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/aadesh-salecha" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- "Currently" sticky note -->
+      <aside class="sticky-note" aria-labelledby="now-h">
+        <svg class="pin" aria-hidden="true"><use href="#d-pin"/></svg>
+        <p class="hand note-kicker" id="now-h">currently&hellip;</p>
+        <a class="note-logo" href="https://www.hyfin.capital/" aria-label="Hyfin website">
+          <img src="images/logos/hyfin.png" width="1406" height="484" alt="Hyfin">
+        </a>
+        <p class="note-role"><strong>Founding Engineer</strong><br>San Francisco &middot; May 2026&ndash;present</p>
+        <ul class="note-list">
+          <li>Building <strong>GAIA</strong>: asset performance + market data for clean energy loan origination</li>
+          <li>Agentic LLM + web-scraping enrichment pipelines</li>
+          <li>Risk intelligence for the <strong>$4T+</strong> clean energy financing gap across South Asia &amp; Africa</li>
+          <li>Rolling out AI-native workflows across the team</li>
+        </ul>
+        <p class="note-link"><a href="https://www.hyfin.capital/">hyfin.capital</a></p>
+        <span class="note-art" data-illustration="assets/sticker-solar.png" aria-hidden="true">
+          <svg class="doodle"><use href="#d-panel"/></svg>
+        </span>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ======================= PATH / SCRAPBOOK ======================= -->
+  <section class="section path" id="path" aria-labelledby="path-h">
+    <div class="section-head">
+      <p class="eyebrow hand">the scrapbook</p>
+      <h2 id="path-h"><span class="hl hl-sky">The path so far</span></h2>
+    </div>
+
+    <!-- At-a-glance timeline -->
+    <figure class="gantt card" aria-labelledby="gantt-cap">
+      <figcaption id="gantt-cap" class="gantt-cap">At a glance, 2018&ndash;today</figcaption>
+      <div class="gantt-body">
+        <ol class="gantt-rows">
+          <li style="--s:8.33;--e:8.8" class="g-red"><span class="g-label">Hyfin</span><span class="g-track"><span class="g-bar g-now" title="Hyfin: May 2026 to present"></span></span></li>
+          <li style="--s:6.75;--e:7.7" class="g-sky"><span class="g-label">Amazon</span><span class="g-track"><span class="g-bar" title="Amazon: May 2025 to Sept 2025"></span></span></li>
+          <li style="--s:6.7;--e:8.4" class="g-flax"><span class="g-label">Stanford MS</span><span class="g-track"><span class="g-bar" title="Stanford MS CS: 2024 to 2026"></span></span></li>
+          <li style="--s:5.33;--e:8.38" class="g-sage"><span class="g-label">Stanford research</span><span class="g-track"><span class="g-bar" title="Stanford AI/ML research (Lobell lab, HAI-affiliated): May 2023 to May 2026"></span></span></li>
+          <li style="--s:3.92;--e:6.46" class="g-ink"><span class="g-label">DraftKings</span><span class="g-track"><span class="g-bar" title="DraftKings: Dec 2021 to Jun 2024"></span></span></li>
+          <li style="--s:0.7;--e:3.45" class="g-paper"><span class="g-label">University of Minnesota</span><span class="g-track"><span class="g-bar" title="University of Minnesota BS CS: 2018 to 2021"></span></span></li>
+        </ol>
+        <div class="gantt-axis" aria-hidden="true">
+          <span style="--y:0">2018</span><span style="--y:2">2020</span><span style="--y:4">2022</span><span style="--y:6">2024</span><span style="--y:8">2026</span>
         </div>
       </div>
-    </section>
+    </figure>
 
-    <!-- Experience Section -->
-    <section class="experience-section fade-in">
-      <h2 class="section-title">Experience</h2>
-      <div class="logo-grid">
-        <a class="logo-card" href="https://www.hyfin.capital/">
-          <span class="logo-box"><img src="images/logos/hyfin.png" alt="Hyfin" class="logo-wordmark"></span>
-          <span class="logo-role">Founding Engineer</span>
-          <span class="logo-dates">2026 – present</span>
+    <ol class="scrapbook">
+      <li class="scrap scrap-now">
+        <span class="tape" aria-hidden="true"></span>
+        <span class="scrap-badge">now</span>
+        <a class="scrap-logo" href="https://www.hyfin.capital/" aria-label="Hyfin website">
+          <img class="logo-hyfin" src="images/logos/hyfin.png" width="1406" height="484" alt="Hyfin">
         </a>
-        <a class="logo-card" href="https://sustainability.stanford.edu/people/david-lobell">
-          <span class="logo-box"><img src="images/logos/stanford.svg" alt="Stanford" class="logo-wordmark"></span>
-          <span class="logo-role">MS CS &amp; AI/ML Researcher, Lobell Lab</span>
-          <span class="logo-dates">2023 – 2026</span>
+        <h3 class="scrap-role">Founding Engineer</h3>
+        <p class="scrap-date">May 2026 &ndash; present &middot; San Francisco</p>
+        <p class="scrap-desc">Building GAIA: agentic LLM + web-scraping enrichment pipelines and risk intelligence for the $4T+ clean energy financing gap across South Asia &amp; Africa.</p>
+      </li>
+      <li class="scrap">
+        <span class="tape" aria-hidden="true"></span>
+        <a class="scrap-logo" href="https://sustainability.stanford.edu/" aria-label="Stanford Doerr School of Sustainability">
+          <img class="logo-stanford" src="images/logos/stanford.svg" width="640" height="134" alt="Stanford">
         </a>
-        <a class="logo-card" href="https://hai.stanford.edu/">
-          <span class="logo-box"><img src="images/logos/stanford-tree.svg" alt="" class="logo-mark"><span class="logo-text logo-text-hai">HAI</span></span>
-          <span class="logo-role">Stanford Institute for Human-Centered AI</span>
-          <span class="logo-dates">2023 – 2026</span>
+        <h3 class="scrap-role">AI/ML Researcher &middot; MS CS</h3>
+        <p class="scrap-date">Research: May 2023 &ndash; May 2026</p>
+        <p class="scrap-date">MS CS: 2024 &ndash; 2026</p>
+        <p class="scrap-desc">With <a href="https://sustainability.stanford.edu/people/david-lobell">Prof. David Lobell</a>'s lab and <a href="https://fse.fsi.stanford.edu/">FSE</a> at the Doerr School: geospatial ML on Google Earth Engine, Landsat &amp; Sentinel-2 to detect tree species across cropland in the Global South.</p>
+      </li>
+      <li class="scrap">
+        <span class="tape" aria-hidden="true"></span>
+        <a class="scrap-logo logo-lockup" href="https://hai.stanford.edu/" aria-label="Stanford HAI">
+          <img class="logo-tree" src="images/logos/stanford-tree.svg" width="162" height="248" alt="">
+          <span class="lockup-text">HAI</span>
         </a>
-        <a class="logo-card" href="https://aws.amazon.com/sagemaker/ai/hyperpod/">
-          <span class="logo-box"><img src="images/logos/amazon.svg" alt="Amazon" class="logo-wordmark logo-amazon"></span>
-          <span class="logo-role">AI/ML Engineer</span>
-          <span class="logo-dates">2025</span>
+        <h3 class="scrap-role">AI/ML Research, HAI-affiliated</h3>
+        <p class="scrap-date">May 2023 &ndash; May 2026</p>
+        <p class="scrap-desc">LLM behavioral-bias evaluation with <a href="https://jeichstaedt.com/">Prof. Johannes Eichstaedt</a>, published in <a href="https://doi.org/10.1093/pnasnexus/pgae533">PNAS Nexus</a> and covered by WIRED.</p>
+      </li>
+      <li class="scrap">
+        <span class="tape" aria-hidden="true"></span>
+        <a class="scrap-logo" href="https://aws.amazon.com/sagemaker/ai/hyperpod/" aria-label="Amazon SageMaker HyperPod">
+          <img class="logo-amazon" src="images/logos/amazon.svg" width="603" height="182" alt="Amazon">
         </a>
-        <a class="logo-card" href="https://www.draftkings.com/">
-          <span class="logo-box"><img src="images/logos/draftkings-crown.png" alt="" class="logo-mark"><span class="logo-text">DraftKings</span></span>
-          <span class="logo-role">Senior Software Engineer</span>
-          <span class="logo-dates">2021 – 2024</span>
+        <h3 class="scrap-role">AI/ML Engineer, SageMaker HyperPod</h3>
+        <p class="scrap-date">May 2025 &ndash; Sept 2025 &middot; Seattle</p>
+        <p class="scrap-desc">Agentic AI system (telemetry + time-series + RAG) to auto-resolve ML infrastructure failures; cut GPU energy waste by ~200 kg CO<sub>2</sub>e/day.</p>
+      </li>
+      <li class="scrap">
+        <span class="tape" aria-hidden="true"></span>
+        <a class="scrap-logo logo-lockup" href="https://www.draftkings.com/" aria-label="DraftKings website">
+          <img class="logo-crown" src="images/logos/draftkings-crown.png" width="64" height="64" alt="">
+          <span class="lockup-text">DraftKings</span>
         </a>
+        <h3 class="scrap-role">Senior Software Engineer, Financial Platform</h3>
+        <p class="scrap-date">Dec 2021 &ndash; Jun 2024 &middot; Boston</p>
+        <p class="scrap-desc">Sharded transaction database (incl. crypto); REST APIs serving billions of requests under 200&nbsp;ms; reduced dropout by 40%.</p>
+      </li>
+      <li class="scrap scrap-edu">
+        <span class="tape" aria-hidden="true"></span>
+        <a class="scrap-logo logo-lockup" href="https://twin-cities.umn.edu/" aria-label="University of Minnesota website">
+          <img class="logo-umn" src="images/logos/umn-block-m.svg" width="248" height="148" alt="">
+          <span class="lockup-text lockup-umn">University of Minnesota</span>
+        </a>
+        <h3 class="scrap-role">BS Computer Science</h3>
+        <p class="scrap-date">2018 &ndash; 2021</p>
+        <p class="scrap-desc">4.0 GPA, summa cum laude.</p>
+      </li>
+    </ol>
+
+    <div class="honors">
+      <h3 class="honors-h hand">gold stars &amp; press clippings</h3>
+      <ul class="honor-list">
+        <li class="honor h-flax">Winner, Stanford's first Green AI Hackathon (<a href="https://findgeothermal.com/">findgeothermal.com</a>)</li>
+        <li class="honor h-paper">Press: <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">WIRED</a>, &ldquo;Chatbots, Like the Rest of Us, Just Want to Be Loved&rdquo;</li>
+        <li class="honor h-paper">Press: <a href="https://stanforddaily.com/2025/11/02/ai-into-the-wild-connects-stanford-to-local-flora-and-fauna-at-jasper-ridge/">Stanford Daily</a>, &ldquo;&lsquo;AI Into the Wild&rsquo; connects Stanford to local flora and fauna at Jasper Ridge&rdquo;</li>
+        <li class="honor h-sky">ExxonMobil Scholarship</li>
+        <li class="honor h-sage">UROP Research Scholarship</li>
+        <li class="honor h-sky">Tom Niccum Grant</li>
+        <li class="honor h-red">Google Research Mentorship nominee</li>
+        <li class="honor h-sage">Dean's List 2018&ndash;2020</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================= RESEARCH / CITATIONS ======================= -->
+  <section class="section research" id="research" aria-labelledby="research-h">
+    <div class="section-head">
+      <p class="eyebrow hand">by the numbers</p>
+      <h2 id="research-h"><span class="hl hl-sage">Research</span></h2>
+      <p class="section-intro">I'm interested in applied AI for climate and energy (geospatial ML, remote sensing), Generative AI (LLM evaluation, preference tuning, application building), and applied NLP (to psychology and social sciences).</p>
+    </div>
+
+    <div class="metrics-wrap">
+      <ul class="metrics" aria-label="Google Scholar metrics">
+        <li class="metric m1"><span class="metric-num">320</span><span class="metric-label">citations</span></li>
+        <li class="metric m2"><span class="metric-num">6</span><span class="metric-label">h-index</span></li>
+        <li class="metric m3"><span class="metric-num">16</span><span class="metric-label">publications</span></li>
+        <li class="metric-art" data-illustration="assets/sticker-satellite.png" aria-hidden="true"><svg class="doodle"><use href="#d-satellite"/></svg></li>
+      </ul>
+
+      <figure class="chart card">
+        <figcaption class="chart-head">
+          <span class="chart-title">Citations per year</span>
+          <span class="chart-sub">Google Scholar, as of 2026 &middot; <span class="ytd-key"><span class="ytd-swatch" aria-hidden="true"></span>2026 = year to date</span></span>
+        </figcaption>
+        <div class="chart-box">
+<svg class="cite-svg" viewBox="0 0 600 316" role="group" aria-labelledby="cite-title cite-desc" focusable="false">
+<title id="cite-title">Citations per year, 2020 to 2026</title>
+<desc id="cite-desc">Bar chart of Google Scholar citations per year: 2020: 2, 2021: 5, 2022: 14, 2023: 16, 2024: 21, 2025: 113, 2026 year to date: 145.</desc>
+<defs><pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#efecc4"/><line x1="0" y1="0" x2="0" y2="7" stroke="#b9b25a" stroke-width="3"/></pattern><filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="1.8"/></filter></defs>
+<path class="grid" d="M58 199.5 Q 208 199.1 323 199.5 T 588 199.5"/>
+<text class="ylab" x="46" y="203.5" text-anchor="end">50</text>
+<path class="grid" d="M58 127.0 Q 208 126.3 323 127.0 T 588 127.0"/>
+<text class="ylab" x="46" y="131.0" text-anchor="end">100</text>
+<path class="grid" d="M58 54.5 Q 208 54.8 323 54.5 T 588 54.5"/>
+<text class="ylab" x="46" y="58.5" text-anchor="end">150</text>
+<text class="ylab" x="46" y="276" text-anchor="end">0</text>
+<g class="bar" tabindex="0" role="img" aria-label="2020: 2 citations" data-year="2020" data-value="2">
+<rect class="hit" x="60.0" y="30" width="71.7" height="262"/>
+<path class="shape" d="M71.75714285714287 272 L72.95714285714286 270.5 Q72.85714285714286 269 74.35714285714286 268.8 L117.35714285714286 268.5 Q118.85714285714286 269 118.85714285714286 270.5 L117.65714285714286 272 Z"/>
+<text class="vlab" x="95.9" y="260" text-anchor="middle">2</text>
+<text class="xlab" x="95.9" y="296" text-anchor="middle">2020</text>
+</g>
+<g class="bar" tabindex="0" role="img" aria-label="2021: 5 citations" data-year="2021" data-value="5">
+<rect class="hit" x="135.7" y="30" width="71.7" height="262"/>
+<path class="shape" d="M148.3714285714286 272 L147.8714285714286 268.4 Q148.57142857142858 264.8 152.19642857142858 264.2 L190.94642857142858 264.6 Q194.57142857142858 264.8 195.07142857142858 268.4 L193.57142857142858 272 Z"/>
+<text class="vlab" x="171.6" y="255.8" text-anchor="middle">5</text>
+<text class="xlab" x="171.6" y="296" text-anchor="middle">2021</text>
+</g>
+<g class="bar" tabindex="0" role="img" aria-label="2022: 14 citations" data-year="2022" data-value="14">
+<rect class="hit" x="211.4" y="30" width="71.7" height="262"/>
+<path class="shape" d="M223.5857142857143 272 L224.48571428571427 258.7 Q224.28571428571428 251.7 231.28571428571428 252.2 L263.2857142857143 251.8 Q270.2857142857143 251.7 270.0857142857143 258.7 L271.48571428571427 272 Z"/>
+<text class="vlab" x="247.3" y="242.7" text-anchor="middle">14</text>
+<text class="xlab" x="247.3" y="296" text-anchor="middle">2022</text>
+</g>
+<g class="bar" tabindex="0" role="img" aria-label="2023: 16 citations" data-year="2023" data-value="16">
+<rect class="hit" x="287.1" y="30" width="71.7" height="262"/>
+<path class="shape" d="M298.79999999999995 272 L300.59999999999997 255.8 Q299.99999999999994 248.8 306.99999999999994 248.5 L338.99999999999994 248.4 Q345.99999999999994 248.8 345.3999999999999 255.8 L345.49999999999994 272 Z"/>
+<text class="vlab" x="323.0" y="239.8" text-anchor="middle">16</text>
+<text class="xlab" x="323.0" y="296" text-anchor="middle">2023</text>
+</g>
+<g class="bar" tabindex="0" role="img" aria-label="2024: 21 citations" data-year="2024" data-value="21">
+<rect class="hit" x="362.9" y="30" width="71.7" height="262"/>
+<path class="shape" d="M376.5142857142857 272 L375.21428571428567 248.6 Q375.71428571428567 241.6 382.71428571428567 241.7 L414.71428571428567 241.8 Q421.71428571428567 241.6 421.5142857142857 248.6 L421.8142857142857 272 Z"/>
+<text class="vlab" x="398.7" y="232.6" text-anchor="middle">21</text>
+<text class="xlab" x="398.7" y="296" text-anchor="middle">2024</text>
+</g>
+<g class="bar" tabindex="0" role="img" aria-label="2025: 113 citations" data-year="2025" data-value="113">
+<rect class="hit" x="438.6" y="30" width="71.7" height="262"/>
+<path class="shape" d="M450.32857142857137 272 L450.7285714285714 115.2 Q451.4285714285714 108.2 458.4285714285714 107.8 L490.4285714285714 108.4 Q497.4285714285714 108.2 497.32857142857137 115.2 L496.9285714285714 272 Z"/>
+<text class="vlab" x="474.4" y="99.2" text-anchor="middle">113</text>
+<text class="xlab" x="474.4" y="296" text-anchor="middle">2025</text>
+</g>
+<g class="bar ytd" tabindex="0" role="img" aria-label="2026 (year to date): 145 citations" data-year="2026 (YTD)" data-value="145">
+<rect class="hit" x="514.3" y="30" width="71.7" height="262"/>
+<path class="shape" d="M527.3428571428572 272 L527.0428571428571 68.8 Q527.1428571428571 61.8 534.1428571428571 61.5 L566.1428571428571 62.1 Q573.1428571428571 61.8 573.4428571428571 68.8 L572.4428571428571 272 Z"/>
+<text class="vlab" x="550.1" y="52.8" text-anchor="middle">145</text>
+<text class="xlab" x="550.1" y="296" text-anchor="middle">2026*</text>
+</g>
+<path class="baseline" d="M52 273 Q 178 270.5 318 273 T 592 272"/>
+<g class="annot" aria-hidden="true"><text class="hand" x="489.1" y="67.8" text-anchor="end">2026, so far!</text><path d="M487.1 75.8 q 14 14 28 4" /><path d="M511.1 72.8 l 4 7 l -8 2"/></g>
+</svg>
+          <div class="chart-tip" aria-hidden="true" hidden></div>
+        </div>
+        <details class="chart-data">
+          <summary>See the numbers</summary>
+          <table>
+            <caption class="sr-only">Citations per year (Google Scholar)</caption>
+            <thead><tr><th scope="col">Year</th><th scope="col">Citations</th></tr></thead>
+            <tbody>
+              <tr><td>2020</td><td>2</td></tr>
+              <tr><td>2021</td><td>5</td></tr>
+              <tr><td>2022</td><td>14</td></tr>
+              <tr><td>2023</td><td>16</td></tr>
+              <tr><td>2024</td><td>21</td></tr>
+              <tr><td>2025</td><td>113</td></tr>
+              <tr><td>2026 (year to date)</td><td>145</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================= PUBLICATIONS ======================= -->
+  <section class="section papers" id="papers" aria-labelledby="papers-h">
+    <div class="section-head">
+      <p class="eyebrow hand">things I've written</p>
+      <h2 id="papers-h"><span class="hl hl-red">Publications</span></h2>
+    </div>
+
+    <article class="paper featured">
+      <span class="tape" aria-hidden="true"></span>
+      <div class="featured-flag">
+        <span class="sticker s-red">Featured</span>
+        <span class="sticker s-paper">Covered by WIRED</span>
       </div>
-    </section>
-
-    <!-- Research Section -->
-    <section class="research-section fade-in">
-      <h2 class="section-title">Research</h2>
-      <p class="section-description">
-        I'm interested in applied AI for climate and energy (geospatial ML, remote sensing), Generative AI
-        (LLM evaluation, preference tuning, application building), and applied NLP (to psychology and social sciences). Featured publications are <span class="highlight">highlighted</span>.
+      <p class="paper-venue"><em>Proceedings of the National Academy of Sciences (PNAS Nexus)</em>, Vol. 3, No. 12 (2024)</p>
+      <h3 class="paper-title"><a href="https://llmsocialbias.github.io/llm-social-desirability-research/">Large Language Models Show Human-like Social Desirability Biases in Survey Responses</a></h3>
+      <p class="paper-authors"><strong>Aadesh Salecha</strong>, <a href="https://www.linkedin.com/in/molly-e-ireland">Molly E. Ireland</a>, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>, <a href="https://www.stern.nyu.edu/faculty/bio/joao-sedoc">João Sedoc</a>, <a href="https://www.cis.upenn.edu/~ungar/">Lyle H. Ungar</a>, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a></p>
+      <p class="paper-links">
+        <a class="pill" href="https://doi.org/10.1093/pnasnexus/pgae533">journal</a>
+        <a class="pill" href="https://www.arxiv.org/abs/2405.06058">arxiv</a>
+        <a class="pill" href="https://llmsocialbias.github.io/llm-social-desirability-research/">project</a>
+        <a class="pill" href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/">wired</a>
       </p>
+    </article>
 
-      <!-- Citation Metrics -->
-      <div class="citation-metrics-section">
-        <div class="citation-chart-wrapper">
-          <canvas id="citationChart" width="400" height="300"></canvas>
-        </div>
-        <div class="citation-stats">
-          <div class="metrics-card">
-            <div class="metric-value">320</div>
-            <div class="metric-label">Total Citations</div>
-          </div>
-          <div class="metrics-card">
-            <div class="metric-value">6</div>
-            <div class="metric-label">h-index</div>
-          </div>
-          <div class="metrics-card">
-            <div class="metric-value">16</div>
-            <div class="metric-label">Publications</div>
-          </div>
-        </div>
-      </div>
+    <div class="paper-grid">
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2025</span> <em>Nature Partner Journals: Digital Medicine</em></p>
+        <h3 class="paper-title"><a href="https://www.nature.com/articles/s41746-025-01642-x">Monitoring the Opioid Epidemic via Social Media Discussions</a></h3>
+        <p class="paper-authors">Adam Lavertu, Tymor Hamamsy, <strong>Aadesh Salecha</strong>, Delaney Smith, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>, Russ B Altman</p>
+        <p class="paper-links"><a class="pill" href="https://www.nature.com/articles/s41746-025-01642-x">paper</a></p>
+      </article>
 
-      <!-- Publication Categories -->
-      <div class="papers-grid">
-        <!-- Paper 1 -->
-        <article class="paper-card featured">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/">
-                Large Language Models Show Human-like Social Desirability Biases in Survey Responses
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://www.linkedin.com/in/molly-e-ireland">Molly E. Ireland</a>,
-              <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <a href="https://www.stern.nyu.edu/faculty/bio/joao-sedoc">João Sedoc</a>,
-              <a href="https://www.cis.upenn.edu/~ungar/">Lyle H. Ungar</a>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Proceedings of the National Academy of Sciences (PNAS Nexus)</em>, Vol. 3, No. 12 (2024)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1093/pnasnexus/pgae533" class="paper-link">journal</a>
-              <a href="https://www.arxiv.org/abs/2405.06058" class="paper-link">arxiv</a>
-              <a href="https://llmsocialbias.github.io/llm-social-desirability-research/" class="paper-link">project</a>
-              <a href="https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/" class="paper-link">wired</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2024</span> <em>Journal of Computational Social Science</em>, 7, 1599&ndash;1623 (October 2024)</p>
+        <h3 class="paper-title"><a href="https://link.springer.com/article/10.1007/s42001-024-00282-7">Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak</a></h3>
+        <p class="paper-authors">Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+        <p class="paper-links"><a class="pill" href="https://doi.org/10.1007/s42001-024-00282-7">paper</a></p>
+      </article>
 
-        <!-- Paper 2 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://doi.org/10.1007/s13278-022-00890-z">
-                Fake News Spreader Detection using Trust-based strategies in Social Networks with Bot Filtration
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>Social Network Analysis and Mining (SNAM)</em> (2022)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1007/s13278-022-00890-z" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2024</span> <em>Negotiation and Conflict Management Research</em></p>
+        <h3 class="paper-title">The Language of Conflict Transformation - Assessing Psychological Change Patterns in Israeli-Palestinian Track Two Interactive Problem Solving</h3>
+        <p class="paper-authors">Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>, <strong>Aadesh Salecha</strong>, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a></p>
+      </article>
 
-        <!-- Paper 3 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://doi.org/10.1080/17512786.2021.1882873">
-                Relationship between Citizen-Eyewitness Images and Audience Engagement with News
-              </a>
-            </h3>
-            <div class="paper-authors">
-              Jisu Kim, Jisu Huh, <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journalism Practice</em> (2021)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1080/17512786.2021.1882873" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2022</span> <em>Social Network Analysis and Mining (SNAM)</em></p>
+        <h3 class="paper-title"><a href="https://doi.org/10.1007/s13278-022-00890-z">Fake News Spreader Detection using Trust-based strategies in Social Networks with Bot Filtration</a></h3>
+        <p class="paper-authors"><a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+        <p class="paper-links"><a class="pill" href="https://doi.org/10.1007/s13278-022-00890-z">paper</a></p>
+      </article>
 
-        <!-- Paper 4 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://link.springer.com/article/10.1007/s42001-024-00282-7">
-                Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak
-              </a>
-            </h3>
-            <div class="paper-authors">
-              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journal of Computational Social Science</em>, 7, 1599–1623 (October 2024)
-            </div>
-            <div class="paper-links">
-              <a href="https://doi.org/10.1007/s42001-024-00282-7" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2022</span> <em>72nd Annual International Communication Association Conference</em></p>
+        <h3 class="paper-title">Public's Discrete Emotions During the COVID-19 and Impacts on Their Coping Behaviors in the U.S.</h3>
+        <p class="paper-authors">Hao Xu, Smitha Muthya Sudheendra, Jisu Huh, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+      </article>
 
-        <!-- Paper 5 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              The Language of Conflict Transformation - Assessing Psychological Change Patterns in Israeli-Palestinian Track Two Interactive Problem Solving
-            </h3>
-            <div class="paper-authors">
-              Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Negotiation and Conflict Management Research</em> (2024)
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2021</span> <em>Journalism Practice</em></p>
+        <h3 class="paper-title"><a href="https://doi.org/10.1080/17512786.2021.1882873">Relationship between Citizen-Eyewitness Images and Audience Engagement with News</a></h3>
+        <p class="paper-authors">Jisu Kim, Jisu Huh, <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+        <p class="paper-links"><a class="pill" href="https://doi.org/10.1080/17512786.2021.1882873">paper</a></p>
+      </article>
 
-        <!-- Paper 6 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://www.nature.com/articles/s41746-025-01642-x">
-                Monitoring the Opioid Epidemic via Social Media Discussions
-              </a>
-            </h3>
-            <div class="paper-authors">
-              Adam Lavertu, Tymor Hamamsy, <strong>Aadesh Salecha</strong>, Delaney Smith,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>, Russ B Altman
-            </div>
-            <div class="paper-venue">
-              <em>Nature Partner Journals: Digital Medicine</em> (2025)
-            </div>
-            <div class="paper-links">
-              <a href="https://www.nature.com/articles/s41746-025-01642-x" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2021</span> <em>Undergraduate Thesis (Summa Cum Laude), University of Minnesota Digital Conservancy</em></p>
+        <h3 class="paper-title"><a href="https://hdl.handle.net/11299/222250">Empirical Study of the Spread of Misinformation: A Big Data Approach</a></h3>
+        <p class="paper-authors"><strong>Aadesh Salecha</strong></p>
+        <p class="paper-links"><a class="pill" href="https://hdl.handle.net/11299/222250">paper</a></p>
+      </article>
 
-        <!-- Paper 7 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9308258">
-                Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <a href="https://www.linkedin.com/in/jin-hong-kuan">Jin Hong Kuan</a>,
-              <strong>Aadesh Salecha</strong>
-            </div>
-            <div class="paper-venue">
-              <em>IEEE Symposium Series on Computational Intelligence (SSCI)</em> (2020)
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9308258" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2020</span> <em>IEEE Symposium Series on Computational Intelligence (SSCI)</em></p>
+        <h3 class="paper-title"><a href="https://ieeexplore.ieee.org/abstract/document/9308258">Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines</a></h3>
+        <p class="paper-authors"><a href="https://www.linkedin.com/in/jin-hong-kuan">Jin Hong Kuan</a>, <strong>Aadesh Salecha</strong></p>
+        <p class="paper-links"><a class="pill" href="https://ieeexplore.ieee.org/abstract/document/9308258">paper</a></p>
+      </article>
 
-        <!-- Paper 8 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9381466">
-                Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</em> (2020)
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/abstract/document/9381466" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper">
+        <p class="paper-venue"><span class="year">2020</span> <em>IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</em></p>
+        <h3 class="paper-title"><a href="https://ieeexplore.ieee.org/abstract/document/9381466">Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning</a></h3>
+        <p class="paper-authors"><a href="https://bhavtoshrath.github.io/">Bhavtosh Rath</a>, <strong>Aadesh Salecha</strong>, <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a></p>
+        <p class="paper-links"><a class="pill" href="https://ieeexplore.ieee.org/abstract/document/9381466">paper</a></p>
+      </article>
 
-        <!-- Paper 9 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              Public's Discrete Emotions During the COVID-19 and Impacts on Their Coping Behaviors in the U.S.
-            </h3>
-            <div class="paper-authors">
-              Hao Xu, Smitha Muthya Sudheendra, Jisu Huh,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://cse.umn.edu/cs/jaideep-srivastava">Jaideep Srivastava</a>
-            </div>
-            <div class="paper-venue">
-              <em>72nd Annual International Communication Association Conference</em> (2022)
-            </div>
-          </div>
-        </article>
+      <article class="paper review">
+        <p class="paper-venue"><span class="year year-review">Under review</span> <em>Journal of Conflict Resolution</em> (submitted Dec 2023)</p>
+        <h3 class="paper-title">No Good Time to Negotiate? Track Two Diplomacy within the Protracted Israel-Palestine Conflict as Strategic Joint Thinking</h3>
+        <p class="paper-authors">Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>, <strong>Aadesh Salecha</strong>, <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a></p>
+      </article>
 
-        <!-- Paper 10 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              No Good Time to Negotiate? Track Two Diplomacy within the Protracted Israel-Palestine Conflict as Strategic Joint Thinking
-            </h3>
-            <div class="paper-authors">
-              Oliver Fink, Wilfried Graf, <a href="https://www.linkedin.com/in/shashanka-subrahmanya/">Shashanka Subrahmanya</a>,
-              <strong>Aadesh Salecha</strong>,
-              <a href="https://jeichstaedt.com/">Johannes C. Eichstaedt</a>
-            </div>
-            <div class="paper-venue">
-              <em>Journal of Conflict Resolution</em> (Under review, submitted Dec 2023)
-            </div>
-          </div>
-        </article>
+      <article class="paper review">
+        <p class="paper-venue"><span class="year year-review">Under review</span> <em>PsyArXiv Preprints</em></p>
+        <h3 class="paper-title">A Computational Model of Reward Learning and Habits on Social Media</h3>
+        <p class="paper-authors">Georgia Turner, Lukas J. Gunschera, Shashanka Subrahmanya, <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt, Stefano Palminteri, Amy Orben</p>
+        <p class="paper-links"><a class="pill" href="https://osf.io/preprints/psyarxiv/xe25k">preprint</a></p>
+      </article>
 
-        <!-- Paper 11 -->
-        <article class="paper-card">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              <a href="https://hdl.handle.net/11299/222250">
-                Empirical Study of the Spread of Misinformation: A Big Data Approach
-              </a>
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>
-            </div>
-            <div class="paper-venue">
-              <em>Undergraduate Thesis (Summa Cum Laude), University of Minnesota Digital Conservancy</em> (2021)
-            </div>
-            <div class="paper-links">
-              <a href="https://hdl.handle.net/11299/222250" class="paper-link">paper</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper review">
+        <p class="paper-venue"><span class="year year-review">Under review</span></p>
+        <h3 class="paper-title">The Answer to the Mental Health Crisis: Examining Media Bias Regarding Psychedelic Treatments for Depression and PTSD Using Natural Language Processing</h3>
+        <p class="paper-authors">Audrey Evers, Elizabeth C. Stade, <strong>Aadesh Salecha</strong>, Zoe Tait, Gabriela Khazanov</p>
+      </article>
 
-        <!-- Paper 12 - Under Review -->
-        <article class="paper-card under-review">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              A Computational Model of Reward Learning and Habits on Social Media
-            </h3>
-            <div class="paper-authors">
-              Georgia Turner, Lukas J. Gunschera, Shashanka Subrahmanya,
-              <strong>Aadesh Salecha</strong>, Johannes C. Eichstaedt, Stefano Palminteri, Amy Orben
-            </div>
-            <div class="paper-venue">
-              <em>PsyArXiv Preprints</em> (Under review)
-            </div>
-            <div class="paper-links">
-              <a href="https://osf.io/preprints/psyarxiv/xe25k" class="paper-link">preprint</a>
-            </div>
-          </div>
-        </article>
+      <article class="paper review">
+        <p class="paper-venue"><span class="year year-review">Under review</span></p>
+        <h3 class="paper-title">Structured AI Dialogues Can Increase Happiness and Meaning in Life</h3>
+        <p class="paper-authors"><strong>Aadesh Salecha</strong>, Jonas Schöne, Sonja Lyubomirsky, João Sedoc, Johannes Eichstaedt, Robb Willer</p>
+      </article>
 
-        <!-- Paper 13 - Under Review -->
-        <article class="paper-card under-review">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              The Answer to the Mental Health Crisis: Examining Media Bias Regarding Psychedelic Treatments for Depression and PTSD Using Natural Language Processing
-            </h3>
-            <div class="paper-authors">
-              Audrey Evers, Elizabeth C. Stade,
-              <strong>Aadesh Salecha</strong>, Zoe Tait, Gabriela Khazanov
-            </div>
-            <div class="paper-venue">
-              <em>Under Review</em>
-            </div>
-          </div>
-        </article>
+      <a class="paper paper-more" href="https://scholar.google.com/citations?hl=en&amp;user=Cnwzl3oAAAAJ">
+        <svg class="doodle" aria-hidden="true"><use href="#d-satellite"/></svg>
+        <span><span class="hand more-kicker">want the full list?</span><span class="more-link">All papers on Google Scholar</span></span>
+      </a>
+    </div>
+  </section>
+</main>
 
-        <!-- Paper 14 - Under Review -->
-        <article class="paper-card under-review">
-          <div class="paper-content">
-            <h3 class="paper-title">
-              Structured AI Dialogues Can Increase Happiness and Meaning in Life
-            </h3>
-            <div class="paper-authors">
-              <strong>Aadesh Salecha</strong>, Jonas Schöne, Sonja Lyubomirsky, João Sedoc,
-              Johannes Eichstaedt, Robb Willer
-            </div>
-            <div class="paper-venue">
-              <em>Under Review</em>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>Design and source code inspired by <a href="https://jonbarron.info">Jon Barron</a> and <a href="https://github.com/hadleydalt/my-portfolio">Hadley Dalton</a>.</p>
-    </footer>
+<footer class="footer">
+  <!-- ILLUSTRATION SLOT: assets/illustration-footer.png (wide transparent PNG, ~1600x400) -->
+  <div class="footer-art" data-illustration="assets/illustration-footer.png" aria-hidden="true">
+    <svg class="doodle"><use href="#d-coffee"/></svg>
+    <svg class="doodle"><use href="#d-hold"/></svg>
+    <svg class="doodle"><use href="#d-sun"/></svg>
+    <svg class="doodle"><use href="#d-leaf"/></svg>
   </div>
+  <p class="footer-hello">Thanks for stopping by. Say hi at <a href="mailto:aadeshsalecha@gmail.com">aadeshsalecha@gmail.com</a>.</p>
+  <p class="footer-credit">Design and source code inspired by <a href="https://jonbarron.info">Jon Barron</a> and <a href="https://github.com/hadleydalt/my-portfolio">Hadley Dalton</a>.</p>
+</footer>
 
-  <script>
-    // Splash screen animation
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        document.getElementById('splash').classList.add('splash-loaded');
-      }, 100);
-    });
 
-    // Hide splash on scroll
-    window.addEventListener('scroll', function() {
-      const splash = document.getElementById('splash');
-      if (window.scrollY > 50) {
-        splash.style.opacity = '0';
-        splash.style.pointerEvents = 'none';
-      } else {
-        splash.style.opacity = '1';
-        splash.style.pointerEvents = 'auto';
-      }
-    });
-
-    // Bio length toggle (short by default)
-    document.querySelectorAll('.bio-toggle-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        const which = btn.dataset.bio;
-        document.getElementById('bio-short').hidden = which !== 'short';
-        document.getElementById('bio-long').hidden = which !== 'long';
-        document.querySelectorAll('.bio-toggle-btn').forEach(function(b) {
-          const on = b === btn;
-          b.classList.toggle('active', on);
-          b.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
-      });
-    });
-
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Citation Chart
-    const ctx = document.getElementById('citationChart');
-    if (ctx) {
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
-          datasets: [
-            {
-              label: 'Citations',
-              data: [2, 5, 14, 16, 21, 113, 145],
-              backgroundColor: '#355070ff',
-              borderColor: '#2a3e54ff',
-              borderWidth: 1,
-              borderRadius: 6,
-              barPercentage: 0.6,
-              categoryPercentage: 0.7,
-              order: 2
-            },
-            {
-              label: 'Cumulative',
-              data: [2, 7, 21, 37, 58, 171, 316],
-              type: 'line',
-              borderColor: '#41bbd9ff',
-              backgroundColor: 'transparent',
-              borderWidth: 3,
-              pointBackgroundColor: '#41bbd9ff',
-              pointBorderColor: '#ffffff',
-              pointBorderWidth: 2,
-              pointRadius: 5,
-              pointHoverRadius: 7,
-              tension: 0.4,
-              order: 1
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          plugins: {
-            legend: {
-              display: true,
-              position: 'top',
-              labels: {
-                font: {
-                  family: "'Poppins', sans-serif",
-                  size: 12,
-                  weight: '500'
-                },
-                color: '#6b7280',
-                padding: 15,
-                usePointStyle: true
-              }
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              ticks: {
-                font: {
-                  family: "'Poppins', sans-serif"
-                },
-                color: '#6b7280'
-              },
-              grid: {
-                color: '#e5e7eb',
-                drawBorder: false
-              },
-              title: {
-                display: true,
-                text: 'Citations'
-              }
-            },
-            x: {
-              ticks: {
-                font: {
-                  family: "'Poppins', sans-serif"
-                },
-                color: '#6b7280'
-              },
-              grid: {
-                display: false,
-                drawBorder: false
-              }
-            }
-          }
-        }
-      });
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
