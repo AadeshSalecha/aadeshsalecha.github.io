@@ -162,13 +162,13 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
 .title-figure { position: relative; padding-top: 18px; }
 .portrait {
   position: relative; margin: 0 0 0 auto; max-width: 320px;
-  padding: 12px 12px 40px; background: #fbf7ec;
+  padding: 12px 12px 8px; background: #fbf7ec;
   transform: rotate(2.4deg);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .18), 0 14px 28px rgba(50, 30, 10, .26);
 }
 .portrait img { width: 100%; filter: sepia(.18) saturate(.9) contrast(1.02); }
-.fig-note { position: absolute; right: 18px; bottom: -6px; transform: rotate(-3deg); margin: 0; }
-.fig-note span { font-family: var(--f-sc); font-size: 15px; letter-spacing: .08em; color: var(--rust); margin-right: 6px; }
+.fig-note { font-family: var(--f-pencil); color: var(--pencil); font-size: 21px; line-height: 1.2; text-align: center; padding: 8px 4px 2px; }
+.fig-note span { font-family: var(--f-sc); font-size: 14px; letter-spacing: .08em; color: var(--rust); margin-right: 6px; }
 
 /* tape and photo corners */
 .tape {
@@ -616,8 +616,9 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
   .title-grid { grid-template-columns: minmax(0, 1fr); gap: 0; grid-template-areas: "fig" "text" "found"; grid-template-rows: auto; }
   .title-figure { padding: 6px 0 34px; }
   .title-grid .if-found { justify-self: stretch; margin-top: 8px; transform: rotate(-.6deg); }
-  .portrait { max-width: 200px; margin: 0 auto 0 4px; padding: 8px 8px 26px; }
-  .fig-note { right: auto; left: 214px; bottom: 30px; font-size: 21px; }
+  .portrait { max-width: 200px; margin: 0 auto 0 4px; padding: 8px 8px 6px; }
+  .fig-note { font-size: 17px; padding-top: 6px; }
+  .fig-note span { font-size: 12px; }
   h1 { font-size: 56px; }
   .lede { font-size: 20px; }
   .if-found { display: block; padding: 16px 18px 14px; }
@@ -665,7 +666,6 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
 @media (max-width: 400px) {
   h1 { font-size: 50px; }
   .portrait { max-width: 176px; }
-  .fig-note { left: 192px; }
 }
 
 /* ---------- Extra snapshots under an entry, and film clips ---------- */
