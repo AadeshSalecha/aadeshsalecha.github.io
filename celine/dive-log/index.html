@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Celine Willemsen · Biodiversity &amp; Ecology</title>
+<meta name="description" content="Celine Willemsen is a biology student at the University of Göttingen and an aspiring field ecologist. Her field log covers reef and rainforest conservation work in Honduras, Peru and South Africa.">
+<meta name="theme-color" content="#8fe0d8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23c9a35a'/%3E%3Ccircle cx='32' cy='32' r='21' fill='%23136a98'/%3E%3Cpath d='M14 34c6-4 12 4 18 0s12-4 18 0' stroke='%23bff3ec' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='38' cy='24' r='3' fill='none' stroke='%23e9fbf7' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=Figtree:ital,wght@0,400..700;1,400&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="../shared/ph.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Ambient water: light rays, drifting particles, depth vignette (decorative) -->
+<div class="rays" aria-hidden="true">
+  <span style="--x:6%;--w:9%;--r:14deg;--a:.30;--t:11s"></span>
+  <span style="--x:19%;--w:5%;--r:9deg;--a:.22;--t:14s"></span>
+  <span style="--x:33%;--w:12%;--r:6deg;--a:.26;--t:12s"></span>
+  <span style="--x:52%;--w:6%;--r:1deg;--a:.20;--t:16s"></span>
+  <span style="--x:63%;--w:10%;--r:-4deg;--a:.28;--t:13s"></span>
+  <span style="--x:80%;--w:7%;--r:-9deg;--a:.22;--t:15s"></span>
+  <span style="--x:91%;--w:11%;--r:-13deg;--a:.18;--t:12s"></span>
+</div>
+<canvas class="particles" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- Dive computer: current depth + section navigation -->
+<nav class="gauge" aria-label="Sections, by depth">
+  <div class="gauge-screen">
+    <div class="g-readout" aria-hidden="true">
+      <div class="g-row"><span class="g-label">Depth</span><span class="g-status">At surface</span></div>
+      <div class="g-depth"><span class="g-dir">&#9660;</span><span class="g-num">0.0</span><span class="g-unit">m</span></div>
+      <div class="g-row g-site-row"><span class="g-label">Site</span><span class="g-site">Surface</span></div>
+      <div class="g-row g-time-row"><span class="g-label">Dive time</span><span class="g-time">00:00</span></div>
+    </div>
+    <button class="gauge-toggle" type="button" aria-expanded="false" aria-controls="gauge-stops">
+      <span class="gauge-toggle-label">Log</span>
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 7l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="g-progress" aria-hidden="true"><span></span></div>
+  </div>
+  <div class="gauge-panel" id="gauge-stops">
+    <p class="gauge-panel-title" aria-hidden="true"><span>Dive profile</span><span>0 &rarr; 42 m</span></p>
+    <div class="gauge-profile">
+      <svg class="profile-svg" aria-hidden="true" focusable="false"></svg>
+      <ol class="gauge-stops">
+        <li data-for="top"><a href="#top"><span class="s-d">0 m</span><span class="s-n">Surface</span></a></li>
+        <li data-for="now"><a href="#now"><span class="s-d">5 m</span><span class="s-n">Now</span></a></li>
+        <li data-for="utila"><a href="#utila"><span class="s-d">12 m</span><span class="s-n">Utila</span></a></li>
+        <li data-for="peru" class="is-si"><a href="#peru"><span class="s-d">SI</span><span class="s-n">Peru</span></a></li>
+        <li data-for="sodwana"><a href="#sodwana"><span class="s-d">18 m</span><span class="s-n">Sodwana Bay</span></a></li>
+        <li data-for="bund"><a href="#bund"><span class="s-d">21 m</span><span class="s-n">BUND</span></a></li>
+        <li data-for="certs"><a href="#certs"><span class="s-d">30 m</span><span class="s-n">Certificates</span></a></li>
+        <li data-for="studies"><a href="#studies"><span class="s-d">33 m</span><span class="s-n">Studies</span></a></li>
+        <li data-for="before"><a href="#before"><span class="s-d">37 m</span><span class="s-n">Before biology</span></a></li>
+        <li data-for="contact"><a href="#contact"><span class="s-d">42 m</span><span class="s-n">Contact</span></a></li>
+      </ol>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ 0 m · SURFACE ============ -->
+<header class="zone z-surface" id="top" data-depth="0 1.5" data-stop="0" data-site="Surface">
+  <svg class="surface-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="w1" d="M0 0H1440V54C1340 74 1260 40 1160 52S980 80 880 62 700 34 600 50 420 82 320 64 140 36 0 56Z"/>
+    <path class="w2" d="M0 0H1440V30C1360 46 1290 22 1200 32S1020 50 930 38 760 18 660 30 480 52 380 40 200 20 0 34Z"/>
+  </svg>
+  <div class="wrap hero">
+    <figure class="porthole">
+      <div class="porthole-ring" aria-hidden="true">
+        <i style="--a:0deg"></i><i style="--a:45deg"></i><i style="--a:90deg"></i><i style="--a:135deg"></i>
+        <i style="--a:180deg"></i><i style="--a:225deg"></i><i style="--a:270deg"></i><i style="--a:315deg"></i>
+      </div>
+      <div class="porthole-glass">
+        <img src="../photos/headshot.jpg" data-slot="headshot" data-hint="Studio portrait of Celine" alt="Portrait of Celine Willemsen, smiling, in a dark blazer" width="644" height="965" fetchpriority="high">
+      </div>
+    </figure>
+
+    <div class="hero-text">
+      <p class="kicker mono"><span class="dot" aria-hidden="true"></span>Field log · 2025 to now</p>
+      <h1>Celine Willemsen</h1>
+      <p class="tagline">Biology student at Göttingen, aspiring&nbsp;field&nbsp;ecologist.</p>
+      <!-- DRAFT copy: Celine to edit -->
+      <p class="lede">I study Biological Diversity and Ecology at the University of Göttingen. Before that I learned in the field: on coral reefs in Honduras and South Africa, and in the Peruvian Amazon. I want to spend my working life doing long-term ecological field work.</p>
+      <dl class="hero-status">
+        <div><dt>Now</dt><dd>B.Sc. Biological Diversity &amp; Ecology, Göttingen</dd></div>
+        <div><dt>Field</dt><dd>Honduras · Peru · South&nbsp;Africa</dd></div>
+        <div><dt>Diver</dt><dd>PADI Rescue Diver + EFR</dd></div>
+      </dl>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#now">Begin descent
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 3v13M4 10l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-line" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+  <p class="scroll-cue mono" aria-hidden="true"><span class="cue-bubble"></span>Scroll to descend</p>
+</header>
+
+<main id="main">
+
+<!-- ============ 5 m · NOW ============ -->
+<section class="zone z-now" id="now" data-depth="3 6.5" data-stop="5" data-site="Göttingen" aria-labelledby="now-h">
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag"><span class="dt-m">5 m</span><span class="dt-l">Now</span></p>
+      <h2 id="now-h">Studying biodiversity in&nbsp;Göttingen</h2>
+    </div>
+
+    <div class="now-grid">
+      <div class="now-text">
+        <!-- DRAFT copy: Celine to edit -->
+        <p class="big">In October 2026 I started a B.Sc. in <span lang="de">Biologische Diversität und Ökologie</span> (Biological Diversity and Ecology) at the University of Göttingen.</p>
+        <!-- DRAFT copy: Celine to edit -->
+        <p>The programme is built around applied biodiversity research, ecology, and evolution and systematics. It gives me the science behind the field work I have started doing, and the grounding for what comes next.</p>
+
+        <div class="heading-for">
+          <p class="mono hf-label">Heading for</p>
+          <p class="hf-goal">Long-term ecological field work</p>
+          <ul class="chips" aria-label="Areas of interest">
+            <li>Conservation</li>
+            <li>Biodiversity monitoring</li>
+            <li>Reef ecology</li>
+            <li>Rainforest ecology</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="now-side">
+        <figure class="shot now-photo">
+          <img class="shot-img ar-32" src="../photos/gottingen.jpg" data-slot="gottingen" data-hint="Göttingen: campus, old town or a first field course" alt="Göttingen" width="1200" height="800" loading="lazy">
+        </figure>
+        <article class="card card-light programme" aria-labelledby="prog-h">
+          <p class="card-kicker mono">Current programme</p>
+          <h3 id="prog-h"><span lang="de">B.Sc. Biologische Diversität und Ökologie</span></h3>
+          <dl class="kv">
+            <div><dt>University</dt><dd><span lang="de">Georg-August-Universität</span> Göttingen</dd></div>
+            <div><dt>Started</dt><dd>Winter semester 2026/27 (Oct 2026)</dd></div>
+            <div><dt>Focus</dt><dd>Applied biodiversity research · Ecology · Evolution &amp; systematics</dd></div>
+          </dl>
+          <a class="text-link" href="https://www.uni-goettingen.de/de/678052.html">Programme page<span class="ext" aria-hidden="true">&nearr;</span></a>
+        </article>
+      </div>
+    </div>
+
+    <aside class="topside" aria-label="Also in 2026">
+      <figure class="shot topside-photo">
+        <img class="shot-img ar-sq" src="../photos/australia.jpg" data-slot="australia" data-hint="A moment from Work & Travel in Australia" alt="Australia, 2026" width="600" height="600" loading="lazy">
+      </figure>
+      <div>
+        <p class="mono topside-k">Topside · 2026</p>
+        <!-- DRAFT copy: Celine to edit -->
+        <p class="topside-t">Between the reef and the lecture hall: Work &amp; Travel, Australia.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Shot line: 6 m → 11 m -->
+<div class="shotline shot-down-1" data-depth="6.5 11.5" data-site="Descent line" aria-hidden="true">
+  <div class="rope"></div>
+  <span class="rope-tag" style="top:10%">7 m</span>
+  <span class="rope-tag" style="top:50%">9 m</span>
+  <span class="rope-tag" style="top:90%">11 m</span>
+  <svg class="whaleshark" viewBox="0 0 420 130" focusable="false">
+    <defs>
+      <clipPath id="ws-body"><path d="M8 66C8 52 26 42 64 39C110 35 160 33 206 36L236 12L258 38C298 43 330 50 356 57L404 20L390 64L410 108L352 76C318 84 268 90 222 92L208 92C190 93 170 94 152 94L124 122L112 94C70 92 30 86 14 78C9 74 8 70 8 66Z"/></clipPath>
+    </defs>
+    <path class="ws-shape" d="M8 66C8 52 26 42 64 39C110 35 160 33 206 36L236 12L258 38C298 43 330 50 356 57L404 20L390 64L410 108L352 76C318 84 268 90 222 92L208 92C190 93 170 94 152 94L124 122L112 94C70 92 30 86 14 78C9 74 8 70 8 66Z"/>
+    <g clip-path="url(#ws-body)" class="ws-spots">
+      <circle cx="40" cy="52" r="2.2"/><circle cx="54" cy="47" r="2.2"/><circle cx="48" cy="60" r="2"/><circle cx="66" cy="56" r="2.2"/>
+      <circle cx="84" cy="46" r="2.6"/><circle cx="100" cy="54" r="2.6"/><circle cx="86" cy="64" r="2.4"/><circle cx="116" cy="44" r="2.6"/>
+      <circle cx="132" cy="56" r="2.8"/><circle cx="118" cy="68" r="2.6"/><circle cx="150" cy="44" r="2.8"/><circle cx="166" cy="56" r="2.8"/>
+      <circle cx="150" cy="70" r="2.6"/><circle cx="184" cy="46" r="2.8"/><circle cx="200" cy="58" r="2.8"/><circle cx="184" cy="72" r="2.6"/>
+      <circle cx="220" cy="48" r="2.6"/><circle cx="236" cy="60" r="2.6"/><circle cx="220" cy="74" r="2.4"/><circle cx="256" cy="52" r="2.4"/>
+      <circle cx="272" cy="64" r="2.4"/><circle cx="290" cy="56" r="2.2"/><circle cx="306" cy="66" r="2"/><circle cx="324" cy="60" r="1.8"/>
+      <path d="M60 41C150 34 260 38 356 58M70 50C170 44 270 50 352 62" fill="none" stroke-width="1.4"/>
+    </g>
+  </svg>
+</div>
+
+<section class="field" aria-labelledby="field-h">
+
+<!-- ============ 12 m · UTILA ============ -->
+<div class="zone z-12" id="utila" data-depth="12 14" data-stop="12" data-site="Utila, Honduras">
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag"><span class="dt-m">12 m</span><span class="dt-l">Field log</span></p>
+      <h2 id="field-h">Field log</h2>
+      <p class="zone-sub">Most recent entry first. Each one is a stretch of hands-on conservation work.</p>
+    </div>
+
+    <article class="log" aria-labelledby="utila-h">
+      <header class="log-head">
+        <p class="log-no"><span>Log</span><strong>04</strong></p>
+        <div class="log-title">
+          <p class="log-date"><time datetime="2026-05-04">4</time>&ndash;<time datetime="2026-05-30">30 May 2026</time></p>
+          <h3 id="utila-h">Utila, Bay Islands, Honduras</h3>
+          <p class="log-org">Marine Conservation Internship at the <a href="https://www.wsorc.org/">Whale Shark &amp; Oceanic Research Center (WSORC)<span class="ext" aria-hidden="true">&nearr;</span></a></p>
+        </div>
+        <p class="log-coords">&asymp; 16.1&deg;N<br>86.9&deg;W</p>
+      </header>
+
+      <div class="log-body">
+        <dl class="log-meta">
+          <div><dt>Role</dt><dd>Marine conservation intern</dd></div>
+          <div><dt>Duration</dt><dd>27 days</dd></div>
+          <div><dt>Water</dt><dd>Salt · Caribbean Sea</dd></div>
+          <div><dt>Habitats</dt><dd>Coral reef · mangroves</dd></div>
+        </dl>
+        <div class="log-obs">
+          <h4>Observations</h4>
+          <ul>
+            <li><span class="tag">Coral</span><span>Coral nursery work, monitoring out-planted coral fragments, coral recruit monitoring</span></li>
+            <li><span class="tag">Disease</span><span>SCTLD (stony coral tissue loss disease) treatment</span></li>
+            <li><span class="tag">Survey</span><span>REEF fish surveys, ID of reef-associated organisms, coral ID, megafauna monitoring</span></li>
+            <li><span class="tag">Invasive</span><span>Lionfish removal and dissection</span></li>
+            <li><span class="tag">Coast</span><span>Mangrove reforestation</span></li>
+            <li><span class="tag">General</span><span>General conservation activities</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery g-utila">
+        <figure class="shot a-ws"><img class="shot-img ar-wide" src="../photos/utila-whaleshark.jpg" data-slot="utila-whaleshark" data-hint="Whale shark at the surface off Utila" alt="Whale shark off Utila" width="1600" height="1000" loading="lazy"><figcaption>Whale shark</figcaption></figure>
+        <figure class="shot a-cn"><img class="shot-img ar-43" src="../photos/utila-coral-nursery.jpg" data-slot="utila-coral-nursery" data-hint="Coral fragments on a nursery tree or line" alt="Coral nursery at WSORC, Utila" width="800" height="600" loading="lazy"><figcaption>Coral nursery</figcaption></figure>
+        <figure class="shot a-rs"><img class="shot-img ar-43" src="../photos/utila-reef-survey.jpg" data-slot="utila-reef-survey" data-hint="Underwater survey: slate, transect tape or fish count" alt="Reef survey on Utila" width="800" height="600" loading="lazy"><figcaption>Reef survey</figcaption></figure>
+        <figure class="shot a-lf"><img class="shot-img ar-43" src="../photos/utila-lionfish.jpg" data-slot="utila-lionfish" data-hint="Lionfish removal or dissection" alt="Lionfish removal, Utila" width="800" height="600" loading="lazy"><figcaption>Lionfish removal</figcaption></figure>
+        <figure class="shot a-mg"><img class="shot-img ar-43" src="../photos/utila-mangroves.jpg" data-slot="utila-mangroves" data-hint="Planting mangrove seedlings" alt="Mangrove reforestation, Utila" width="800" height="600" loading="lazy"><figcaption>Mangroves</figcaption></figure>
+        <figure class="shot a-dv"><img class="shot-img ar-43" src="../photos/utila-dive.jpg" data-slot="utila-dive" data-hint="Celine on a dive, in gear" alt="Celine diving off Utila" width="800" height="600" loading="lazy"><figcaption>On a dive</figcaption></figure>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- Ascent: 14 m → surface (safety stop) -->
+<div class="shotline shot-up" data-depth="14 0.3" data-site="Ascent" aria-hidden="true">
+  <div class="rope"></div>
+  <span class="rope-tag" style="top:22%">Ascending</span>
+  <span class="rope-tag" style="top:66%">Safety stop · 5 m</span>
+  <span class="up-bubbles"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+</div>
+
+<!-- ============ SURFACE INTERVAL · PERU ============ -->
+<div class="zone z-fresh" id="peru" data-depth="0 0" data-stop="0" data-site="Peruvian Amazon" data-mode="fresh">
+  <svg class="fresh-top" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="ft-water" d="M0 70C120 50 220 88 360 72S600 44 740 64 1000 92 1140 70 1340 52 1440 66V0H0Z"/>
+    <path class="ft-line" d="M0 70C120 50 220 88 360 72S600 44 740 64 1000 92 1140 70 1340 52 1440 66"/>
+  </svg>
+  <svg class="canopy canopy-l" viewBox="0 0 320 260" aria-hidden="true" focusable="false">
+    <defs><path id="leaf" d="M0 0C18-22 62-26 96 0C62 26 18 22 0 0Z"/></defs>
+    <g class="c1"><use href="#leaf" transform="translate(-10 20) rotate(24) scale(1.6)"/><use href="#leaf" transform="translate(30 0) rotate(58) scale(1.3)"/><use href="#leaf" transform="translate(-20 90) rotate(8) scale(1.4)"/></g>
+    <g class="c2"><use href="#leaf" transform="translate(60 -10) rotate(80) scale(1.1)"/><use href="#leaf" transform="translate(0 50) rotate(40) scale(1.2)"/><use href="#leaf" transform="translate(-30 150) rotate(-6) scale(1.1)"/></g>
+    <g class="c3"><use href="#leaf" transform="translate(100 -20) rotate(95) scale(.9)"/><use href="#leaf" transform="translate(-10 200) rotate(-14) scale(.8)"/></g>
+  </svg>
+  <svg class="canopy canopy-r" viewBox="0 0 320 260" aria-hidden="true" focusable="false">
+    <g class="c1"><use href="#leaf" transform="translate(-10 20) rotate(24) scale(1.6)"/><use href="#leaf" transform="translate(30 0) rotate(58) scale(1.3)"/><use href="#leaf" transform="translate(-20 90) rotate(8) scale(1.4)"/></g>
+    <g class="c2"><use href="#leaf" transform="translate(60 -10) rotate(80) scale(1.1)"/><use href="#leaf" transform="translate(0 50) rotate(40) scale(1.2)"/><use href="#leaf" transform="translate(-30 150) rotate(-6) scale(1.1)"/></g>
+    <g class="c3"><use href="#leaf" transform="translate(100 -20) rotate(95) scale(.9)"/><use href="#leaf" transform="translate(-10 200) rotate(-14) scale(.8)"/></g>
+  </svg>
+
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag depth-tag-si"><span class="dt-m">0 m</span><span class="dt-l">Surface interval</span></p>
+      <p class="si-note">A freshwater detour: six weeks out of the sea and into the rainforest.</p>
+    </div>
+
+    <article class="log log-fresh" aria-labelledby="peru-h">
+      <header class="log-head">
+        <p class="log-no"><span>Log</span><strong>03</strong></p>
+        <div class="log-title">
+          <p class="log-date"><time datetime="2026-03-16">16 Mar</time> &ndash; <time datetime="2026-04-25">25 Apr 2026</time></p>
+          <h3 id="peru-h">Peruvian Amazon, Madre de Dios</h3>
+          <p class="log-org">Amazon Conservation &amp; Reforestation at <a href="https://panthera-sanctuary.com/">Panthera Sanctuary<span class="ext" aria-hidden="true">&nearr;</span></a>, near Puerto Maldonado</p>
+        </div>
+        <p class="log-coords">&asymp; 12.6&deg;S<br>69.2&deg;W</p>
+      </header>
+
+      <div class="log-body">
+        <dl class="log-meta">
+          <div><dt>Programme</dt><dd>Amazon Conservation &amp; Reforestation</dd></div>
+          <div><dt>Duration</dt><dd>41 days</dd></div>
+          <div><dt>Water</dt><dd>Fresh · Amazon basin</dd></div>
+          <div><dt>Habitats</dt><dd>Rainforest · agroforestry plots</dd></div>
+        </dl>
+        <div class="log-obs">
+          <h4>Observations</h4>
+          <ul>
+            <li><span class="tag">Wildlife</span><span>Caiman monitoring, mammal monitoring, bird watching, herpetology</span></li>
+            <li><span class="tag">Forest</span><span>Reforestation, agroforestry and neotropical permaculture</span></li>
+            <li><span class="tag">Patrol</span><span>Reserve patrols and rainforest expeditions</span></li>
+            <li><span class="tag">Camp</span><span>Trail maintenance and construction</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery g-peru">
+        <figure class="shot a-rf"><img class="shot-img ar-wide" src="../photos/peru-rainforest.jpg" data-slot="peru-rainforest" data-hint="Rainforest canopy or river near the sanctuary" alt="Rainforest near Puerto Maldonado" width="1600" height="1000" loading="lazy"><figcaption>Rainforest</figcaption></figure>
+        <figure class="shot a-ca"><img class="shot-img ar-43" src="../photos/peru-caiman.jpg" data-slot="peru-caiman" data-hint="Caiman during a monitoring session" alt="Caiman monitoring" width="800" height="600" loading="lazy"><figcaption>Caiman monitoring</figcaption></figure>
+        <figure class="shot a-re"><img class="shot-img ar-43" src="../photos/peru-reforestation.jpg" data-slot="peru-reforestation" data-hint="Planting saplings or agroforestry work" alt="Reforestation work in Peru" width="800" height="600" loading="lazy"><figcaption>Reforestation</figcaption></figure>
+        <figure class="shot a-ex"><img class="shot-img ar-43" src="../photos/peru-expedition.jpg" data-slot="peru-expedition" data-hint="On patrol or expedition in the forest" alt="Rainforest expedition" width="800" height="600" loading="lazy"><figcaption>Expedition</figcaption></figure>
+      </div>
+    </article>
+  </div>
+
+  <svg class="fresh-bottom" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path class="fb-river" d="M0 40C160 62 300 26 460 44S760 70 920 48 1220 24 1440 46V160H0Z"/>
+    <path class="fb-line" d="M0 40C160 62 300 26 460 44S760 70 920 48 1220 24 1440 46"/>
+  </svg>
+  <svg class="caiman" viewBox="0 0 240 50" aria-hidden="true" focusable="false">
+    <path class="cm-ripple" d="M-4 44C14 41 30 47 50 44M70 46C96 42 120 49 150 45M170 44C192 41 214 47 244 44"/>
+    <path class="cm-body" d="M4 40C6 34 14 32 20 35L26 37H60C70 36 76 30 82 26C88 22 98 23 102 29C105 33 110 35 120 36L132 37l4-4 4 4h8l4-4 4 4h8l4-4 4 4h8l3-3 3 3h7l3-3 3 3H210C220 38 230 39 236 40Z"/>
+    <ellipse class="cm-eye" cx="92" cy="28.6" rx="4.6" ry="3.3"/>
+    <rect class="cm-pupil" x="91.2" y="25.6" width="1.6" height="6" rx=".8"/>
+    <circle class="cm-nose" cx="16" cy="35.4" r="1.3"/>
+  </svg>
+</div>
+
+<!-- Descent: surface → 18 m -->
+<div class="shotline shot-down-2" data-depth="0.3 17.5" data-site="Indian Ocean" aria-hidden="true">
+  <div class="rope"></div>
+  <span class="rope-tag" style="top:20%">Back in · Indian Ocean</span>
+  <span class="rope-tag" style="top:56%">10 m</span>
+  <span class="rope-tag" style="top:91%">16 m</span>
+  <svg class="fishschool" viewBox="0 0 300 120" focusable="false">
+    <g><path transform="translate(10 34)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(40 22)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(36 52)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(70 38)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(98 24)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(92 60)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(124 44)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(150 30)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(60 76)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(130 78)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(178 52)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(200 34)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/><path transform="translate(226 64)" d="M24 6C20 0 10 0 6 6C10 12 20 12 24 6ZM6 6L0 1V11Z"/></g>
+  </svg>
+</div>
+
+<!-- ============ 18 m · SODWANA BAY ============ -->
+<div class="zone z-18" id="sodwana" data-depth="18 20" data-stop="18" data-site="Sodwana Bay, ZA">
+  <svg class="seafan seafan-r" viewBox="0 0 200 260" aria-hidden="true" focusable="false">
+    <path d="M100 258V190M100 190C98 150 70 120 40 96M100 190C104 150 132 118 166 92M100 190C100 140 98 100 92 50M70 140C56 120 30 116 12 120M132 138C150 118 176 112 194 118M92 100C80 78 62 66 46 54M96 90C108 66 126 52 142 40M40 96C28 80 20 62 18 44M166 92C178 76 186 58 186 38M92 50C88 34 80 20 70 10M92 60C100 40 112 26 124 14M52 106C40 104 26 98 16 88M146 104C160 104 174 98 186 88" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
+    <article class="log" aria-labelledby="sodwana-h">
+      <header class="log-head">
+        <p class="log-no"><span>Log</span><strong>02</strong></p>
+        <div class="log-title">
+          <p class="log-date"><time datetime="2025-10-20">20 Oct</time> &ndash; <time datetime="2025-11-03">3 Nov 2025</time></p>
+          <h3 id="sodwana-h">Sodwana Bay, South Africa</h3>
+          <p class="log-org">Marine Conservation &amp; Indian Ocean Reef Ecology with Wildlife &amp; Ecological Investments (WEI), who run research programmes with <a href="https://www.opwall.com/expeditions/research-expedition/south-africa-expedition-marine-and-terrestrial/">Operation Wallacea<span class="ext" aria-hidden="true">&nearr;</span></a></p>
+        </div>
+        <p class="log-coords">&asymp; 27.5&deg;S<br>32.7&deg;E</p>
+      </header>
+
+      <div class="log-body">
+        <dl class="log-meta">
+          <div><dt>Programme</dt><dd>Marine Conservation &amp; Indian Ocean Reef Ecology</dd></div>
+          <div><dt>Duration</dt><dd>15 days</dd></div>
+          <div><dt>Water</dt><dd>Salt · Indian Ocean</dd></div>
+          <div><dt>Habitats</dt><dd>Coral reef</dd></div>
+        </dl>
+        <div class="log-obs">
+          <h4>Observations</h4>
+          <ul>
+            <li><span class="tag">Ecology</span><span>Indian Ocean reef ecology</span></li>
+            <li><span class="tag">Method</span><span>Reef survey techniques</span></li>
+            <li><span class="tag">Context</span><span>Course topics typically span reef ecosystems, coral and algal species, megafauna, and mangrove and seagrass ecology</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery g-sodwana">
+        <figure class="shot a-sr"><img class="shot-img ar-wide" src="../photos/sodwana-reef.jpg" data-slot="sodwana-reef" data-hint="Reef scene at Sodwana Bay" alt="Reef at Sodwana Bay" width="1600" height="1000" loading="lazy"><figcaption>Reef, Sodwana Bay</figcaption></figure>
+        <figure class="shot a-sc"><img class="shot-img ar-43" src="../photos/sodwana-coast.jpg" data-slot="sodwana-coast" data-hint="Coastline, dunes or dive launch at Sodwana" alt="Coast at Sodwana Bay" width="800" height="600" loading="lazy"><figcaption>The coast</figcaption></figure>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- ============ 21 m · BUND ============ -->
+<div class="zone z-21" id="bund" data-depth="21 23" data-stop="21" data-site="Moers, NRW">
+  <div class="wrap">
+    <article class="log log-small" aria-labelledby="bund-h">
+      <header class="log-head">
+        <p class="log-no"><span>Log</span><strong>01</strong></p>
+        <div class="log-title">
+          <p class="log-date"><time datetime="2025-06">Jun</time> &ndash; <time datetime="2025-12">Dec 2025</time></p>
+          <h3 id="bund-h">Home waters: BUND</h3>
+          <p class="log-org">Member of the Neukirchen-Vluyn/Moers local group of <a href="https://www.bund-nrw.de/">BUND (Friends of the Earth Germany)<span class="ext" aria-hidden="true">&nearr;</span></a></p>
+        </div>
+      </header>
+      <div class="bund-body">
+        <dl class="log-meta">
+          <div><dt>Role</dt><dd>Volunteer, local group member</dd></div>
+          <div><dt>Duration</dt><dd>7 months</dd></div>
+          <div><dt>Where</dt><dd>Neukirchen-Vluyn / Moers, NRW</dd></div>
+        </dl>
+        <figure class="shot bund-photo"><img class="shot-img ar-32" src="../photos/bund-local.jpg" data-slot="bund-local" data-hint="With the BUND local group" alt="BUND local group, Neukirchen-Vluyn/Moers" width="900" height="600" loading="lazy"><figcaption>Local group</figcaption></figure>
+      </div>
+    </article>
+  </div>
+</div>
+
+</section>
+
+<!-- Shot line: 23 m → 28 m -->
+<div class="shotline shot-down-3" data-depth="23 28" data-site="Descent line" aria-hidden="true">
+  <div class="rope"></div>
+  <span class="rope-tag" style="top:40%">25 m</span>
+</div>
+
+<!-- ============ 30 m · CERTIFICATIONS ============ -->
+<section class="zone z-30" id="certs" data-depth="28 31" data-stop="30" data-site="Certifications" aria-labelledby="certs-h">
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag"><span class="dt-m">30 m</span><span class="dt-l">Certifications</span></p>
+      <h2 id="certs-h">Stamped and signed&nbsp;off</h2>
+      <p class="zone-sub">Diving qualifications first, then the rest of the paperwork.</p>
+    </div>
+
+    <div class="logbook">
+      <div class="logbook-page">
+        <p class="page-head"><span>Training record</span><span>Diving</span></p>
+        <ol class="stamps">
+          <li class="stamp st-rescue">
+            <svg class="stamp-svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs><path id="arc-r" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
+              <circle cx="100" cy="100" r="92" class="ring-thick"/><circle cx="100" cy="100" r="84" class="ring-thin"/><circle cx="100" cy="100" r="54" class="ring-thin"/>
+              <text class="arc-text"><textPath href="#arc-r" textLength="446" lengthAdjust="spacing">PADI · RESCUE DIVER · EMERGENCY FIRST RESPONSE ·</textPath></text>
+              <g transform="translate(100 92)"><rect x="-26" y="-17" width="52" height="34" rx="2" class="flag"/><path d="M-26 -17L26 17" class="flag-stripe"/></g>
+              <text x="100" y="134" class="stamp-date" text-anchor="middle">JUL 2026</text>
+            </svg>
+            <div class="stamp-cap"><strong>Rescue Diver + EFR</strong><span>PADI · Emergency First Response · Jul 2026</span></div>
+          </li>
+          <li class="stamp st-aow">
+            <svg class="stamp-svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs><path id="arc-a" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
+              <circle cx="100" cy="100" r="92" class="ring-thick"/><circle cx="100" cy="100" r="84" class="ring-thin"/><circle cx="100" cy="100" r="54" class="ring-thin"/>
+              <text class="arc-text"><textPath href="#arc-a" textLength="446" lengthAdjust="spacing">PADI · ADVANCED OPEN WATER DIVER · PADI · AOW ·</textPath></text>
+              <path d="M66 98c8-7 15 7 23 0s15-7 23 0 15 7 23 0" class="wave"/><path d="M66 110c8-7 15 7 23 0s15-7 23 0 15 7 23 0" class="wave"/>
+              <path d="M100 66v18M93 77l7 7 7-7" class="wave"/>
+              <text x="100" y="138" class="stamp-date" text-anchor="middle">MAY 2026</text>
+            </svg>
+            <div class="stamp-cap"><strong>Advanced Open Water Diver</strong><span>PADI · May 2026</span></div>
+          </li>
+          <li class="stamp st-ow">
+            <svg class="stamp-svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs><path id="arc-o" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
+              <circle cx="100" cy="100" r="92" class="ring-thick"/><circle cx="100" cy="100" r="84" class="ring-thin"/><circle cx="100" cy="100" r="54" class="ring-thin"/>
+              <text class="arc-text"><textPath href="#arc-o" textLength="446" lengthAdjust="spacing">PADI · OPEN WATER DIVER · PADI · OPEN WATER ·</textPath></text>
+              <circle cx="88" cy="94" r="9" class="wave"/><circle cx="112" cy="84" r="6" class="wave"/><circle cx="106" cy="106" r="4" class="wave"/>
+              <text x="100" y="138" class="stamp-date" text-anchor="middle">OCT 2025</text>
+            </svg>
+            <div class="stamp-cap"><strong>Open Water Diver</strong><span>PADI · Oct 2025</span></div>
+          </li>
+        </ol>
+        <p class="page-foot"><span>Open Water</span><span class="pf-arrow" aria-hidden="true"></span><span>Advanced</span><span class="pf-arrow" aria-hidden="true"></span><span>Rescue + EFR</span></p>
+      </div>
+
+      <figure class="pinned">
+        <img class="shot-img ar-portrait" src="../photos/field-portrait.jpg" data-slot="field-portrait" data-hint="Celine in the field or in dive gear" alt="Celine in dive gear" width="800" height="1000" loading="lazy">
+        <figcaption>Field-ready</figcaption>
+      </figure>
+    </div>
+
+    <ul class="other-certs" aria-label="Other certificates">
+      <li>
+        <span class="oc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13" /><circle cx="19" cy="15" r="3"/></svg></span>
+        <div><strong>Cambridge C1 Advanced</strong><span>CEFR C1 English · Dec 2025</span></div>
+      </li>
+      <li>
+        <span class="oc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3M8 17h6"/></svg></span>
+        <div><strong>PRINCE2 Agile Foundation</strong><span>PeopleCert · Aug 2025</span></div>
+      </li>
+      <li>
+        <span class="oc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16l1.6-5.2A2 2 0 0 1 8.5 9.4h7a2 2 0 0 1 1.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><circle cx="7.5" cy="18" r=".6"/><circle cx="16.5" cy="18" r=".6"/></svg></span>
+        <div><strong>Driver&rsquo;s licence</strong><span>Class B</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 33 m · STUDIES ============ -->
+<section class="zone z-33" id="studies" data-depth="31 34" data-stop="33" data-site="Studies" aria-labelledby="studies-h">
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag"><span class="dt-m">33 m</span><span class="dt-l">Studies</span></p>
+      <h2 id="studies-h">Studies</h2>
+    </div>
+    <ol class="studies">
+      <li class="study study-now">
+        <p class="study-when"><span class="live" aria-hidden="true"></span>Since Oct 2026</p>
+        <div class="study-main">
+          <h3><span lang="de">B.Sc. Biologische Diversität und Ökologie</span></h3>
+          <p class="study-sub">Biological Diversity &amp; Ecology · University of Göttingen</p>
+          <p class="study-detail">Focus areas: applied biodiversity research, ecology, evolution &amp; systematics. Started winter semester 2026/27.</p>
+        </div>
+        <a class="text-link" href="https://www.uni-goettingen.de/de/678052.html">Programme<span class="ext" aria-hidden="true">&nearr;</span></a>
+      </li>
+      <li class="study">
+        <p class="study-when">Sep 2018 &ndash; Jan 2023</p>
+        <div class="study-main">
+          <h3>B.A. Business Administration</h3>
+          <p class="study-sub">FOM University of Applied Sciences</p>
+        </div>
+        <a class="text-link" href="https://www.fom.de/">FOM<span class="ext" aria-hidden="true">&nearr;</span></a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 37 m · BEFORE BIOLOGY ============ -->
+<section class="zone z-37" id="before" data-depth="35 39" data-stop="37" data-site="Before biology" aria-labelledby="before-h">
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag"><span class="dt-m">37 m</span><span class="dt-l">Before biology</span></p>
+      <h2 id="before-h">What I bring to a field&nbsp;team</h2>
+      <!-- DRAFT copy: Celine to edit -->
+      <p class="zone-sub">Before biology I spent about five years in business. Field projects run on the same things: plans that hold, budgets and funding, contracts, and clear writing.</p>
+    </div>
+
+    <ul class="kit">
+      <li>
+        <span class="kit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 11l2 2 4-4M8.5 17h7"/></svg></span>
+        <h3>Project coordination</h3>
+        <p>Coordinated the finance (FI) sub-project of LEMKEN&rsquo;s SAP S/4HANA rollout. PRINCE2 Agile Foundation certified.</p>
+      </li>
+      <li>
+        <span class="kit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
+        <h3>Budgets &amp; funding applications</h3>
+        <p>Five years in financial accounting, including help with funding applications.</p>
+      </li>
+      <li>
+        <span class="kit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h4"/></svg></span>
+        <h3>Contracts &amp; insurance</h3>
+        <p>Contract and insurance management, plus administration of subsidiaries.</p>
+      </li>
+      <li>
+        <span class="kit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span>
+        <h3>Clear writing</h3>
+        <p>Freelance copywriter for over a year. Useful for grant applications, reports and outreach.</p>
+      </li>
+      <li>
+        <span class="kit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+        <h3>Keeping things running</h3>
+        <p>Assistant to management from 2021 to 2025: admin, coordination and follow-through.</p>
+      </li>
+    </ul>
+
+    <ol class="prior">
+      <li>
+        <p class="prior-when">Feb 2021 &ndash; Feb 2026</p>
+        <div><h3>Industrial clerk, <a href="https://lemken.com/en-en/">LEMKEN GmbH &amp; Co. KG<span class="ext" aria-hidden="true">&nearr;</span></a></h3>
+        <p>Alpen, Germany. Financial Services &amp; Tax group, Financial Accounting department. Assistant to management 02/2021 to 07/2025.</p></div>
+      </li>
+      <li>
+        <p class="prior-when">Nov 2023 &ndash; Jan 2025</p>
+        <div><h3>Freelance copywriter</h3>
+        <p>Trained through a Copywriting MBA program (Oct 2023 to Oct 2024).</p></div>
+      </li>
+      <li>
+        <p class="prior-when">Sep 2018 &ndash; Jan 2021</p>
+        <div><h3>Apprenticeship as industrial clerk, LEMKEN</h3>
+        <p>Where my business years started.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 42 m · SEABED ============ -->
+<section class="zone z-seabed" id="contact" data-depth="39 42" data-stop="42" data-site="Seabed" aria-labelledby="contact-h">
+  <div class="torch" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="zone-head">
+      <p class="depth-tag"><span class="dt-m">42 m</span><span class="dt-l">Seabed</span></p>
+      <h2 id="contact-h">Let&rsquo;s talk field work</h2>
+      <!-- DRAFT copy: Celine to edit -->
+      <p class="zone-sub">If you run field projects in conservation or biodiversity monitoring, I would like to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <p class="cc-k">Email</p>
+        <a class="cc-mail" href="mailto:celinewillemsen@web.de">celinewillemsen<wbr>@web.de</a>
+        <p class="cc-k">LinkedIn</p>
+        <a class="cc-link" href="https://www.linkedin.com/in/celine-willemsen/">linkedin.com/in/celine-willemsen<span class="ext" aria-hidden="true">&nearr;</span></a>
+      </div>
+      <div class="comms">
+        <p class="cc-k">Languages</p>
+        <ul>
+          <li><strong>German</strong><span>Native</span></li>
+          <li><strong>English</strong><span>C1 · Cambridge Advanced</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <svg class="seabed" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <defs><linearGradient id="sand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#23266a"/><stop offset=".4" stop-color="#3a3f86"/><stop offset=".7" stop-color="#2a2e72"/><stop offset="1" stop-color="#202363"/></linearGradient></defs>
+    <g class="sb-grass">
+      <path d="M150 230C146 196 156 170 146 138M162 232C164 200 176 182 178 150M174 234C172 214 186 196 196 176M138 232C132 210 124 194 112 180"/>
+      <path d="M1188 226C1184 192 1194 166 1184 134M1200 228C1202 196 1214 178 1216 146M1212 230C1210 210 1224 192 1234 172M1176 228C1170 206 1162 190 1150 176"/>
+      <path d="M612 232C610 214 618 200 612 184M622 234C626 216 634 206 640 192M602 234C596 220 590 210 580 202"/>
+    </g>
+    <g class="sb-fan">
+      <path d="M1320 226V180M1320 180C1316 150 1294 130 1272 118M1320 180C1324 150 1346 128 1370 116M1320 180C1320 146 1318 120 1312 92M1300 146C1288 134 1272 132 1258 136M1340 144C1354 132 1370 128 1384 132M1312 112C1302 98 1290 92 1278 88M1314 104C1324 90 1336 82 1348 76" fill="none"/>
+      <path d="M300 228V196M300 196C296 176 282 162 266 154M300 196C304 174 318 160 336 152M300 196C300 172 298 154 294 136" fill="none"/>
+    </g>
+    <path class="sb-back" d="M0 200C140 176 260 204 420 192S700 160 860 178 1160 206 1300 186 1400 176 1440 182V260H0Z"/>
+    <path class="sb-front" d="M0 226C180 210 320 236 520 224S860 204 1040 220 1320 238 1440 222V260H0Z"/>
+    <g class="sb-rocks"><ellipse cx="452" cy="222" rx="38" ry="14"/><ellipse cx="490" cy="226" rx="20" ry="9"/><ellipse cx="1010" cy="218" rx="30" ry="11"/></g>
+  </svg>
+</section>
+
+</main>
+
+<footer class="seafloor">
+  <div class="wrap seafloor-in">
+    <p>&copy; 2026 Celine Willemsen</p>
+    <a class="ascend" href="#top">
+      <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 17V4M4 10l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Ascend to the surface
+    </a>
+  </div>
+</footer>
+</body>
+</html>
