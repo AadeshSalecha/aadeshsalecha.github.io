@@ -243,7 +243,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
   margin: 0 0 18px; color: var(--cream); max-width: 30ch;
   padding-left: 16px; border-left: 3px solid var(--sun);
 }
-.hero__intro { font-size: clamp(16.5px, 1.4vw, 18.5px); line-height: 1.65; color: var(--cream-2); max-width: 54ch; }
+.hero__intro { font-size: clamp(16.5px, 1.4vw, 18.5px); line-height: 1.65; color: var(--cream); max-width: 54ch; text-shadow: 0 1px 12px rgba(10, 34, 20, .35); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 
 .portrait { position: relative; margin: 0; justify-self: center; width: min(100%, 360px); }
@@ -375,7 +375,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
 .mg-above__inner .zone-head__n { flex-direction: row-reverse; }
 .mg-below {
   position: relative; display: flow-root;
-  background: linear-gradient(#3aa6a0 0%, #34a4a1 50%, #2aa0a2 100%);
+  background: linear-gradient(#3aa6a0 0%, #2f9c9c 55%, #23909a 100%);
   padding: 0 0 clamp(90px, 11vw, 150px);
   --ph-bg: linear-gradient(155deg, #66c6bd, #3ea6a1); --ph-ink: #fff; --ph-line: rgba(255, 255, 255, .55);
 }
@@ -392,13 +392,13 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
   --ph-bg: linear-gradient(155deg, #45b7b4, #23889c); --ph-ink: #fff; --ph-line: rgba(255, 255, 255, .5);
   color: #effaf8;
   padding: clamp(60px, 8vw, 110px) 0 clamp(250px, 27vw, 380px);
-  background: linear-gradient(#2aa0a2 0%, #2096a0 22%, #1a809b 55%, #156c93 85%, #13678f 100%);
+  background: linear-gradient(#23909a 0%, #1b8293 14%, #187a93 40%, #156e92 75%, #13678f 100%);
 }
-.caustics { inset: 0 0 45% 0; -webkit-mask-image: linear-gradient(#000 0%, transparent 100%); mask-image: linear-gradient(#000 0%, transparent 100%); }
+.caustics { inset: 0 0 40% 0; -webkit-mask-image: linear-gradient(transparent 0, #000 220px, rgba(0, 0, 0, .7) 50%, transparent 100%); mask-image: linear-gradient(transparent 0, #000 220px, rgba(0, 0, 0, .7) 50%, transparent 100%); }
 .caustics::before, .caustics::after {
   content: ""; position: absolute; inset: -320px;
   background: url("textures/caustics.svg") 0 0 / 300px 300px;
-  opacity: .13;
+  opacity: .12;
 }
 .caustics::after { background-size: 430px 430px; opacity: .09; transform: rotate(14deg); }
 .sunrays {
@@ -484,7 +484,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
   color: var(--ink);
   padding: clamp(30px, 4vw, 60px) 0 clamp(80px, 9vw, 120px);
   background:
-    url("textures/sand.svg") 0 0 / 260px 130px,
+    url("textures/sand.svg") 0 0 / 560px 280px,
     linear-gradient(#7d8c80 0, #a7a78e 180px, #cdbf9e 380px, #e2d5b6 640px, #e9ddc2 100%);
 }
 .sb-grass { width: clamp(120px, 14vw, 200px); height: auto; }
