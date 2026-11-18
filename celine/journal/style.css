@@ -29,8 +29,8 @@
   --f-hand: 'Homemade Apple', 'Segoe Script', 'Bradley Hand', cursive;
   --f-pencil: 'Caveat', 'Bradley Hand', 'Segoe Print', cursive;
 
-  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .08 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --mottle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='720'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005556' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .1 0 0 0 .5 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .08 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --mottle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='720'%3E%3Cfilter id='m' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005556' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .1 0 0 0 .5 -.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -150,14 +150,14 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
 .station .coords { margin-left: 8px; }
 
 .if-found {
-  display: inline-block; max-width: 420px; padding: 18px 26px 16px; transform: rotate(-.8deg);
+  display: inline-block; max-width: 440px; padding: 18px 26px 16px; transform: rotate(-.8deg);
   background: var(--paper-hi);
   box-shadow: inset 0 0 0 1.5px var(--ink-2), inset 0 0 0 5px var(--paper-hi), inset 0 0 0 6px rgba(90, 64, 48, .6), 0 3px 10px rgba(60, 40, 20, .12);
 }
 .if-found p { margin: 0; }
 .if-found-h { font-family: var(--f-sc); font-size: 14px; letter-spacing: .16em; color: var(--rust); }
 .if-found-name { font-family: var(--f-hand); font-size: 22px; line-height: 2; color: var(--ink); }
-.if-found-links { font-size: 18px; }
+.if-found-links { font-size: 17.5px; line-height: 1.5; }
 
 .title-figure { position: relative; padding-top: 18px; }
 .portrait {
@@ -248,8 +248,8 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
 .tree .node { fill: var(--ink); }
 .tree .node--open { fill: var(--paper-hi); stroke: var(--faded); stroke-width: 2; }
 .tree .node--now { fill: var(--rust); stroke: var(--ink); stroke-width: 2; }
-.tree .lineage-old path { stroke: #8a7255; stroke-width: 2.6; stroke-dasharray: 4 7; }
-.tree .lineage-next path { stroke: var(--sepia); stroke-width: 3; stroke-dasharray: .5 9; }
+.tree .lineage-old path { stroke: #8a7255; stroke-width: 3; stroke-dasharray: 6 7; filter: none; }
+.tree .lineage-next path { stroke: var(--sepia); stroke-width: 3.6; stroke-dasharray: .5 10; filter: none; }
 .tree .axis path { stroke: var(--faded); stroke-width: 1.4; }
 .tree .axis .dash-faint { stroke-dasharray: 3 6; }
 .tree .axis text { font-family: var(--f-sc); font-size: 15px; letter-spacing: .06em; fill: var(--faded); }
@@ -429,25 +429,24 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
 .margin-note::before { content: "\2192"; position: absolute; left: 0; top: 0; font-family: var(--f-pencil); color: var(--pencil); }
 .margin-note a { color: var(--pencil); }
 
-.entry-photos { display: flex; flex-direction: column; }
-.entry-photos .snap--lg { z-index: 1; }
-.entry-photos .snap--sm { width: 54%; margin: -38px 0 0 auto; z-index: 2; }
-.entry--flip .entry-photos .snap--sm { margin: -38px auto 0 0; }
+.entry-photos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 22px; align-items: start; }
+.entry-photos .snap--lg { grid-column: 1 / -1; z-index: 1; }
+.entry-photos .snap--sm { grid-column: 2; grid-row: 2; margin-top: -38px; z-index: 2; }
+.entry--flip .entry-photos .snap--sm { grid-column: 1; }
+.entry-photos .plate--side { grid-column: 1; grid-row: 2; margin-top: 30px; transform: rotate(-1.2deg); padding: 18px 12px 12px; }
+.entry--flip .entry-photos .plate--side { grid-column: 2; transform: rotate(1.2deg); }
+.plate--side .sketch { max-width: 170px; margin: 0 auto; }
+.plate--side figcaption { font-size: 14.5px; }
 .entry-photos .snap--lg:not(:only-child) figcaption { text-align: left; padding-left: 8px; }
 .entry--flip .entry-photos .snap--lg:not(:only-child) figcaption { text-align: right; padding-right: 8px; }
-.entry-photos--pair { flex-direction: row; align-items: flex-start; gap: 26px; }
-.entry-photos.entry-photos--pair .snap--sm { margin: 16px 0 0; width: 50%; }
-.entry-photos--pair .plate--leaf { width: 50%; }
+.entry-photos.entry-photos--pair .snap--sm { grid-column: 1; grid-row: 1; margin: 16px 0 0; }
+.entry-photos--pair .plate--leaf { grid-column: 2; grid-row: 1; }
 
 .entry-plates { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 28px; margin-top: 44px; align-items: stretch; }
-.plate--mangrove { max-width: 230px; margin: 26px 0 0 18px; transform: rotate(1.4deg); padding-top: 22px; }
-.plate--mangrove .sketch { max-width: 150px; margin: 0 auto; }
 .entry-plates .plate { display: flex; flex-direction: column; justify-content: space-between; }
 .entry-plates .plate .sketch { margin: auto 0; }
 #peru .entry-plates { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin-left: auto; margin-right: auto; }
 .entry-plates--one { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-left: auto; margin-right: auto; }
-.plate--seed { max-width: 300px; margin-top: 18px; transform: rotate(-1deg); }
-.plate--seed .sketch { max-width: 220px; margin: 0 auto; }
 .plate--coral .sketch { max-width: 400px; margin: 0 auto; }
 .plate--leaf { padding: 20px 14px 12px; transform: rotate(1.5deg); }
 .plate--leaf .sketch { max-width: 150px; margin: 0 auto; }
@@ -683,10 +682,8 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
   .chart-key { flex-direction: column; gap: 2px; }
   .entry { margin-top: 72px; padding-top: 34px; }
   .entry-date { font-size: 18px; }
-  .entry-photos .snap--sm { width: 62%; }
   .entry-plates, .entry-plates--one, #peru .entry-plates { grid-template-columns: minmax(0, 1fr); gap: 18px; margin-top: 32px; }
   .entry-plates .plate--sm { max-width: 300px; justify-self: center; width: 100%; }
-  .plate--mangrove { margin-left: 8px; }
   .plate { padding: 30px 12px 12px; }
   .plate figcaption { font-size: 14.5px; }
   .entry-photos--pair { gap: 16px; }

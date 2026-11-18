@@ -174,6 +174,7 @@
     highlight(id);
     readoutStop(id);
     card.classList.add('is-open');
+    viewport.classList.add('has-card');
     if (phoneMQ.matches) {
       var r = viewport.getBoundingClientRect();
       if (r.top < 0 || r.bottom > window.innerHeight * 0.38) {
@@ -193,6 +194,7 @@
     if (!current) return;
     current = null;
     card.classList.remove('is-open');
+    viewport.classList.remove('has-card');
     highlight(null);
     readoutStop(null);
     apply(defaultView(), true);
