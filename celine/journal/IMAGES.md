@@ -9,7 +9,7 @@ Photos are shown inside white snapshot borders, slightly tilted, with tape or ph
 | File | Where it appears | Ideal aspect | Notes |
 |---|---|---|---|
 | `field-portrait.jpg` | Title page, taped-in portrait ("fig. 1, the author, with a tree frog") | 3:4 portrait | Added. A slight sepia filter is applied in CSS so it sits on the paper. |
-| `utila-montage.mp4` | Entry No. 1 (Utila), main film clip with photo corners | any (3:4 frame until it loads) | **To add.** 30-second montage; plays muted while on screen, with a pause button. Optional poster `utila-montage.jpg`. |
+| `utila-montage.webm` / `.mp4` | Entry No. 1 (Utila), wide film under the entry, photo corners | 16:9 | Added. 30 s, 960×540; plays muted while on screen, with pause and sound buttons. Poster `utila-montage.jpg`. |
 | `peru-nursery.webm` / `.mp4` | Entry No. 2 (Peru), main film clip | 3:4 | Added. Poster: `peru-reforestation.jpg`. |
 | `peru-herp-survey.jpg` | Entry No. 2 (Peru), small taped photo overlapping the clip | 3:4 | Added. |
 | `peru-rain.jpg`, `peru-samples.jpg` | Entry No. 2 (Peru), strip of two snapshots under the entry | 3:4 | Added. |

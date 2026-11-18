@@ -33,7 +33,7 @@ Until a file exists, the pages show a labelled placeholder in its place.
 | `peru-rain.jpg` | Rain gear and rubber boots at the sanctuary |
 | `peru-samples.jpg` | Back from the field with sample tubs |
 | `sodwana-dive-centre.jpg` | At the Sodwana Bay dive centre, between dives |
-| `utila-montage.mp4` | **To add:** the 30-second Utila montage (diving, coral nursery, coral treatment). Optional poster frame: `utila-montage.jpg` |
+| `utila-montage.webm` + `utila-montage.mp4` + `utila-montage.jpg` | 30-second Utila montage with its soundtrack (starts muted; sound toggle on the page), plus its poster frame |
 
 All photos here are resized and re-encoded, which also strips camera metadata (including any GPS location).
 

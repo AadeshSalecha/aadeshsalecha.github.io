@@ -79,6 +79,23 @@
       });
       v.parentNode.appendChild(btn);
       label();
+      if (v.hasAttribute('data-sound')) {
+        var snd = document.createElement('button');
+        snd.type = 'button';
+        snd.className = 'vid-sound';
+        var setSnd = function () {
+          snd.textContent = v.muted ? '\u266A sound on' : '\u266A sound off';
+          snd.setAttribute('aria-pressed', v.muted ? 'false' : 'true');
+          snd.setAttribute('aria-label', v.muted ? 'Turn sound on' : 'Turn sound off');
+        };
+        snd.addEventListener('click', function () {
+          v.muted = !v.muted;
+          if (!v.muted && v.paused) { userPaused = false; v.play().catch(function () {}); }
+          setSnd();
+        });
+        v.parentNode.appendChild(snd);
+        setSnd();
+      }
     }
     v.addEventListener('loadeddata', addButton);
     if (v.readyState >= 2) addButton();
