@@ -668,6 +668,27 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
   .fig-note { left: 192px; }
 }
 
+/* ---------- Extra snapshots under an entry, and film clips ---------- */
+.entry-strip { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 34px 40px; margin-top: 48px; }
+.entry-strip .snap { width: min(270px, 42%); }
+.entry-strip .snap:nth-child(2) { margin-top: 26px; }
+video.snap-video { display: block; background: #2b1d14; }
+.vid-toggle {
+  position: absolute; right: 18px; bottom: 46px; z-index: 4;
+  width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid rgba(251, 247, 236, .8);
+  background: rgba(43, 29, 20, .72); color: #fbf7ec; font-size: 13px; line-height: 1; cursor: pointer;
+  display: grid; place-items: center; transition: background .2s;
+}
+.vid-toggle:hover { background: rgba(110, 34, 16, .85); }
+.vid-toggle:focus-visible { outline: 2px dashed var(--rust); outline-offset: 3px; }
+.ph[data-kind="video"]::before { content: "film to be added"; }
+@media (max-width: 700px) {
+  .entry-strip { gap: 22px 16px; margin-top: 34px; }
+  .entry-strip .snap { width: calc(50% - 10px); }
+  .entry-strip .snap figcaption { font-size: 17px; }
+  .entry-strip .snap:nth-child(2) { margin-top: 18px; }
+}
+
 /* ---------- Work experience: "before biology" entries ---------- */
 .sub-h--entries { margin-top: 110px; }
 .sub-h--entries + .entry { margin-top: 24px; }

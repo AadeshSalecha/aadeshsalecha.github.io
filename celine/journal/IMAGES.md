@@ -8,16 +8,17 @@ Photos are shown inside white snapshot borders, slightly tilted, with tape or ph
 
 | File | Where it appears | Ideal aspect | Notes |
 |---|---|---|---|
-| `headshot.jpg` | Title page, taped-in portrait ("fig. 1, the author") | 2:3 portrait | Exists already. A slight sepia filter is applied in CSS so it sits on the paper. |
-| `utila-whaleshark.jpg` | Work experience, Entry No. 1 (Utila), large photo with corners | 4:3 landscape | Whale shark at the surface off Utila. |
-| `utila-coral-nursery.jpg` | Entry No. 1 (Utila), small taped photo overlapping the large one | 1:1 square | Coral fragments in the nursery. |
-| `peru-rainforest.jpg` | Entry No. 2 (Peru), large taped photo | 4:3 landscape | Rainforest near Puerto Maldonado. |
-| `peru-caiman.jpg` | Entry No. 2 (Peru), small taped photo | 1:1 square | Caiman during a monitoring survey. |
-| `sodwana-reef.jpg` | Entry No. 3 (Sodwana Bay), large photo with corners | 4:3 landscape | Reef at Sodwana Bay. |
+| `field-portrait.jpg` | Title page, taped-in portrait ("fig. 1, the author, with a tree frog") | 3:4 portrait | Added. A slight sepia filter is applied in CSS so it sits on the paper. |
+| `utila-montage.mp4` | Entry No. 1 (Utila), main film clip with photo corners | any (3:4 frame until it loads) | **To add.** 30-second montage; plays muted while on screen, with a pause button. Optional poster `utila-montage.jpg`. |
+| `peru-nursery.webm` / `.mp4` | Entry No. 2 (Peru), main film clip | 3:4 | Added. Poster: `peru-reforestation.jpg`. |
+| `peru-herp-survey.jpg` | Entry No. 2 (Peru), small taped photo overlapping the clip | 3:4 | Added. |
+| `peru-rain.jpg`, `peru-samples.jpg` | Entry No. 2 (Peru), strip of two snapshots under the entry | 3:4 | Added. |
+| `sodwana-reef.jpg` | Entry No. 3 (Sodwana Bay), main photo with corners | 3:4 | Added (underwater). |
+| `sodwana-dive-centre.jpg`, `sodwana-coast.jpg` | Entry No. 3 (Sodwana Bay), strip of two snapshots | 3:4 | Added. |
 | `bund-local.jpg` | Entry No. 4 (BUND), small taped photo | 1:1 square | With the BUND local group, Lower Rhine. |
 | `australia.jpg` | Entry No. 5 (Australia), large taped photo | 4:3 landscape | Work & Travel, Australia. |
 | `gottingen.jpg` | Education, taped beside the "Now studying" label | 5:4 landscape | Göttingen campus or old town. |
-Not used by this variant (fine to supply anyway; other variants may use them): `utila-reef-survey`, `utila-lionfish`, `utila-mangroves`, `utila-dive`, `peru-reforestation`, `peru-expedition`, `sodwana-coast`, `field-portrait`.
+Not used by this variant: `headshot` (studio portrait, still used by the other drafts), `utila-whaleshark`, `utila-coral-nursery`, `utila-reef-survey`, `utila-lionfish`, `utila-mangroves`, `utila-dive`, `peru-rainforest`, `peru-caiman`, `peru-expedition`.
 
 ## Drawings
 

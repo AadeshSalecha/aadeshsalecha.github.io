@@ -55,6 +55,45 @@
     }
   }
 
+  // Film clips: muted, play while on screen (unless reduced motion), with a pause button.
+  // Without JS they keep native controls. Missing files are swapped for placeholders by ph.js.
+  document.querySelectorAll('video.snap-video').forEach(function (v) {
+    v.removeAttribute('controls');
+    v.muted = true;
+    var userPaused = reduce; // reduced motion: start paused, the button plays it
+    var btn = null;
+    function label() {
+      if (!btn) return;
+      var playing = !v.paused;
+      btn.textContent = playing ? '\u275A\u275A' : '\u25B6';
+      btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+    }
+    function addButton() {
+      if (btn || !v.isConnected) return;
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'vid-toggle';
+      btn.addEventListener('click', function () {
+        if (v.paused) { userPaused = false; v.play().catch(function () {}); }
+        else { userPaused = true; v.pause(); }
+      });
+      v.parentNode.appendChild(btn);
+      label();
+    }
+    v.addEventListener('loadeddata', addButton);
+    if (v.readyState >= 2) addButton();
+    v.addEventListener('play', label);
+    v.addEventListener('pause', label);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !userPaused) v.play().catch(function () {});
+          else if (!e.isIntersecting) v.pause();
+        });
+      }, { threshold: 0.35 }).observe(v);
+    }
+  });
+
   // Thumb-index: mark the tab for the section in view.
   var tabs = document.querySelectorAll('.tabs a');
   if (tabs.length && 'IntersectionObserver' in window) {
