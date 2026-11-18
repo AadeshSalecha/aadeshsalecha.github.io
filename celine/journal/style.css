@@ -259,17 +259,43 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
 .tree .t-lg { font-size: 36px; }
 .tree .t-sm { font-size: 21px; fill: var(--sepia); }
 .tree .t-date { font-family: var(--f-hand); font-size: 16.5px; fill: var(--sepia); }
-.tree .t-coord { font-family: var(--f-sc); font-size: 16.5px; letter-spacing: .05em; fill: var(--ink-2); }
 .tree .t-sub { font-family: var(--f-body); font-style: italic; font-size: 19px; fill: var(--ink-2); }
 .tree .t-pencil { font-family: var(--f-pencil); font-size: 20px; fill: var(--pencil); }
 .tree .t-pencil--lg { font-size: 23px; }
-.tree .t-ithink { font-family: var(--f-hand); font-size: 19px; fill: var(--rust); }
 .tree .lbl--end text { text-anchor: end; }
 .tree .br-link { cursor: pointer; }
 .tree .br-link:hover .t-name, .tree .br-link:focus-visible .t-name { fill: var(--rust); }
 .tree .br-link:hover .branch, .tree .br-link:focus-visible .branch { stroke: var(--rust); }
 .tree .br-link:focus-visible { outline: 2px dashed var(--rust); outline-offset: 4px; }
 .tree-fig figcaption, .plate figcaption { font-size: 16.5px; line-height: 1.45; color: var(--ink-2); font-style: italic; text-align: center; margin: 14px auto 0; max-width: 46em; }
+
+/* ---------- Plate I: the tree grows, oldest branch first ----------
+   Every timed element carries --at (start) and optionally --dur in its style.
+   Transitions live only on the .grown state, so removing .grown resets instantly
+   (that is how "grow it again" replays). Without JS or with reduced motion,
+   none of this applies and the tree is simply shown. */
+.tree .pulse { fill: none; stroke: var(--rust); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.tree--narrow { --pulse-at: 3.7s; }
+.regrow { display: block; margin: 8px auto 0; padding: 4px 12px; background: none; border: 0; font-family: var(--f-pencil); font-size: 20px; color: var(--pencil); cursor: pointer; }
+.regrow:hover { color: var(--rust); }
+.regrow:focus-visible { outline: 2px dashed var(--rust); outline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  .ink-ready .grow-in .draw { stroke-dasharray: 1 1; stroke-dashoffset: 1; }
+  .ink-ready .grow-in .node, .ink-ready .grow-in .lbl, .ink-ready .grow-in .bud,
+  .ink-ready .grow-in .axis text, .ink-ready .grow-in .axis path:not(.draw), .ink-ready .grow-in .axis .ticks { opacity: 0; }
+  .ink-ready .grow-in .node { transform: scale(0); transform-box: fill-box; transform-origin: center; }
+  .ink-ready .grow-in .bud { transform: scale(.15); transform-box: fill-box; transform-origin: 50% 100%; }
+  .ink-ready .grow-in .lbl { transform: translateX(-14px); }
+  .ink-ready .grow-in .lbl--end { transform: translateX(14px); }
+
+  .ink-ready .grow-in.grown .draw { stroke-dashoffset: 0; transition: stroke-dashoffset var(--dur, .8s) var(--ease, cubic-bezier(.45, .05, .3, 1)) var(--at, 0s); }
+  .ink-ready .grow-in.grown .node { opacity: 1; transform: scale(1); transition: opacity .15s linear var(--at, 0s), transform .55s cubic-bezier(.3, 1.8, .5, 1) var(--at, 0s); }
+  .ink-ready .grow-in.grown .bud { opacity: 1; transform: none; transition: opacity .4s ease var(--at, 0s), transform .9s cubic-bezier(.3, 1.5, .5, 1) var(--at, 0s); }
+  .ink-ready .grow-in.grown .lbl { opacity: 1; transform: none; transition: opacity .6s ease var(--at, 0s), transform .8s cubic-bezier(.2, .8, .3, 1) var(--at, 0s); }
+  .ink-ready .grow-in.grown .axis text, .ink-ready .grow-in.grown .axis path:not(.draw), .ink-ready .grow-in.grown .axis .ticks { opacity: 1; transition: opacity .5s ease var(--at, .2s); }
+  .ink-ready .grow-in.grown .pulse { animation: tip-pulse 2.2s ease-out var(--pulse-at, 4.1s) 3; }
+}
+@keyframes tip-pulse { 0% { opacity: .75; transform: scale(1); } 100% { opacity: 0; transform: scale(3.4); } }
 
 /* ---------- Draw-in ink (only when JS is ready and motion allowed) ---------- */
 @media (prefers-reduced-motion: no-preference) {
@@ -604,7 +630,6 @@ h3 { font-family: var(--f-display); font-size: clamp(29px, 3.3vw, 40px); line-he
   .tree .t-name { font-size: 22px; }
   .tree .t-lg { font-size: 30px; }
   .tree .t-sub { font-size: 16px; }
-  .tree .t-coord { font-size: 15px; }
   .tree .t-date { font-size: 15.5px; }
   .tree .t-pencil { font-size: 19px; }
   .entry { margin-top: 72px; padding-top: 34px; }
