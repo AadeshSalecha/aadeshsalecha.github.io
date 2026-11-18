@@ -1,0 +1,19 @@
+# Search engines and AI agents are welcome to crawl and index this site.
+User-agent: *
+Allow: /
+
+# AI crawlers and assistants: explicitly welcome too.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://aadeshsalecha.github.io/sitemap.xml

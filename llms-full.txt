@@ -1,0 +1,101 @@
+# Aadesh Salecha: full profile
+
+> Plain-text version of https://aadeshsalecha.github.io/ for AI agents and other automated readers. Last updated 2026-11-18. Short index: https://aadeshsalecha.github.io/llms.txt
+
+## Summary
+
+Aadesh Salecha is a Founding Engineer at Hyfin in San Francisco, building AI for clean energy finance. He works on applied AI for climate, energy finance and planetary intelligence. He holds an MS in Computer Science from Stanford University (2026) and a BS in Computer Science, summa cum laude, from the University of Minnesota (2021). Before Hyfin he was an AI/ML Engineer at Amazon (AWS SageMaker HyperPod) and a Senior Software Engineer at DraftKings. His research spans geospatial machine learning for carbon sequestration and the evaluation of human-like biases in large language models.
+
+- Name: Aadesh Salecha
+- Current role: Founding Engineer, Hyfin (https://www.hyfin.capital/), San Francisco, CA, since March 2026
+- Education: MS Computer Science, Stanford University (Sep 2024 – May 2026); BS Computer Science, University of Minnesota (Aug 2018 – May 2021), GPA 4.0, summa cum laude
+- Email: aadeshsalecha@gmail.com
+- Website: https://aadeshsalecha.github.io/
+- LinkedIn: https://www.linkedin.com/in/aadesh-salecha
+- Google Scholar: https://scholar.google.com/citations?user=Cnwzl3oAAAAJ
+- GitHub: https://github.com/aadeshsalecha
+- Stanford Profiles: https://profiles.stanford.edu/aadesh-salecha
+
+## Research interests
+
+- Applied AI for climate and energy: geospatial ML, remote sensing, satellite imagery (Google Earth Engine, Landsat, Sentinel-2, AlphaEarth embeddings)
+- Generative AI: LLM evaluation, preference tuning, agentic systems, retrieval-augmented generation (RAG), application building
+- Applied NLP for psychology and the social sciences
+
+## Experience
+
+### Hyfin: Founding Engineer (March 2026 – present, San Francisco, CA)
+- Building GAIA, a fintech platform that synthesizes asset performance and market data for clean energy loan origination.
+- Designed agentic data enrichment pipelines that combine LLMs and web scraping to create data for a new asset class with no track record.
+- Architecting risk intelligence tools aimed at the $4T+ clean energy financing gap across South Asia and Africa.
+- Leads the rollout of AI-native workflows and processes across the team.
+
+### Amazon (AWS SageMaker HyperPod): AI/ML Engineer (May 2025 – September 2025, Seattle, WA)
+- Designed an agentic AI system combining telemetry, time-series signals and RAG-based diagnosis to auto-resolve ML infrastructure failures.
+- Reduced GPU energy waste, lowering the operational carbon footprint by about 200 kg CO2e per day through efficiency modeling and anomaly detection.
+- Optimized distributed compute scheduling using ML-based pattern detection.
+
+### Stanford University: AI/ML Researcher (May 2023 – May 2026, Palo Alto, CA)
+- With Prof. David Lobell and the Center on Food Security and the Environment (Stanford Doerr School of Sustainability): built geospatial ML pipelines on Google Earth Engine, Landsat and Sentinel-2 imagery to detect tree species across cropland in the Global South, supporting verification of the 5+ Gt CO2/year sequestration potential of integrating trees into global cropland.
+- With Prof. Johannes Eichstaedt (Stanford HAI-affiliated): applied cognitive science and psychometrics to evaluate LLMs; showed that LLMs exhibit human-like social desirability biases (PNAS Nexus, covered by WIRED).
+- Won Stanford's first Green AI Hackathon with a geothermal site prediction system built on AlphaEarth satellite embeddings (93% AUC): https://findgeothermal.com/
+
+### DraftKings: Senior Software Engineer, Financial Platform (December 2021 – June 2024, Boston, MA)
+- Developed a sharded database storing millions of user transactions, with support for cryptocurrencies.
+- Built REST APIs handling billions of requests with under 200 ms latency.
+- Led cross-functional work with product managers that reduced user dropout by 40%.
+
+## Research metrics (Google Scholar, November 2026)
+
+- Citations: 347
+- h-index: 7
+- Publications listed: 19
+- Citations per year: 2020: 1, 2021: 6, 2022: 14, 2023: 16, 2024: 21, 2025: 112, 2026 (to date): 173
+
+## Publications
+
+### Published
+1. Salecha, A., Ireland, M. E., Subrahmanya, S., Sedoc, J., Ungar, L. H., & Eichstaedt, J. C. (2024). Large Language Models Show Human-like Social Desirability Biases in Survey Responses. PNAS Nexus, 3(12). https://doi.org/10.1093/pnasnexus/pgae533 (arXiv: https://www.arxiv.org/abs/2405.06058; project page: https://llmsocialbias.github.io/llm-social-desirability-research/)
+2. Lavertu, A., Hamamsy, T., Salecha, A., Smith, D., Eichstaedt, J. C., & Altman, R. B. (2025). Monitoring the Opioid Epidemic via Social Media Discussions. npj Digital Medicine. https://www.nature.com/articles/s41746-025-01642-x
+3. Xu, H., Sudheendra, S. M., Huh, J., Salecha, A., & Srivastava, J. (2024). Influence of Emotions on Coping Behaviors in Crisis: A Computational Analysis of the COVID-19 Outbreak. Journal of Computational Social Science, 7, 1599–1623. https://doi.org/10.1007/s42001-024-00282-7
+4. Fink, O., Graf, W., Subrahmanya, S., Salecha, A., & Eichstaedt, J. C. (2024). The Language of Conflict Transformation: Assessing Psychological Change Patterns in Israeli-Palestinian Track Two Interactive Problem Solving. Negotiation and Conflict Management Research.
+5. Rath, B., Salecha, A., & Srivastava, J. (2022). Fake News Spreader Detection using Trust-based Strategies in Social Networks with Bot Filtration. Social Network Analysis and Mining. https://doi.org/10.1007/s13278-022-00890-z
+6. Xu, H., Sudheendra, S. M., Huh, J., Salecha, A., & Srivastava, J. (2022). Public's Discrete Emotions During the COVID-19 and Impacts on Their Coping Behaviors in the U.S. 72nd Annual International Communication Association Conference.
+7. Kim, J., Huh, J., Rath, B., Salecha, A., & Srivastava, J. (2021). Relationship between Citizen-Eyewitness Images and Audience Engagement with News. Journalism Practice. https://doi.org/10.1080/17512786.2021.1882873
+8. Salecha, A. (2021). Empirical Study of the Spread of Misinformation: A Big Data Approach. Undergraduate thesis (summa cum laude), University of Minnesota Digital Conservancy. https://hdl.handle.net/11299/222250
+9. Kuan, J. H., & Salecha, A. (2020). Emergence and Stability of Self-Evolved Cooperative Strategies using Stochastic Machines. IEEE Symposium Series on Computational Intelligence (SSCI). https://ieeexplore.ieee.org/abstract/document/9308258
+10. Rath, B., Salecha, A., & Srivastava, J. (2020). Detecting Fake News Spreaders in Social Networks using Inductive Representation Learning. IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM). https://ieeexplore.ieee.org/abstract/document/9381466
+
+### Under review / preprints
+- Salecha, A., Schöne, J., Lyubomirsky, S., Sedoc, J., Eichstaedt, J., & Willer, R. Structured AI Dialogues Can Increase Happiness and Meaning in Life.
+- Turner, G., Gunschera, L. J., Subrahmanya, S., Salecha, A., Eichstaedt, J. C., Palminteri, S., & Orben, A. A Computational Model of Reward Learning and Habits on Social Media. PsyArXiv: https://osf.io/preprints/psyarxiv/xe25k
+- Evers, A., Stade, E. C., Salecha, A., Tait, Z., & Khazanov, G. The Answer to the Mental Health Crisis: Examining Media Bias Regarding Psychedelic Treatments for Depression and PTSD Using Natural Language Processing.
+- Fink, O., Graf, W., Subrahmanya, S., Salecha, A., & Eichstaedt, J. C. No Good Time to Negotiate? Track Two Diplomacy within the Protracted Israel-Palestine Conflict as Strategic Joint Thinking. Journal of Conflict Resolution (submitted).
+
+Complete and current list: https://scholar.google.com/citations?user=Cnwzl3oAAAAJ
+
+## Honors
+
+- Winner, Stanford's first Green AI Hackathon (geothermal site prediction: https://findgeothermal.com/)
+- ExxonMobil Scholarship
+- UROP Research Scholarship (University of Minnesota)
+- Tom Niccum Grant
+- Google Research Mentorship nominee
+- Dean's List 2018–2020; BS summa cum laude, GPA 4.0
+
+## Press
+
+- WIRED, March 5, 2025: "Chatbots, Like the Rest of Us, Just Want to Be Loved" by Will Knight, quoting Aadesh on LLM social desirability bias. https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/
+- The Stanford Daily, November 2, 2025: "'AI Into the Wild' connects Stanford to local flora and fauna at Jasper Ridge", quoting Aadesh as event organizer. https://stanforddaily.com/2025/11/02/ai-into-the-wild-connects-stanford-to-local-flora-and-fauna-at-jasper-ridge/
+
+## Skills
+
+- ML and AI: PyTorch, TensorFlow, JAX, Keras, Hugging Face, scikit-learn, NumPy, pandas; LLMs, RAG, agentic AI, deep learning
+- Geospatial: remote sensing, Google Earth Engine, ArcGIS Pro, xarray, Sentinel, Landsat
+- Languages: Python, SQL, Java, C, C++, C#, MATLAB, JavaScript, HTML, CSS, LaTeX
+- Cloud and infrastructure: AWS (EC2, S3, DynamoDB, MSK), Azure, GCP, Terraform, Kubernetes, Snowflake, Prometheus, Grafana, CloudWatch
+- Web and data: .NET, React, Flask, Django, Beautiful Soup, Selenium, Power BI
+
+## Outside work
+
+Climbing, strength training, hiking and brewing coffee.

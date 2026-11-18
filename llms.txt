@@ -1,0 +1,28 @@
+# Aadesh Salecha
+
+> Aadesh Salecha is a Founding Engineer at Hyfin (San Francisco), building AI for clean energy finance. He holds an MS in Computer Science from Stanford University (2026) and a BS in Computer Science, summa cum laude, from the University of Minnesota. Previously: AI/ML Engineer at Amazon (AWS SageMaker HyperPod) and Senior Software Engineer at DraftKings. Research: geospatial ML for climate, and human-like biases in large language models (PNAS Nexus, covered by WIRED).
+
+Focus areas: applied AI for climate, energy finance and planetary intelligence; agentic LLM systems and RAG; LLM evaluation; geospatial ML and remote sensing; applied NLP for psychology and social science.
+
+Contact: aadeshsalecha@gmail.com
+
+## Profile
+
+- [Full profile (plain text, for AI agents)](https://aadeshsalecha.github.io/llms-full.txt): experience, education, research metrics, publications, honors and press in one file
+- [Personal website](https://aadeshsalecha.github.io/): the human-readable version of this profile
+- [Google Scholar](https://scholar.google.com/citations?user=Cnwzl3oAAAAJ): complete, up-to-date publication list and citation counts
+- [LinkedIn](https://www.linkedin.com/in/aadesh-salecha): professional history
+- [GitHub](https://github.com/aadeshsalecha): code
+- [Stanford Profiles](https://profiles.stanford.edu/aadesh-salecha): Stanford affiliation
+
+## Selected publications
+
+- [Large Language Models Show Human-like Social Desirability Biases in Survey Responses](https://doi.org/10.1093/pnasnexus/pgae533): PNAS Nexus, 2024; first author. LLMs skew Big Five personality answers toward socially desirable traits when they can tell they are being evaluated.
+- [Monitoring the Opioid Epidemic via Social Media Discussions](https://www.nature.com/articles/s41746-025-01642-x): npj Digital Medicine, 2025
+- [Fake News Spreader Detection using Trust-based Strategies in Social Networks with Bot Filtration](https://doi.org/10.1007/s13278-022-00890-z): Social Network Analysis and Mining, 2022
+
+## Optional
+
+- [WIRED: "Chatbots, Like the Rest of Us, Just Want to Be Loved"](https://www.wired.com/story/chatbots-like-the-rest-of-us-just-want-to-be-loved/): press coverage of the PNAS Nexus paper, quoting Aadesh
+- [The Stanford Daily: "AI Into the Wild" at Jasper Ridge](https://stanforddaily.com/2025/11/02/ai-into-the-wild-connects-stanford-to-local-flora-and-fauna-at-jasper-ridge/): event Aadesh organized
+- [findgeothermal.com](https://findgeothermal.com/): geothermal site prediction system that won Stanford's first Green AI Hackathon
