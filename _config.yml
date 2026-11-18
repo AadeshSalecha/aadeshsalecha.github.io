@@ -1,0 +1,10 @@
+# GitHub Pages (Jekyll) settings.
+# Keep the private Celine drafts' working notes out of the published site:
+# Markdown can't carry a noindex tag, so these stay in the repo only.
+exclude:
+  - celine/photos/README.md
+  - celine/journal/IMAGES.md
+  - celine/dive-log/IMAGES.md
+  - celine/canopy-to-coral/IMAGES.md
+  - celine/expedition-map/IMAGES.md
+  - celine/feature/IMAGES.md
