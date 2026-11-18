@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celine Willemsen · Biodiversity &amp; Ecology</title>
+<meta name="description" content="Field journal of Celine Willemsen: biology student (B.Sc. Biological Diversity and Ecology, University of Göttingen) and aspiring field ecologist. Notes from Utila, the Peruvian Amazon, Sodwana Bay and BUND.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2a1d15">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f2e7cf'/%3E%3Cpath d='M32 56V30M32 40C24 36 18 30 16 20M32 34C40 30 46 24 48 14M32 46C38 44 44 40 46 34' fill='none' stroke='%233b2a1c' stroke-width='3.4' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='20' r='3.4' fill='%233b2a1c'/%3E%3Ccircle cx='48' cy='14' r='3.4' fill='%233b2a1c'/%3E%3Ccircle cx='46' cy='34' r='3' fill='%233b2a1c'/%3E%3Ccircle cx='32' cy='28' r='3.8' fill='%239a3f2a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Homemade+Apple&amp;family=IM+Fell+English:ital@0;1&amp;family=IM+Fell+English+SC&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="../shared/ph.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the journal</a>
+
+<!-- Shared SVG filters: ink wobble, stamp distress, watercolour wash -->
+<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-200" y="-200" width="1600" height="1400">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="distress" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="8" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.2 2.65" result="m"/>
+      <feComposite in="SourceGraphic" in2="m" operator="in" result="c"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="1" seed="2" result="w"/>
+      <feDisplacementMap in="c" in2="w" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wash" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="5" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="26" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="2.2"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="desk">
+<div class="book">
+
+  <!-- Thumb-index tabs (desktop) -->
+  <nav class="tabs" aria-label="Journal sections">
+    <ul>
+      <li><a href="#plate-i">Plate I</a></li>
+      <li><a href="#field">Field</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#studies">Studies</a></li>
+      <li><a href="#pocket">Pocket</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ TITLE PAGE ============ -->
+  <header class="page title-page" id="top">
+    <div class="runhead" aria-hidden="true"><span>Field Journal · Vol. I</span><span class="folio">i</span></div>
+
+    <div class="title-grid">
+      <div class="title-text">
+        <p class="hand kicker">The field journal of</p>
+        <h1>Celine Willemsen</h1>
+        <p class="subtitle">Biology student at the University of Göttingen<br> &amp; aspiring field ecologist</p>
+        <svg class="rule-squiggle ink-in" viewBox="0 0 420 24" aria-hidden="true" focusable="false"><path class="draw" pathLength="1" d="M4 14 C 60 4, 110 22, 170 12 S 280 4, 330 14 S 400 18, 416 9"/><path class="draw d2" pathLength="1" d="M300 20 C 330 16, 370 22, 412 16"/></svg>
+
+        <!-- DRAFT copy: Celine to edit -->
+        <div class="intro">
+          <p>I'm a biology student at the University of Göttingen, where I started the B.Sc. in Biological Diversity and Ecology in October 2026. What I want to do is long-term ecological field work: conservation, biodiversity monitoring, reef and rainforest ecology.</p>
+          <p>This notebook collects where I have worked so far: coral nurseries and lionfish in Honduras, caiman monitoring and reforestation in the Peruvian Amazon, reef ecology in South Africa, and volunteering with BUND in Germany.</p>
+        </div>
+
+        <p class="station"><span class="sc">Present station</span> Göttingen, Lower Saxony <span class="coords">51.54° N, 9.93° E</span></p>
+      </div>
+
+      <div class="title-figure">
+        <figure class="portrait">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+          <img src="../photos/headshot.jpg" alt="Portrait of Celine Willemsen, smiling, in a dark blazer and brown jumper" width="644" height="965">
+        </figure>
+        <p class="pencil fig-note"><span>fig. 1</span> the author</p>
+      </div>
+
+      <div class="if-found">
+        <p class="if-found-h">If found, please return to</p>
+        <p class="if-found-name">Celine Willemsen</p>
+        <p class="if-found-links"><a href="mailto:celinewillemsen@web.de">celinewillemsen@web.de</a><span aria-hidden="true"> · </span><a href="https://www.linkedin.com/in/celine-willemsen/">LinkedIn</a></p>
+      </div>
+    </div>
+
+    <nav class="contents" id="contents" aria-labelledby="contents-h">
+      <h2 id="contents-h" class="contents-h">Contents</h2>
+      <ol>
+        <li><a href="#plate-i"><span class="c-num">I</span><span class="c-title">Descent, with modification</span><span class="c-lead" aria-hidden="true"></span><span class="c-page">Plate I</span></a></li>
+        <li><a href="#field"><span class="c-num">II</span><span class="c-title">Field entries, 2025–2026</span><span class="c-lead" aria-hidden="true"></span><span class="c-page">p. 2</span></a></li>
+        <li><a href="#certificates"><span class="c-num">III</span><span class="c-title">Certificates &amp; licences</span><span class="c-lead" aria-hidden="true"></span><span class="c-page">p. 7</span></a></li>
+        <li><a href="#studies"><span class="c-num">IV</span><span class="c-title">Studies</span><span class="c-lead" aria-hidden="true"></span><span class="c-page">p. 8</span></a></li>
+        <li><a href="#pocket"><span class="c-num">V</span><span class="c-title">Back pocket: before biology</span><span class="c-lead" aria-hidden="true"></span><span class="c-page">p. 9</span></a></li>
+        <li><a href="#contact"><span class="c-num">VI</span><span class="c-title">Languages &amp; correspondence</span><span class="c-lead" aria-hidden="true"></span><span class="c-page">p. 10</span></a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <!-- ============ PLATE I: TREE ============ -->
+  <section class="page plate-tree" id="plate-i" aria-labelledby="plate-i-h">
+    <div class="runhead" aria-hidden="true"><span>Plate I</span><span class="folio">1</span></div>
+    <p class="hand kicker">Plate I</p>
+    <h2 id="plate-i-h">Descent, with modification</h2>
+    <p class="lede">Read it like a phylogeny: the oldest lineage at the root, the newest growth at the tip. Each branch is a place I've worked. Tap a tip to jump to its entry.</p>
+
+    <figure class="tree-fig ink-in">
+      <!-- Wide version (tablet & desktop) -->
+      <svg class="tree tree--wide" viewBox="0 0 1000 780" role="group" aria-labelledby="tree-cap">
+        <!-- time axis -->
+        <g class="axis" aria-hidden="true">
+          <path class="draw" pathLength="1" d="M52 748 V 664 M52 650 V 96"/>
+          <path d="M44 662 l16 -6 M44 652 l16 -6"/>
+          <path class="dash-faint" d="M52 96 V 40"/>
+          <g class="ticks"><path d="M46 730 h12 M46 604 h12 M46 470 h12 M46 196 h12"/></g>
+          <text x="66" y="736">2018</text>
+          <text x="66" y="610">2025</text>
+          <text x="66" y="476">2026</text>
+          <text x="66" y="202">now</text>
+          <text x="66" y="62" class="t-pencil">later</text>
+        </g>
+
+        <!-- older lineage: business years (faint, dashed) -->
+        <mask id="m-biz"><path class="draw d1" pathLength="1" d="M500 712 C 440 708, 360 690, 300 666 C 270 654, 250 646, 232 642" stroke="#fff" stroke-width="8" fill="none"/></mask>
+        <g class="lineage-old" mask="url(#m-biz)">
+          <path d="M500 712 C 440 708, 360 690, 300 666 C 270 654, 250 646, 232 642"/>
+          <path d="M300 666 C 296 650, 300 636, 306 628"/>
+          <path d="M360 690 C 362 676, 368 668, 376 664"/>
+        </g>
+        <circle class="node node--open" cx="232" cy="642" r="6"/>
+        <g class="lbl lbl-old" aria-hidden="true">
+          <text x="110" y="700" class="t-name t-sm">Business, 2018–2026</text>
+          <text x="110" y="724" class="t-pencil">LEMKEN · FOM · copywriting</text>
+          <text x="110" y="746" class="t-pencil">an older lineage; traits carried forward</text>
+        </g>
+
+        <!-- trunk, tapering as it grows -->
+        <path class="trunk trunk--a draw" pathLength="1" d="M500 754 C 497 700, 506 650, 503 604"/>
+        <path class="trunk trunk--b draw" style="--d:.45s" pathLength="1" d="M503 604 C 500 540, 495 480, 499 420"/>
+        <path class="trunk trunk--c draw" style="--d:.9s" pathLength="1" d="M499 420 C 503 350, 497 270, 500 200"/>
+        <path class="trunk-shade draw d1" pathLength="1" d="M508 742 C 506 700, 512 652, 510 610 M506 566 C 504 524, 501 484, 505 436 M504 400 C 507 350, 503 300, 504 262"/>
+        <path class="root draw" pathLength="1" d="M500 754 C 486 762, 468 766, 446 767 M500 754 C 512 764, 530 768, 554 769 M500 754 C 497 762, 496 768, 494 774 M470 765 C 462 770, 456 772, 448 774 M532 767 C 540 772, 548 774, 556 774"/>
+        <path class="ground draw d1" pathLength="1" d="M408 772 C 440 770, 470 773, 500 772 S 560 770, 598 773"/>
+
+        <!-- BUND (right, lowest) -->
+        <a href="#bund" class="br-link" aria-label="BUND, Moers, June to December 2025: go to entry">
+          <path class="branch draw d2" pathLength="1" d="M503 612 C 560 600, 640 590, 700 566"/>
+          <path class="twig draw d3" pathLength="1" d="M640 590 C 650 576, 662 568, 676 566 M672 578 C 690 584, 706 588, 716 590 M596 598 C 606 606, 616 612, 630 614 M612 594 C 616 584, 622 578, 630 574"/>
+          <circle class="node" cx="700" cy="566" r="6.5"/><circle class="node node--sm" cx="676" cy="566" r="3"/><circle class="node node--sm" cx="716" cy="590" r="3"/><circle class="node node--sm" cx="630" cy="614" r="2.6"/><circle class="node node--sm" cx="630" cy="574" r="2.6"/>
+          <g class="lbl">
+            <text x="726" y="552" class="t-name">BUND, Moers</text>
+            <text x="726" y="576" class="t-date">Jun – Dec 2025</text>
+            <text x="726" y="598" class="t-coord">51.45° N · 6.63° E</text>
+          </g>
+        </a>
+
+        <!-- Sodwana (left) -->
+        <a href="#sodwana" class="br-link" aria-label="Sodwana Bay, South Africa, October to November 2025: go to entry">
+          <path class="branch draw d3" pathLength="1" d="M502 540 C 440 530, 360 516, 300 486"/>
+          <path class="twig draw d4" pathLength="1" d="M360 516 C 350 500, 340 494, 326 492 M330 500 C 316 510, 300 514, 288 512 M412 526 C 404 540, 394 548, 380 552 M396 522 C 392 510, 386 504, 376 500"/>
+          <circle class="node" cx="300" cy="486" r="6.5"/><circle class="node node--sm" cx="326" cy="492" r="3"/><circle class="node node--sm" cx="288" cy="512" r="3"/><circle class="node node--sm" cx="380" cy="552" r="2.6"/><circle class="node node--sm" cx="376" cy="500" r="2.6"/>
+          <g class="lbl lbl--end">
+            <text x="282" y="462" class="t-name">Sodwana Bay</text>
+            <text x="282" y="486" class="t-date">Oct – Nov 2025</text>
+            <text x="276" y="534" class="t-coord">27.54° S · 32.68° E</text>
+          </g>
+        </a>
+
+        <!-- Peru (right) -->
+        <a href="#peru" class="br-link" aria-label="Peruvian Amazon, March to April 2026: go to entry">
+          <path class="branch draw d4" pathLength="1" d="M499 440 C 560 430, 650 420, 716 384"/>
+          <path class="twig draw d5" pathLength="1" d="M630 424 C 640 408, 654 402, 668 400 M662 412 C 680 420, 700 422, 712 418 M690 402 C 694 388, 700 380, 708 376 M576 432 C 584 444, 594 452, 608 456 M598 430 C 604 418, 612 412, 622 410"/>
+          <circle class="node node--sm" cx="608" cy="456" r="2.6"/><circle class="node node--sm" cx="622" cy="410" r="2.6"/>
+          <circle class="node" cx="716" cy="384" r="6.5"/><circle class="node node--sm" cx="668" cy="400" r="3"/><circle class="node node--sm" cx="712" cy="418" r="3"/><circle class="node node--sm" cx="708" cy="376" r="3"/>
+          <g class="lbl">
+            <text x="730" y="372" class="t-name">Peruvian Amazon</text>
+            <text x="730" y="396" class="t-date">Mar – Apr 2026</text>
+            <text x="730" y="440" class="t-coord">12.59° S · 69.19° W</text>
+          </g>
+        </a>
+
+        <!-- Utila (left) -->
+        <a href="#utila" class="br-link" aria-label="Utila, Honduras, May 2026: go to entry">
+          <path class="branch draw d5" pathLength="1" d="M500 352 C 440 344, 350 330, 288 300"/>
+          <path class="twig draw d6" pathLength="1" d="M372 336 C 362 320, 350 314, 336 312 M338 322 C 320 330, 304 334, 290 332 M318 318 C 312 306, 306 300, 298 296 M300 304 C 290 296, 282 286, 278 276 M424 344 C 418 356, 410 364, 398 368 M440 346 C 436 334, 430 328, 420 324"/>
+          <circle class="node node--sm" cx="398" cy="368" r="2.6"/><circle class="node node--sm" cx="420" cy="324" r="2.6"/>
+          <circle class="node" cx="288" cy="300" r="6.5"/><circle class="node node--sm" cx="336" cy="312" r="3"/><circle class="node node--sm" cx="290" cy="332" r="3"/><circle class="node node--sm" cx="278" cy="276" r="3"/>
+          <g class="lbl lbl--end">
+            <text x="264" y="296" class="t-name">Utila, Honduras</text>
+            <text x="264" y="320" class="t-date">May 2026</text>
+            <text x="264" y="352" class="t-coord">16.10° N · 86.93° W</text>
+          </g>
+        </a>
+
+        <!-- Australia (small twig, right) -->
+        <path class="branch branch--thin draw d6" pathLength="1" d="M500 286 C 540 280, 590 272, 628 254"/>
+        <circle class="node node--sm" cx="628" cy="254" r="4"/>
+        <g class="lbl" aria-hidden="true">
+          <text x="640" y="258" class="t-pencil t-pencil--lg">Work &amp; Travel, Australia · 2026</text>
+        </g>
+
+        <!-- Göttingen: the newest tip -->
+        <a href="#studies" class="br-link" aria-label="Göttingen, B.Sc. Biological Diversity and Ecology since October 2026: go to studies">
+          <path class="bud draw d7" pathLength="1" d="M500 200 C 488 190, 480 176, 484 164 C 496 170, 502 184, 500 200 M500 200 C 512 188, 524 180, 534 182 C 528 194, 516 200, 500 200"/>
+          <circle class="node node--now" cx="500" cy="200" r="9"/>
+          <g class="lbl lbl--end">
+            <text x="470" y="176" class="t-name t-lg">Göttingen</text>
+            <text x="470" y="202" class="t-sub">B.Sc. Biological Diversity &amp; Ecology</text>
+            <text x="470" y="224" class="t-coord">since Oct 2026 · 51.54° N · 9.93° E</text>
+          </g>
+        </a>
+        <g class="lbl" aria-hidden="true">
+          <text x="548" y="206" class="t-pencil t-pencil--lg">the newest tip, still growing</text>
+        </g>
+
+        <!-- what comes next: dashed, speculative -->
+        <mask id="m-next"><path class="draw d8" pathLength="1" d="M500 190 V 112 M500 112 C 470 96, 440 82, 404 74 M500 112 C 500 96, 500 80, 500 56 M500 112 C 530 96, 560 82, 596 74" stroke="#fff" stroke-width="8" fill="none"/></mask>
+        <g class="lineage-next" mask="url(#m-next)">
+          <path d="M500 190 V 112"/>
+          <path d="M500 112 C 470 96, 440 82, 404 74"/>
+          <path d="M500 112 C 500 96, 500 80, 500 56"/>
+          <path d="M500 112 C 530 96, 560 82, 596 74"/>
+        </g>
+        <g class="lbl lbl-next" aria-hidden="true">
+          <text x="396" y="70" text-anchor="end" class="t-pencil t-pencil--lg">reef ecology?</text>
+          <text x="500" y="44" text-anchor="middle" class="t-pencil t-pencil--lg">biodiversity monitoring?</text>
+          <text x="604" y="70" class="t-pencil t-pencil--lg">rainforest?</text>
+          <text x="560" y="128" class="t-ithink">I think</text>
+        </g>
+      </svg>
+
+      <!-- Narrow version (phones) -->
+      <svg class="tree tree--narrow" viewBox="0 0 360 930" role="group" aria-labelledby="tree-cap">
+        <path class="trunk trunk--a draw" pathLength="1" d="M34 900 C 31 800, 38 700, 34 600"/>
+        <path class="trunk trunk--b draw" style="--d:.45s" pathLength="1" d="M34 600 C 30 500, 37 380, 34 280"/>
+        <path class="trunk trunk--c draw" style="--d:.9s" pathLength="1" d="M34 280 C 32 220, 35 170, 34 128"/>
+        <path class="root draw" pathLength="1" d="M34 900 C 24 908, 14 912, 4 912 M34 900 C 44 910, 56 914, 68 914"/>
+        <mask id="m-next-n"><path class="draw d8" pathLength="1" d="M34 120 V 70 M34 70 C 44 56, 60 46, 80 40" stroke="#fff" stroke-width="8" fill="none"/></mask>
+        <g class="lineage-next" mask="url(#m-next-n)"><path d="M34 120 V 70"/><path d="M34 70 C 44 56, 60 46, 80 40"/><path d="M34 70 C 30 56, 26 46, 18 38"/></g>
+        <g class="lbl" aria-hidden="true"><text x="90" y="46" class="t-pencil">next: long-term field work</text></g>
+
+        <a href="#studies" class="br-link" aria-label="Göttingen, since October 2026: go to studies">
+          <circle class="node node--now" cx="34" cy="132" r="8"/>
+          <g class="lbl"><text x="58" y="132" class="t-name t-lg">Göttingen</text><text x="58" y="156" class="t-sub">B.Sc. Biological Diversity &amp; Ecology</text><text x="58" y="176" class="t-coord">since Oct 2026 · 51.54° N · 9.93° E</text></g>
+        </a>
+
+        <path class="branch branch--thin draw d6" pathLength="1" d="M34 250 C 46 240, 58 232, 70 228"/>
+        <circle class="node node--sm" cx="70" cy="228" r="4"/>
+        <g class="lbl" aria-hidden="true"><text x="82" y="234" class="t-pencil">Work &amp; Travel, Australia · 2026</text></g>
+
+        <a href="#utila" class="br-link" aria-label="Utila, Honduras, May 2026: go to entry">
+          <path class="branch draw d5" pathLength="1" d="M34 352 C 48 336, 60 324, 72 318"/>
+          <path class="twig draw d6" pathLength="1" d="M50 334 C 50 324, 52 316, 56 308 M60 326 C 64 330, 68 336, 70 342"/>
+          <circle class="node node--sm" cx="56" cy="308" r="2.6"/><circle class="node node--sm" cx="70" cy="342" r="2.6"/>
+          <circle class="node" cx="72" cy="318" r="6"/>
+          <g class="lbl"><text x="86" y="314" class="t-name">Utila, Honduras</text><text x="86" y="338" class="t-date">May 2026</text><text x="86" y="362" class="t-coord">16.10° N · 86.93° W</text></g>
+        </a>
+        <a href="#peru" class="br-link" aria-label="Peruvian Amazon, March to April 2026: go to entry">
+          <path class="branch draw d4" pathLength="1" d="M34 468 C 48 452, 60 440, 72 434"/>
+          <path class="twig draw d5" pathLength="1" d="M50 450 C 50 440, 52 432, 56 424 M60 442 C 64 446, 68 452, 70 458"/>
+          <circle class="node node--sm" cx="56" cy="424" r="2.6"/><circle class="node node--sm" cx="70" cy="458" r="2.6"/>
+          <circle class="node" cx="72" cy="434" r="6"/>
+          <g class="lbl"><text x="86" y="430" class="t-name">Peruvian Amazon</text><text x="86" y="454" class="t-date">Mar – Apr 2026</text><text x="86" y="478" class="t-coord">12.59° S · 69.19° W</text></g>
+        </a>
+        <a href="#sodwana" class="br-link" aria-label="Sodwana Bay, South Africa, October to November 2025: go to entry">
+          <path class="branch draw d3" pathLength="1" d="M34 584 C 48 568, 60 556, 72 550"/>
+          <path class="twig draw d4" pathLength="1" d="M52 564 C 52 556, 54 548, 58 542"/>
+          <circle class="node node--sm" cx="58" cy="542" r="2.6"/>
+          <circle class="node" cx="72" cy="550" r="6"/>
+          <g class="lbl"><text x="86" y="546" class="t-name">Sodwana Bay</text><text x="86" y="570" class="t-date">Oct – Nov 2025</text><text x="86" y="594" class="t-coord">27.54° S · 32.68° E</text></g>
+        </a>
+        <a href="#bund" class="br-link" aria-label="BUND, Moers, June to December 2025: go to entry">
+          <path class="branch draw d2" pathLength="1" d="M34 700 C 48 684, 60 672, 72 666"/>
+          <path class="twig draw d3" pathLength="1" d="M60 674 C 64 680, 68 686, 70 692"/>
+          <circle class="node node--sm" cx="70" cy="692" r="2.6"/>
+          <circle class="node" cx="72" cy="666" r="6"/>
+          <g class="lbl"><text x="86" y="662" class="t-name">BUND, Moers</text><text x="86" y="686" class="t-date">Jun – Dec 2025</text><text x="86" y="710" class="t-coord">51.45° N · 6.63° E</text></g>
+        </a>
+
+        <mask id="m-biz-n"><path class="draw d1" pathLength="1" d="M34 870 C 50 850, 62 832, 76 822" stroke="#fff" stroke-width="8" fill="none"/></mask>
+        <g class="lineage-old" mask="url(#m-biz-n)"><path d="M34 870 C 50 850, 62 832, 76 822"/></g>
+        <circle class="node node--open" cx="76" cy="822" r="5"/>
+        <g class="lbl" aria-hidden="true"><text x="90" y="818" class="t-name t-sm">Business, 2018–2026</text><text x="90" y="842" class="t-pencil">LEMKEN · FOM · copywriting</text><text x="90" y="862" class="t-pencil">traits carried forward</text></g>
+      </svg>
+
+      <figcaption id="tree-cap"><span class="fig-no">Fig. 2.</span> Branching diagram of my path, 2018 to the present. Solid branches: field work and study. Faint: the business years. Dashed: what comes next.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ II: FIELD ENTRIES ============ -->
+  <section class="page field" id="field" aria-labelledby="field-h">
+    <div class="runhead" aria-hidden="true"><span>Field entries</span><span class="folio">2</span></div>
+    <p class="hand kicker">Section II</p>
+    <h2 id="field-h">Field entries, <span class="nw">2025–2026</span></h2>
+
+    <div class="field-intro">
+      <div>
+        <!-- DRAFT copy: Celine to edit -->
+        <p class="lede">Four stations, newest first. Each entry lists what the work involved. Photographs are being pasted in as I sort them.</p>
+        <p class="pencil note-aus"><svg class="pin" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7" r="5"/><path d="M10 12 V 19"/></svg>Since June 2026: Work &amp; Travel, Australia.</p>
+      </div>
+      <figure class="snap snap--field tilt-l">
+        <span class="tape tape--t" aria-hidden="true"></span>
+        <img class="snap-img" src="../photos/field-portrait.jpg" data-slot="field-portrait" data-hint="Celine in the field or in dive gear" alt="Celine in the field" width="1200" height="900" loading="lazy">
+        <figcaption>In the field</figcaption>
+      </figure>
+    </div>
+
+    <!-- Plate II: chart of field stations -->
+    <figure class="plate chart ink-in" aria-labelledby="chart-cap">
+      <p class="plate-no" aria-hidden="true">Plate II</p>
+      <svg class="chart-svg" viewBox="0 0 1000 415" role="img" aria-labelledby="chart-t">
+        <title id="chart-t">Chart showing the five field stations: Moers and Göttingen in Germany, Sodwana Bay in South Africa, Puerto Maldonado in Peru, Utila in Honduras, plus Australia.</title>
+        <defs>
+          <path id="land" d="M953 396L957 397L959 396L962 396L964 396L964 400L963 402L963 404L961 403L959 406L956 406L953 403L953 400L951 397L951 395L953 396ZM600 295L601 299L602 301L601 303L599 302L599 305L599 307L598 311L596 315L595 320L592 327L591 333L589 337L586 338L583 339L581 338L578 337L577 335L577 332L575 329L575 326L576 323L579 319L580 316L578 312L578 309L579 307L579 305L581 304L583 304L585 303L588 301L592 298L592 295L594 295L596 293L596 291L597 289L598 291L600 295ZM947 295L948 298L950 297L953 300L953 302L954 305L954 307L956 310L956 312L957 315L961 317L964 318L966 320L968 323L969 327L971 326L972 328L974 331L976 334L978 335L981 338L982 341L982 343L982 345L984 349L983 352L983 354L982 357L982 359L981 362L979 365L977 367L975 370L974 372L973 375L972 377L971 379L970 382L968 384L964 384L961 386L959 387L957 389L954 387L951 387L952 385L950 386L947 388L944 387L941 387L939 386L936 385L933 383L933 380L932 378L930 377L926 376L928 375L927 372L925 374L922 375L924 373L924 371L926 369L925 366L922 369L920 371L918 374L916 372L916 370L913 367L911 366L907 363L905 363L901 361L895 361L890 363L886 364L882 364L878 366L875 367L873 370L870 370L867 370L864 370L861 370L859 370L857 372L854 373L852 374L849 374L847 374L843 372L841 371L841 369L843 368L843 366L844 364L843 362L841 358L841 356L841 354L839 351L838 349L837 346L835 343L835 341L836 343L835 339L837 340L838 342L838 340L836 337L835 335L835 333L836 330L836 328L838 325L838 328L839 325L842 324L844 322L847 321L849 321L853 320L855 319L859 318L862 317L864 316L865 314L868 312L868 310L868 308L870 305L872 308L874 308L872 306L873 304L875 305L875 302L878 300L880 298L882 298L884 296L888 297L890 300L893 300L895 300L894 298L896 295L898 294L899 291L901 290L903 290L906 289L906 287L903 286L905 286L907 287L909 288L913 289L916 290L918 289L920 288L922 290L921 292L920 294L918 294L918 297L916 299L920 302L922 303L924 305L927 307L930 308L934 310L937 309L937 307L938 305L939 303L940 300L939 298L939 295L939 292L940 290L940 288L941 286L943 284L944 286L944 288L945 290L946 292L947 294L947 295ZM862 282L860 282L855 280L859 279L861 280L862 282ZM876 282L873 283L872 281L874 279L878 277L881 276L884 276L886 276L881 278L878 279L876 282ZM851 274L853 275L855 275L856 277L852 277L849 278L847 278L848 276L850 276L851 274ZM870 274L869 276L864 278L859 277L862 275L864 276L867 276L870 274ZM1007 275L1004 274L1002 273L1006 274L1007 275ZM998 272L996 271L994 270L997 270L998 272ZM817 270L824 270L825 268L832 270L833 273L839 273L843 275L839 277L835 275L832 275L828 275L824 275L820 273L817 273L809 272L808 270L805 270L808 266L812 267L815 268L817 268L817 270ZM914 267L912 270L912 267L913 265L914 267ZM992 270L990 269L988 266L987 263L989 265L991 267L993 269L992 270ZM978 265L976 265L973 267L971 268L969 268L966 267L964 266L968 265L970 265L970 263L971 265L973 265L974 263L976 262L976 260L978 260L979 262L978 265ZM886 257L882 258L881 256L885 256L886 257ZM898 256L899 259L896 257L893 257L891 257L889 257L889 255L894 255L898 256ZM982 261L980 260L979 258L975 256L973 255L976 255L979 256L980 258L982 259L982 261ZM912 249L913 255L917 257L920 253L924 251L927 251L930 252L933 253L937 254L943 257L950 259L953 261L955 263L955 265L962 267L963 269L959 269L960 272L963 274L966 278L968 278L968 280L971 280L969 281L973 283L970 284L966 283L963 282L960 280L958 278L956 274L951 273L948 274L946 275L946 278L943 279L941 278L937 278L934 275L930 274L924 276L926 273L928 272L927 268L926 264L918 261L915 261L910 258L907 260L907 258L904 255L908 254L910 254L905 253L903 250L900 250L898 248L903 247L905 246L911 247L912 249ZM879 239L876 243L873 244L869 243L863 243L860 244L859 246L863 250L865 248L872 247L870 248L868 250L865 252L868 256L868 258L871 262L871 264L869 265L869 261L866 262L865 260L863 258L863 254L860 255L861 260L861 265L859 265L857 264L858 261L857 257L855 255L856 252L857 249L859 244L859 242L863 240L865 241L870 241L874 241L878 238L879 239ZM891 240L891 243L889 243L889 245L890 247L888 245L887 241L887 238L889 236L889 238L891 239L891 240ZM807 266L803 266L800 263L795 260L793 258L790 255L789 252L786 247L782 244L781 241L780 238L777 235L775 232L772 230L768 226L768 224L770 224L776 225L779 229L782 231L784 233L788 237L791 237L794 239L797 242L799 244L798 247L800 248L802 251L803 253L806 253L808 256L807 260L807 266ZM851 238L856 241L851 242L850 244L850 247L847 250L846 254L845 259L840 260L839 257L836 257L834 256L830 257L826 256L823 255L822 250L819 246L818 243L819 239L821 237L824 238L827 238L827 234L829 234L833 233L836 230L838 228L839 226L842 224L845 222L847 219L849 219L851 221L853 223L856 224L856 226L853 226L854 228L851 229L849 232L852 236L851 238ZM883 213L883 216L883 218L882 221L881 217L879 219L880 222L879 224L875 222L874 219L875 217L873 215L871 217L867 219L868 215L870 214L872 212L873 214L876 213L877 211L880 211L879 208L882 210L883 212L883 213ZM716 221L712 222L711 219L710 214L712 208L714 210L716 213L718 217L717 220L716 221ZM189 207L186 207L186 205L188 204L189 207ZM874 206L873 208L872 210L870 211L868 208L870 206L870 204L872 204L872 206L874 203L874 206ZM854 210L849 213L851 211L853 209L856 206L857 202L858 205L856 207L854 210ZM866 200L868 202L871 202L869 205L867 206L867 204L867 202L866 200ZM880 199L881 204L878 203L879 206L877 207L877 204L875 202L877 202L875 198L879 198L880 199ZM865 196L864 199L862 197L860 195L864 195L865 196ZM864 176L866 177L868 176L867 178L869 181L868 184L865 185L865 188L866 191L868 192L874 193L874 195L874 198L871 196L870 194L869 196L867 193L863 194L862 192L862 190L860 189L859 187L859 184L861 179L862 176L864 176ZM172 177L168 178L166 178L166 176L169 176L171 176L172 177ZM130 178L127 178L125 177L127 176L130 176L132 177L130 178ZM146 171L149 171L153 171L155 172L158 173L160 174L162 176L160 177L157 176L155 177L153 176L150 179L147 177L145 177L143 177L141 178L139 177L139 175L143 176L146 176L145 174L145 172L143 172L146 171ZM823 175L820 177L817 176L817 173L819 171L823 170L825 170L824 173L823 175ZM120 160L125 161L129 164L131 166L133 166L135 167L137 168L140 169L137 171L135 171L132 171L127 171L129 169L125 168L123 164L121 165L118 164L112 162L110 162L112 161L108 160L106 162L104 162L102 164L100 163L102 162L105 160L109 159L113 159L116 159L120 160ZM128 156L126 154L124 153L125 151L128 154L128 156ZM864 160L862 163L860 160L860 157L862 154L865 151L866 154L864 160ZM130 146L129 149L128 146L127 144L130 146ZM913 118L912 121L910 120L908 121L907 123L905 122L907 118L909 119L911 117L913 118ZM543 112L540 114L537 116L535 116L534 114L536 114L540 113L543 112ZM503 112L505 113L508 113L510 114L512 114L506 115L502 114L503 112ZM472 103L471 106L471 109L468 107L466 107L461 105L461 103L466 104L469 103L472 103ZM449 92L451 94L451 99L449 99L447 100L446 95L445 93L447 93L449 92ZM937 107L936 110L936 112L934 114L930 116L923 116L918 121L915 119L915 116L909 117L904 119L900 119L904 122L901 128L899 130L897 128L898 125L896 124L894 121L898 120L900 118L903 116L906 113L913 112L917 113L921 106L924 108L929 104L931 103L934 98L933 94L934 92L938 91L940 96L940 99L937 103L937 107ZM450 88L449 91L447 90L446 88L450 85L450 88ZM948 81L950 82L953 80L954 84L948 85L945 89L939 86L937 90L933 90L933 87L934 84L938 84L940 79L941 76L945 80L948 81ZM179 72L182 73L185 72L183 74L177 73L176 71L178 70L179 72ZM186 63L184 63L179 61L176 60L182 60L186 62L186 63ZM207 57L204 60L207 59L209 59L208 61L211 62L213 61L217 62L216 65L218 64L219 66L220 68L218 72L214 71L215 68L210 71L207 71L210 69L206 68L202 68L195 68L197 66L195 65L199 62L202 57L205 54L208 53L210 53L207 57ZM947 56L951 63L945 62L943 67L946 71L946 74L944 71L941 74L940 71L941 67L940 63L941 61L941 56L939 52L940 47L943 45L943 43L944 46L945 49L945 53L947 56ZM390 51L383 53L378 53L381 49L379 45L384 42L387 40L390 40L394 42L392 45L392 48L390 51ZM462 38L460 41L456 39L461 37L462 38ZM404 27L400 31L404 31L408 31L407 34L403 37L407 37L411 42L413 43L416 47L421 49L421 51L419 53L417 56L412 56L406 57L404 57L401 58L398 58L395 59L393 59L399 55L402 54L396 53L399 51L397 49L398 46L403 47L404 45L401 42L397 42L397 39L394 40L394 36L392 34L393 30L396 27L399 28L404 27ZM121 14L120 16L118 16L117 14L119 13L121 14ZM111 12L107 14L105 14L106 11L112 11L111 12ZM99 1L100 3L102 2L104 3L108 5L112 6L115 7L118 8L115 10L109 9L107 7L103 9L98 11L97 9L92 9L95 7L95 4L97 1L99 1ZM361 -2L360 1L364 3L360 6L349 9L346 9L341 9L331 8L334 6L326 4L333 3L325 1L327 -1L333 -2L339 1L344 -1L349 0L355 -2L361 -2ZM134 -4L130 -4L129 -6L130 -8L134 -8L137 -7L136 -5L134 -4ZM1081 -11L1091 -8L1100 -4L1100 -2L1102 -1L1102 -4L1112 -3L1119 0L1115 2L1109 2L1109 6L1104 6L1101 5L1096 4L1096 2L1092 2L1088 2L1086 1L1082 0L1084 2L1081 4L1077 5L1072 5L1075 7L1077 10L1079 11L1080 13L1072 13L1061 16L1058 16L1052 19L1047 21L1046 23L1040 20L1031 23L1029 22L1025 23L1021 23L1019 25L1015 29L1019 31L1019 36L1015 37L1014 40L1009 43L1007 47L1002 48L1001 52L996 56L994 53L993 48L990 39L992 34L995 32L996 30L1001 29L1008 25L1014 21L1021 18L1024 13L1019 13L1017 16L1008 20L1005 16L995 17L986 23L989 25L981 26L975 27L975 24L970 23L965 25L954 25L941 26L929 33L915 42L921 42L923 45L927 45L929 43L933 44L938 48L938 51L936 55L935 59L934 65L928 70L927 73L922 77L917 82L914 84L909 86L907 86L905 84L900 87L898 88L896 89L895 93L893 94L891 96L889 96L887 97L887 99L890 101L893 106L894 108L894 112L893 115L890 115L887 117L883 117L883 115L884 112L882 108L885 108L882 105L880 104L878 104L878 102L879 99L877 98L875 97L870 98L867 99L863 100L865 99L864 97L867 95L865 93L862 94L858 97L856 99L852 99L850 101L852 103L855 104L855 106L858 107L862 104L866 106L868 106L869 108L863 109L862 111L858 113L856 115L860 117L862 121L864 124L866 127L866 130L864 131L865 133L867 134L866 137L865 140L863 140L861 144L858 149L854 154L849 157L844 160L840 160L838 162L836 161L834 163L829 165L825 165L824 169L822 169L821 167L822 165L817 164L815 165L810 168L807 171L806 174L809 178L812 183L816 185L818 188L820 195L819 201L816 204L812 206L809 209L804 213L803 210L804 208L801 206L798 205L797 203L795 199L791 198L788 198L789 195L786 195L785 199L783 204L782 208L782 210L785 210L786 214L787 217L789 219L791 219L793 221L796 224L798 226L798 229L798 231L798 234L801 238L801 240L798 240L795 237L790 234L790 232L788 230L787 227L786 225L786 222L784 219L783 217L781 215L780 213L779 216L778 214L779 211L780 208L779 205L781 202L779 200L780 196L778 194L777 189L776 185L775 182L772 184L768 186L766 186L764 185L765 180L764 177L761 173L762 171L760 171L757 168L756 166L756 164L755 162L753 160L750 160L750 162L749 164L747 163L745 163L742 164L737 165L737 168L735 170L730 172L726 177L723 179L719 181L719 183L717 184L714 185L712 186L711 188L712 193L712 196L711 200L711 206L709 206L707 209L705 211L703 214L698 211L697 206L695 203L694 201L692 197L691 193L691 190L687 185L686 178L685 173L685 169L684 165L678 168L676 167L671 163L673 161L667 157L665 156L664 153L661 150L654 151L648 151L643 152L636 150L632 150L627 149L626 145L624 144L621 145L617 146L613 145L609 142L606 141L603 138L600 133L598 133L596 132L595 134L593 133L593 135L594 139L596 142L598 144L601 146L600 148L601 150L602 152L603 150L604 148L606 149L606 151L605 153L606 155L610 155L613 155L615 155L617 153L620 150L622 148L624 147L624 149L624 152L625 155L627 156L630 156L632 157L634 159L635 161L635 164L633 166L631 169L629 169L628 171L629 174L627 174L624 176L623 178L621 178L620 181L618 182L616 181L613 183L609 184L608 187L604 188L598 190L595 193L593 193L590 194L588 195L585 195L583 196L581 197L578 198L576 198L575 195L575 193L574 190L573 188L573 186L573 184L573 182L571 180L569 178L567 175L566 172L564 170L562 169L560 166L559 163L560 161L557 157L556 155L554 154L552 152L552 150L549 146L547 143L545 141L543 141L544 138L544 136L542 139L541 141L539 141L538 139L535 134L536 138L538 142L541 148L542 150L544 152L547 156L546 159L551 162L553 167L552 171L554 176L557 178L559 182L560 185L562 187L567 191L569 193L571 195L573 196L575 199L573 201L575 202L577 204L578 206L580 206L584 205L588 204L591 203L593 203L596 202L599 202L601 201L603 200L604 203L604 205L602 210L600 215L598 219L595 225L592 229L587 234L584 237L578 241L575 243L571 248L570 250L566 252L565 254L563 257L562 261L560 262L558 266L559 268L561 270L560 273L560 276L561 278L563 282L565 284L565 288L565 291L565 297L566 299L565 302L563 304L561 306L558 308L553 310L549 314L545 317L543 320L545 323L546 325L546 330L546 332L546 334L542 336L537 338L535 340L537 342L535 346L535 349L534 351L532 353L529 355L528 357L526 360L522 364L519 366L517 368L513 369L511 369L508 370L506 370L502 370L500 370L498 370L495 371L491 372L489 373L487 373L485 372L483 370L482 368L481 365L482 362L480 358L478 355L475 350L473 347L471 345L470 341L469 338L468 333L468 328L468 326L466 325L464 322L462 317L462 315L459 311L458 309L458 306L458 303L460 300L460 298L461 295L462 293L464 291L465 289L466 286L466 284L464 283L463 281L463 278L464 276L463 273L462 270L460 268L460 266L459 263L456 259L452 255L450 252L447 249L448 247L449 243L450 241L451 236L451 233L450 231L448 230L447 228L442 228L440 229L437 229L435 226L433 224L431 221L428 221L425 221L422 222L419 222L413 225L411 226L408 227L404 226L400 225L398 225L393 226L391 227L387 228L385 228L381 227L378 224L375 222L372 219L369 218L367 216L366 214L366 211L364 209L362 207L360 205L357 202L355 202L354 200L352 196L353 194L351 191L351 189L353 187L354 185L354 183L355 181L355 177L355 174L354 172L355 170L354 168L352 167L352 165L352 163L355 160L356 157L358 154L360 151L360 149L361 147L364 146L366 142L368 141L372 140L374 138L376 137L379 134L378 129L380 126L380 124L383 121L386 120L389 118L392 114L393 112L396 112L398 114L401 113L405 114L407 114L410 112L414 112L417 110L420 109L427 108L433 108L435 108L438 107L442 107L446 108L450 106L453 107L456 107L454 110L455 112L455 115L452 117L453 119L455 119L456 121L462 123L466 123L471 125L473 128L476 129L482 131L486 132L489 130L488 127L489 125L492 123L495 123L500 124L502 125L507 126L508 128L513 127L517 128L520 130L522 130L525 129L530 128L532 128L533 130L537 130L540 130L542 129L543 127L544 123L546 119L548 116L548 113L547 110L549 109L546 109L543 108L541 110L535 111L532 109L528 109L525 111L521 109L517 109L515 105L512 103L514 100L512 98L516 95L522 95L523 92L530 92L535 90L539 89L545 89L552 91L557 93L561 92L564 93L569 91L569 89L568 87L566 85L564 85L558 80L554 79L551 77L553 76L556 73L554 72L560 70L556 70L553 70L551 71L547 72L544 73L545 75L550 76L545 78L540 80L538 79L535 77L539 75L532 73L532 71L529 72L527 74L524 77L522 78L521 83L519 84L517 87L519 89L522 91L517 93L512 96L511 94L509 93L507 93L503 94L505 96L503 96L501 96L499 95L499 98L501 99L502 102L504 103L504 105L500 104L502 106L499 106L501 110L498 110L495 108L494 105L493 103L492 101L490 99L489 97L487 95L487 91L487 89L485 88L483 87L480 86L478 84L474 83L471 81L470 79L470 77L468 77L466 79L465 77L463 75L460 76L461 78L461 81L465 83L467 86L471 89L474 89L474 91L477 92L480 93L483 95L483 97L481 95L477 95L476 97L478 98L478 100L476 101L474 104L474 101L473 98L472 96L470 96L469 94L467 93L465 92L463 92L460 90L456 88L454 85L453 82L451 81L448 80L446 81L444 82L442 83L439 85L432 84L426 85L426 87L426 89L423 92L418 93L415 96L414 99L415 101L413 103L412 105L409 106L407 109L402 109L399 109L396 110L393 111L391 108L387 107L384 107L382 108L382 105L382 103L380 102L380 99L381 97L382 93L382 91L381 89L382 87L380 85L385 82L390 83L395 83L399 84L402 83L408 84L410 81L410 74L407 70L404 68L398 67L398 64L403 63L409 64L408 60L411 62L420 59L421 56L424 55L427 54L429 53L432 48L437 46L440 46L444 45L447 44L446 41L445 39L445 35L446 33L450 33L454 31L454 33L453 35L455 35L454 37L451 39L452 41L455 43L459 44L461 43L465 44L467 45L470 44L475 43L480 41L484 42L488 43L488 41L494 40L493 37L493 34L495 32L498 31L501 33L504 33L505 30L505 28L502 27L501 25L506 24L511 24L515 24L518 24L523 22L519 20L512 21L506 22L500 23L497 21L494 20L495 16L493 13L495 10L498 8L506 4L509 3L503 0L497 1L493 4L494 6L488 9L481 12L478 17L481 20L484 22L481 26L477 27L476 33L474 37L469 36L467 39L463 39L462 36L458 32L456 26L453 24L446 28L441 29L436 27L434 23L433 15L437 13L446 9L454 6L461 0L469 -7L476 -9L486 -14L494 -16L500 -16L506 -19L512 -18L519 -19L531 -16L526 -16L530 -13L534 -14L540 -12L550 -11L564 -7L567 -5L567 -3L563 -1L557 0L540 -3L538 -2L544 0L544 6L549 7L552 8L552 6L550 5L553 3L561 5L565 5L562 2L571 -2L574 -2L578 0L580 -3L577 -5L578 -7L576 -10L586 -8L588 -6L584 -6L584 -4L586 -2L592 -3L593 -6L601 -7L614 -11L617 -10L613 -8L618 -8L620 -9L627 -9L633 -11L637 -8L641 -11L637 -13L639 -14L650 -13L655 -12L669 -8L671 -10L667 -12L663 -13L664 -15L662 -17L662 -19L669 -22L671 -25L674 -26L684 -25L684 -23L681 -20L683 -19L684 -16L684 -11L688 -9L686 -6L679 -1L683 -1L685 -2L689 -3L690 -5L693 -7L691 -9L692 -11L688 -11L687 -13L690 -17L686 -20L692 -23L691 -25L693 -25L695 -23L694 -20L698 -19L696 -22L702 -23L710 -23L717 -21L713 -24L713 -28L719 -29L728 -29L736 -29L733 -31L738 -34L742 -34L749 -36L759 -36L770 -38L773 -37L781 -39L788 -39L793 -42L801 -43L808 -42L803 -41L811 -41L812 -39L815 -40L826 -40L835 -38L838 -36L833 -33L823 -31L820 -30L825 -30L830 -29L833 -30L835 -27L837 -28L843 -29L855 -28L856 -26L871 -26L871 -29L879 -28L885 -28L891 -26L893 -24L891 -22L895 -19L901 -18L905 -22L911 -20L917 -21L924 -20L927 -21L933 -20L930 -24L935 -25L969 -23L972 -21L981 -18L996 -19L1004 -18L1007 -16L1006 -14L1011 -13L1016 -13L1022 -14L1029 -13L1036 -13L1043 -10L1047 -11L1044 -14L1046 -15L1058 -14L1066 -14L1076 -13L1081 -11ZM597 92L599 94L601 95L598 96L598 99L596 101L596 103L597 105L601 106L603 108L608 109L614 108L614 104L614 100L611 99L612 96L610 96L611 93L614 94L618 93L615 91L614 88L611 89L610 92L609 90L610 87L605 85L603 81L601 80L605 80L605 77L608 76L611 77L612 73L611 71L608 71L604 70L600 72L597 73L595 75L591 75L588 79L591 83L591 85L595 90L597 92ZM79 -13L79 -9L84 -12L89 -10L88 -7L91 -4L95 -7L98 -10L98 -14L103 -14L109 -14L114 -12L114 -10L111 -8L114 -6L113 -4L106 -2L101 -1L97 -2L96 0L92 3L91 5L87 7L82 7L79 9L79 11L74 12L70 15L66 19L64 22L64 26L70 27L71 30L73 33L78 32L85 34L89 35L91 37L96 38L100 40L106 40L110 40L109 43L111 47L113 51L119 55L122 54L124 50L122 44L119 42L125 40L129 38L131 35L131 33L129 29L124 27L128 23L127 19L126 14L128 13L134 14L138 14L141 13L145 14L149 17L157 18L157 21L158 26L162 27L164 29L170 27L173 23L176 21L178 24L183 29L187 33L186 36L191 38L194 40L200 41L202 42L204 45L207 46L209 51L206 53L203 54L197 55L192 58L186 59L178 58L173 58L169 58L166 61L161 63L156 68L151 71L155 70L161 66L168 62L174 62L177 64L174 66L175 70L176 73L181 75L187 75L191 70L191 73L193 74L189 77L181 79L177 80L173 83L170 83L170 80L176 77L170 77L166 77L163 80L159 82L155 83L153 85L152 88L154 90L155 88L156 90L153 91L151 91L149 91L147 92L145 92L142 93L147 92L143 94L141 94L140 97L137 100L135 98L136 100L137 102L136 104L134 107L134 104L132 103L132 99L131 101L132 103L130 103L132 104L132 108L134 109L134 113L132 116L128 117L126 119L124 119L122 120L121 122L117 124L115 126L114 128L113 131L114 133L115 136L117 139L117 141L118 145L118 147L118 149L117 151L114 151L114 149L112 149L110 145L108 143L108 141L109 139L108 137L105 134L103 133L100 135L97 133L95 132L91 132L87 132L85 132L83 133L84 135L82 136L78 136L75 135L72 135L70 134L67 134L64 135L61 138L57 140L55 141L54 143L54 146L55 149L54 152L53 155L53 160L53 163L54 165L55 168L57 171L58 173L60 175L64 176L68 176L71 176L74 175L76 175L79 173L80 171L80 168L83 166L87 165L90 165L92 165L93 167L91 169L90 172L90 174L89 177L88 179L88 181L88 183L86 184L85 186L87 186L89 186L91 186L93 186L95 186L97 185L99 186L102 186L105 187L107 189L107 191L106 193L105 196L106 198L105 200L104 202L105 204L106 206L109 209L110 211L112 211L115 212L117 211L119 210L122 209L124 210L126 210L128 212L130 212L133 210L135 209L135 205L137 203L140 203L143 203L146 201L149 198L151 200L151 202L148 202L150 204L150 206L148 208L149 211L151 211L152 208L150 204L155 202L156 199L157 202L160 202L162 204L166 205L170 205L172 207L174 207L177 206L181 205L186 205L182 206L184 208L187 208L190 210L190 213L192 213L196 215L198 217L198 219L200 219L202 221L208 223L211 222L215 223L219 224L223 228L225 229L226 231L228 237L230 238L230 241L227 244L235 245L235 249L238 247L242 248L248 250L250 252L250 254L254 253L261 255L267 255L272 258L277 262L280 263L283 264L286 269L286 272L285 278L283 280L278 285L275 290L273 293L271 296L271 302L270 308L269 311L268 317L264 322L263 326L260 327L259 330L255 330L249 331L247 333L243 334L238 337L235 340L235 343L235 345L235 349L234 351L231 353L227 359L224 362L221 364L220 367L217 370L216 372L211 374L209 373L207 374L203 372L201 372L198 370L198 372L203 375L202 378L205 379L204 381L201 386L195 388L188 389L184 388L185 390L184 393L185 395L182 396L179 397L175 396L174 400L177 401L179 400L180 402L176 403L173 406L173 409L172 411L168 411L166 413L165 416L168 419L172 419L170 423L166 425L164 429L160 431L160 436L162 438L158 438L156 439L152 440L152 444L150 444L146 443L142 440L137 438L136 436L137 433L135 431L135 425L136 421L140 418L135 417L138 414L139 408L144 409L145 401L143 400L142 405L140 405L141 399L142 392L144 390L143 386L142 382L144 382L146 376L149 370L150 365L149 359L150 356L150 351L152 347L153 340L154 332L155 324L155 318L154 312L150 310L143 305L136 301L133 299L132 296L129 290L126 283L122 276L121 274L119 271L117 269L114 267L113 262L114 259L117 257L119 254L117 254L115 253L115 248L117 245L118 243L120 241L123 239L123 236L126 234L128 232L129 230L128 227L128 224L128 220L126 218L124 215L124 213L122 211L120 211L119 213L117 214L118 216L117 218L115 218L115 215L113 216L112 214L110 214L108 214L106 213L105 211L103 209L101 209L100 207L100 209L98 208L97 206L97 204L96 202L94 201L94 199L92 198L90 197L91 195L89 196L87 196L84 195L82 194L79 193L77 193L75 192L73 191L69 187L67 185L64 184L62 185L59 186L57 186L55 185L52 185L48 183L46 183L41 181L38 179L35 178L31 177L30 175L26 173L24 171L23 169L24 167L25 165L24 163L22 160L19 156L15 154L13 151L10 150L10 147L8 146L6 144L5 141L3 141L1 139L-1 137L-3 133L-4 130L-7 128L-10 127L-10 130L-10 133L-6 137L-4 139L-3 142L-1 144L1 146L3 149L4 151L5 154L7 155L10 158L8 160L6 158L4 156L1 154L-1 153L-1 150L-1 148L-3 147L-5 145L-7 145L-9 144L-11 142L-8 140L-11 136L-13 135L-14 133L-16 130L-17 127L-19 124L-20 122L-22 120L-24 119L-26 118L-28 117L-31 117L-32 114L-36 111L-39 105L-41 103L-43 100L-44 97L-46 95L-45 92L-45 89L-46 86L-45 83L-44 76L-45 71L-46 68L-47 66L-41 67L-39 70L-39 66L-40 63L-48 59L-50 58L-57 56L-59 53L-59 51L-63 49L-64 46L-69 43L-69 41L-71 40L-74 39L-75 36L-80 33L-82 29L-85 29L-91 29L-96 28L-103 24L-107 23L-113 22L-118 22L-126 21L-130 19L-134 20L-133 22L-135 23L-140 23L-143 25L-147 25L-148 23L-146 20L-142 18L-148 20L-150 22L-156 25L-153 26L-156 29L-160 31L-164 32L-171 35L-172 37L-176 39L-179 38L-182 39L-186 41L-189 42L-196 43L-192 41L-188 39L-184 37L-180 37L-178 35L-173 33L-169 31L-169 28L-167 26L-171 27L-174 28L-177 26L-178 28L-179 26L-183 27L-185 27L-185 25L-187 22L-192 23L-195 21L-198 20L-198 18L-200 17L-199 15L-196 12L-192 10L-189 11L-186 9L-183 9L-181 8L-183 6L-181 4L-183 5L-187 5L-191 5L-196 6L-202 5L-203 3L-208 1L-203 0L-194 -2L-191 -2L-192 0L-184 0L-187 -3L-192 -4L-194 -6L-198 -8L-203 -9L-201 -11L-194 -11L-190 -12L-189 -14L-185 -16L-181 -16L-174 -18L-171 -18L-165 -20L-160 -19L-157 -17L-155 -18L-149 -18L-143 -16L-140 -17L-132 -16L-125 -15L-122 -15L-117 -15L-111 -14L-107 -14L-100 -13L-95 -11L-91 -11L-88 -12L-83 -13L-78 -13L-72 -15L-66 -16L-63 -14L-61 -15L-60 -17L-57 -16L-51 -13L-46 -15L-46 -13L-41 -13L-35 -14L-29 -13L-21 -11L-16 -11L-12 -11L-7 -9L-12 -7L-6 -6L4 -7L8 -7L12 -5L16 -7L12 -9L14 -10L19 -10L22 -10L25 -9L28 -7L33 -8L39 -6L45 -7L50 -7L50 -9L53 -10L59 -8L59 -5L61 -8L64 -8L66 -11L62 -14L58 -15L58 -19L62 -22L67 -21L71 -20L76 -16L73 -14L79 -13ZM94 -27L97 -24L101 -27L110 -29L116 -25L116 -22L123 -24L127 -25L135 -23L140 -21L147 -21L151 -18L160 -17L163 -15L167 -12L160 -10L169 -8L175 -7L180 -3L186 -3L185 -1L178 4L174 2L168 -1L163 -1L162 1L166 3L171 5L173 6L175 10L174 12L169 11L160 8L165 12L169 14L160 14L152 11L147 10L149 9L143 7L138 5L127 7L124 5L126 3L133 2L141 2L141 -1L146 -5L143 -8L138 -9L130 -11L132 -12L129 -14L125 -14L122 -15L120 -14L114 -14L100 -15L92 -16L86 -16L83 -18L87 -19L82 -19L81 -23L84 -26L87 -28L97 -29L94 -27ZM314 -65L338 -62L331 -61L317 -60L297 -60L299 -59L312 -60L323 -58L330 -60L333 -58L329 -56L338 -57L356 -59L368 -58L370 -57L355 -54L352 -53L341 -53L349 -52L345 -50L342 -47L342 -43L346 -41L341 -41L335 -39L341 -37L342 -34L338 -34L343 -31L335 -30L339 -29L333 -27L328 -27L332 -25L332 -23L325 -24L323 -23L328 -23L333 -20L334 -17L328 -17L325 -18L320 -20L321 -18L317 -16L327 -15L332 -15L322 -12L312 -9L301 -8L297 -8L293 -6L288 -3L280 0L278 0L273 1L267 2L264 4L264 7L262 9L256 12L258 15L256 18L254 22L249 22L243 19L236 19L232 17L230 13L224 9L222 6L221 3L216 0L217 -3L215 -4L219 -9L224 -10L226 -12L226 -15L222 -13L220 -13L217 -12L212 -13L212 -16L213 -18L217 -18L224 -17L218 -19L215 -21L211 -20L208 -21L212 -24L210 -26L207 -28L202 -32L198 -34L188 -37L180 -38L170 -38L161 -37L157 -38L150 -41L160 -42L168 -42L152 -43L143 -45L158 -48L171 -50L173 -51L163 -52L166 -54L179 -56L184 -57L192 -59L203 -60L214 -60L218 -59L228 -61L237 -59L242 -59L250 -58L241 -60L242 -62L254 -64L267 -64L272 -65L285 -65L314 -65Z"/>
+          <clipPath id="chart-clip"><rect x="0" y="0" width="1000" height="415"/></clipPath>
+        </defs>
+        <g clip-path="url(#chart-clip)">
+          <g class="grat"><path d="M81.5 0V414.8M192.6 0V414.8M303.7 0V414.8M414.8 0V414.8M525.9 0V414.8M637.0 0V414.8M748.1 0V414.8M859.3 0V414.8M970.4 0V414.8M0 22.2H1000M0 96.3H1000M0 170.4H1000M0 318.5H1000M0 392.6H1000"/></g>
+          <path class="equator" d="M0 244.4 H1000"/>
+          <path class="tropic" d="M0 157.6 H1000 M0 331.3 H1000"/>
+          <use href="#land" class="wl wl1"/>
+          <use href="#land" class="wl wl2"/>
+          <use href="#land" class="wl wl3"/>
+          <use href="#land" class="wl wl4"/>
+          <use href="#land" class="land"/>
+          <g class="grat-lbl" aria-hidden="true">
+            <text x="6" y="240">Equator</text>
+            <text x="6" y="153">Tropic of Cancer</text>
+            <text x="6" y="327">Tropic of Capricorn</text>
+            <text x="86" y="408">90° W</text><text x="419" y="408">0°</text><text x="752" y="408">120° E</text>
+          </g>
+          <!-- compass rose -->
+          <g class="rose" transform="translate(66 352)" aria-hidden="true">
+            <circle r="34"/><circle r="27" class="thin"/>
+            <path class="rose-pt" d="M0 -46 L6 -6 L0 0 L-6 -6 Z M0 46 L6 6 L0 0 L-6 6 Z M46 0 L6 6 L0 0 L6 -6 Z M-46 0 L-6 6 L0 0 L-6 -6 Z"/>
+            <path class="rose-pt rose-pt--d" d="M0 -46 L6 -6 L0 0 Z M0 46 L-6 6 L0 0 Z M46 0 L6 6 L0 0 Z M-46 0 L-6 -6 L0 0 Z"/>
+            <text y="-52" text-anchor="middle">N</text>
+          </g>
+          <!-- route: Moers > Sodwana > Peru > Utila > (Pacific) > Australia > Göttingen -->
+          <mask id="m-route"><path class="draw d1" pathLength="1" d="M439 54 C 520 140, 560 250, 536 346 C 420 400, 260 360, 159 291 C 120 250, 96 220, 93 185 C 60 160, 20 150, -10 150 M1010 250 C 960 270, 930 300, 911 337 C 820 260, 640 120, 452 54" stroke="#fff" stroke-width="10" fill="none"/></mask>
+          <g class="route" mask="url(#m-route)">
+            <path d="M439 54 C 520 140, 560 250, 536 346"/>
+            <path d="M536 346 C 420 400, 260 360, 159 291"/>
+            <path d="M159 291 C 120 250, 96 220, 93 185"/>
+            <path d="M93 185 C 60 160, 20 150, -10 150"/>
+            <path d="M1010 250 C 960 270, 930 300, 911 337"/>
+            <path d="M911 337 C 820 260, 640 120, 452 54"/>
+          </g>
+          <g class="stations">
+            <g class="st" transform="translate(439 54)"><circle r="5"/></g>
+            <g class="st st--now" transform="translate(452 54)"><circle r="6.5"/><path d="M0 -12 V 12 M-12 0 H 12"/></g>
+            <g class="st" transform="translate(536 346)"><circle r="5"/></g>
+            <g class="st" transform="translate(159 291)"><circle r="5"/></g>
+            <g class="st" transform="translate(93 185)"><circle r="5"/></g>
+            <g class="st st--soft" transform="translate(911 337)"><circle r="4"/></g>
+          </g>
+          <g class="st-num" aria-hidden="true">
+            <text x="418" y="80">i</text>
+            <text x="470" y="44">v</text>
+            <text x="552" y="356">ii</text>
+            <text x="172" y="304">iii</text>
+            <text x="106" y="182">iv</text>
+          </g>
+          <g class="st-lbl" aria-hidden="true">
+            <text x="470" y="82">Moers · Göttingen</text>
+            <text x="560" y="378">Sodwana Bay</text>
+            <text x="176" y="326">Puerto Maldonado</text>
+            <text x="112" y="206">Utila</text>
+            <text x="900" y="362" text-anchor="middle">Australia</text>
+          </g>
+        </g>
+        <rect class="chart-frame" x="1" y="1" width="998" height="413"/>
+      </svg>
+      <figcaption id="chart-cap">
+        <span class="fig-no">Plate II.</span> Chart of field stations, in the order I reached them.
+        <ol class="chart-key">
+          <li><span class="k">i</span> Moers, BUND <span class="coords">51.45° N, 6.63° E</span></li>
+          <li><span class="k">ii</span> Sodwana Bay <span class="coords">27.54° S, 32.68° E</span></li>
+          <li><span class="k">iii</span> Puerto Maldonado <span class="coords">12.59° S, 69.19° W</span></li>
+          <li><span class="k">iv</span> Utila <span class="coords">16.10° N, 86.93° W</span></li>
+          <li><span class="k">v</span> Göttingen <span class="coords">51.54° N, 9.93° E</span></li>
+        </ol>
+      </figcaption>
+    </figure>
+
+    <!-- Entry 4: Utila -->
+    <article class="entry" id="utila" aria-labelledby="utila-h">
+      <div class="entry-head">
+        <p class="entry-meta"><span class="entry-no">Entry No. 4</span><span class="folio-sm" aria-hidden="true">p. 3</span></p>
+        <p class="entry-date hand"><time datetime="2026-05-04">4</time>–<time datetime="2026-05-30">30 May 2026</time></p>
+        <h3 id="utila-h">Utila, Bay Islands, Honduras</h3>
+        <p class="entry-coords"><span class="coords">16.10° N, 86.93° W</span></p>
+        <p class="entry-role">Marine Conservation Internship<span class="sep" aria-hidden="true"> · </span><a href="https://www.wsorc.org/">Whale Shark &amp; Oceanic Research Center</a> (WSORC)</p>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-text">
+          <h4 class="obs-h">Work &amp; observations</h4>
+          <ul class="obs">
+            <li>Coral nursery work, monitoring out-planted coral fragments, coral recruit monitoring</li>
+            <li>SCTLD (stony coral tissue loss disease) treatment</li>
+            <li>REEF fish surveys, ID of reef-associated organisms, coral ID, megafauna monitoring</li>
+            <li>Lionfish removal (invasive species) and dissection</li>
+            <li>Mangrove reforestation</li>
+            <li>General conservation activities</li>
+          </ul>
+          <p class="pencil margin-note">Same month: PADI Advanced Open Water <a href="#certificates">(see p. 7)</a></p>
+          <figure class="plate plate--sm plate--tall plate--mangrove ink-in">
+            <svg class="sketch sketch--mangrove" viewBox="0 0 160 260" role="img" aria-labelledby="mang-t">
+              <title id="mang-t">Line sketch of a young mangrove planted in shallow water</title>
+              <rect class="wash wash--sea" x="10" y="118" width="140" height="90" filter="url(#wash)"/>
+              <g class="ink-lines">
+                <path class="draw" pathLength="1" d="M76 44 C 74 90, 72 150, 76 204 C 77 214, 79 220, 80 224 C 82 218, 84 212, 84 204 C 86 150, 86 92, 84 44 Z"/>
+                <path class="draw d1" pathLength="1" d="M76 44 C 66 28, 46 18, 26 20 C 36 34, 56 44, 76 44 M84 44 C 92 26, 112 14, 134 14 C 126 30, 106 42, 84 44"/>
+                <path class="draw d2 fine" pathLength="1" d="M74 42 C 60 34, 44 26, 30 22 M86 42 C 100 32, 116 22, 130 16"/>
+                <path class="draw d2" pathLength="1" d="M80 44 C 80 36, 80 30, 80 22 C 74 14, 70 10, 66 6 M80 22 C 86 14, 92 10, 98 8"/>
+                <path class="draw d2" pathLength="1" d="M10 122 C 22 116, 34 126, 46 120 S 70 116, 82 122 S 106 126, 118 120 S 140 118, 150 122"/>
+                <path class="draw d3 fine" pathLength="1" d="M18 134 c 6 -3, 12 3, 18 0 M98 140 c 6 -3, 12 3, 18 0 M40 160 c 6 -3, 12 3, 18 0 M108 176 c 6 -3, 12 3, 18 0"/>
+                <path class="draw d3" pathLength="1" d="M8 208 C 40 204, 120 204, 152 208"/>
+                <path class="draw d4 fine" pathLength="1" d="M80 222 C 70 230, 64 238, 56 246 M80 222 C 88 232, 96 238, 106 244 M80 224 C 80 234, 78 242, 80 252 M70 232 C 64 232, 60 236, 56 238"/>
+                <path class="draw d4 fine" pathLength="1" d="M14 214 l8 8 M30 214 l8 8 M46 214 l8 8 M110 214 l8 8 M126 214 l8 8 M142 214 l6 6"/>
+                <g class="lenticels"><circle cx="79" cy="70" r="1"/><circle cx="81" cy="96" r="1"/><circle cx="78" cy="130" r="1"/><circle cx="81" cy="160" r="1"/><circle cx="79" cy="186" r="1"/></g>
+              </g>
+            </svg>
+            <figcaption><span class="fig-no">fig. b</span> Young mangrove, planted out.</figcaption>
+          </figure>
+        </div>
+        <div class="entry-photos">
+          <figure class="snap snap--lg tilt-r">
+            <span class="corner corner--tl" aria-hidden="true"></span><span class="corner corner--tr" aria-hidden="true"></span><span class="corner corner--bl" aria-hidden="true"></span><span class="corner corner--br" aria-hidden="true"></span>
+            <img class="snap-img" src="../photos/utila-whaleshark.jpg" data-slot="utila-whaleshark" data-hint="Whale shark at the surface off Utila" alt="Whale shark at the surface off Utila" width="1200" height="900" loading="lazy">
+            <figcaption>Off Utila, May 2026</figcaption>
+          </figure>
+          <figure class="snap snap--sm tilt-l2">
+            <span class="tape tape--t" aria-hidden="true"></span>
+            <img class="snap-img" src="../photos/utila-coral-nursery.jpg" data-slot="utila-coral-nursery" data-hint="Coral fragments in the nursery" alt="Coral fragments growing in the Utila coral nursery" width="900" height="900" loading="lazy">
+            <figcaption>Coral nursery</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="entry-plates">
+        <figure class="plate plate--wide ink-in">
+          <p class="plate-no" aria-hidden="true">Plate III</p>
+          <svg class="sketch sketch--shark" viewBox="0 0 420 170" role="img" aria-labelledby="shark-t">
+            <title id="shark-t">Line sketch of a whale shark in side view</title>
+            <ellipse class="wash wash--sea" cx="210" cy="90" rx="190" ry="54" filter="url(#wash)"/>
+            <g class="ink-lines">
+              <path class="draw" pathLength="1" d="M16 92 C 15 78, 40 66, 96 59 C 150 52, 205 46, 232 45 C 240 34, 250 22, 259 15 C 262 28, 268 38, 284 48 C 300 52, 318 58, 332 63 C 337 56, 342 52, 348 50 C 349 58, 352 64, 360 69 C 366 70, 370 72, 374 73 C 386 60, 398 38, 412 14 C 410 42, 402 70, 392 86 C 398 98, 404 110, 410 124 C 394 112, 380 102, 372 94 C 340 98, 300 104, 266 108 C 230 112, 160 113, 120 111 C 80 107, 40 101, 18 92 Z"/>
+              <path class="draw d1" pathLength="1" d="M120 108 C 130 122, 142 136, 160 152 C 158 138, 158 122, 162 110"/>
+              <path class="draw d1" pathLength="1" d="M266 108 C 270 116, 274 122, 280 126 C 276 118, 276 112, 278 106"/>
+              <path class="draw d1" pathLength="1" d="M16 92 C 30 95, 44 95, 58 93"/>
+              <path class="draw d2" pathLength="1" d="M78 68 C 82 80, 82 94, 78 104 M86 66 C 90 80, 90 96, 86 106 M94 64 C 98 80, 98 96, 94 108 M102 63 C 106 80, 106 96, 102 108 M110 62 C 113 78, 113 94, 110 108"/>
+              <path class="draw d2" pathLength="1" d="M118 60 C 180 52, 250 52, 334 64 M120 78 C 200 72, 290 72, 368 74 M124 98 C 190 98, 260 96, 336 90"/>
+              <path class="draw d3 hatch" pathLength="1" d="M140 110 l6 -6 M152 111 l6 -6 M164 112 l6 -6 M176 112 l6 -6 M188 112 l6 -6 M200 112 l6 -6 M212 111 l6 -6 M224 111 l6 -6 M236 110 l6 -6 M248 109 l6 -6"/>
+              <path class="draw d3" pathLength="1" d="M382 66 C 390 74, 394 80, 392 86 M246 33 C 252 36, 258 40, 264 45"/>
+              <path class="draw d3 fine stripes" pathLength="1" d="M136 58 C 138 74, 138 92, 136 108 M164 54 C 166 72, 166 92, 164 110 M192 51 C 194 70, 194 92, 192 111 M220 50 C 222 70, 222 92, 220 111 M248 50 C 250 70, 250 90, 248 109 M276 52 C 278 70, 278 88, 276 106 M304 56 C 306 70, 306 86, 304 100"/>
+              <circle class="eye" cx="48" cy="82" r="2.4"/>
+            </g>
+            <g class="spots"><circle cx="94.5" cy="70.4" r="1.4"/><circle cx="94.6" cy="80.2" r="1.5"/><circle cx="96.1" cy="87.5" r="1.5"/><circle cx="95.3" cy="95.3" r="1.7"/><circle cx="103.9" cy="69" r="1.6"/><circle cx="106" cy="77.5" r="1.2"/><circle cx="104.2" cy="87.1" r="1.6"/><circle cx="105.2" cy="94.8" r="1.3"/><circle cx="113.4" cy="69.1" r="1.1"/><circle cx="113.1" cy="77" r="1.7"/><circle cx="112.5" cy="84.9" r="1.9"/><circle cx="114.1" cy="92.5" r="1.6"/><circle cx="124.4" cy="66.6" r="1.9"/><circle cx="121.6" cy="76.3" r="1.8"/><circle cx="124.3" cy="83.5" r="1.3"/><circle cx="123.9" cy="94" r="1.8"/><circle cx="131.8" cy="65.3" r="1.7"/><circle cx="130.6" cy="75.9" r="1.8"/><circle cx="131.6" cy="84.1" r="1.1"/><circle cx="132.5" cy="92.9" r="1.6"/><circle cx="142.1" cy="64.7" r="1.9"/><circle cx="142.5" cy="73.2" r="1.8"/><circle cx="141" cy="81.1" r="1.1"/><circle cx="139.7" cy="91.4" r="1.2"/><circle cx="140.6" cy="99.1" r="1.4"/><circle cx="149.9" cy="63" r="1.4"/><circle cx="149" cy="72.9" r="1.6"/><circle cx="151.3" cy="80" r="2"/><circle cx="151.5" cy="90.5" r="1.6"/><circle cx="149.6" cy="99.3" r="1.7"/><circle cx="159" cy="62.8" r="1.6"/><circle cx="158.3" cy="73.3" r="1.6"/><circle cx="160.2" cy="79.4" r="1.2"/><circle cx="160.4" cy="89.5" r="1.4"/><circle cx="160" cy="97" r="1.9"/><circle cx="167.9" cy="62.7" r="1.3"/><circle cx="166.8" cy="72.1" r="1.9"/><circle cx="167.3" cy="80.4" r="1.4"/><circle cx="169.1" cy="88" r="1.1"/><circle cx="166.6" cy="95.3" r="1.6"/><circle cx="176.4" cy="62.8" r="1.4"/><circle cx="177.4" cy="71.9" r="1.5"/><circle cx="177.8" cy="77.9" r="1.7"/><circle cx="177" cy="86.6" r="1.3"/><circle cx="177" cy="96.3" r="1.5"/><circle cx="186" cy="60" r="1.7"/><circle cx="186.9" cy="69.7" r="1.6"/><circle cx="185.1" cy="79" r="1.4"/><circle cx="184.8" cy="86.9" r="1.4"/><circle cx="185.1" cy="95.2" r="1.9"/><circle cx="196" cy="61.4" r="1.8"/><circle cx="194.2" cy="68.3" r="1.3"/><circle cx="194.4" cy="78.7" r="1.7"/><circle cx="195.2" cy="85.7" r="1.6"/><circle cx="194.8" cy="95.1" r="1.1"/><circle cx="202.6" cy="60.9" r="1.5"/><circle cx="204.3" cy="67" r="1.9"/><circle cx="205.4" cy="78.2" r="1.3"/><circle cx="203" cy="85.1" r="1.5"/><circle cx="205.5" cy="94.8" r="1.5"/><circle cx="213.3" cy="61.5" r="1.4"/><circle cx="211.8" cy="68.4" r="2"/><circle cx="214" cy="75.7" r="1.6"/><circle cx="213.7" cy="86.6" r="1.5"/><circle cx="212.6" cy="93" r="1.9"/><circle cx="222.2" cy="59.5" r="1.7"/><circle cx="223" cy="67.1" r="1.6"/><circle cx="223.1" cy="77.9" r="1.8"/><circle cx="221" cy="84.6" r="1.8"/><circle cx="222.8" cy="92.8" r="1.7"/><circle cx="230.5" cy="60" r="1.3"/><circle cx="229.7" cy="68.6" r="1.8"/><circle cx="232.5" cy="77.1" r="2"/><circle cx="232.1" cy="85.1" r="1.9"/><circle cx="230.9" cy="94.5" r="1.7"/><circle cx="241.1" cy="58.6" r="1.4"/><circle cx="241.5" cy="69.1" r="1.9"/><circle cx="240.8" cy="75.5" r="1.1"/><circle cx="240" cy="84" r="1.6"/><circle cx="240.3" cy="94" r="1.5"/><circle cx="249.9" cy="59.2" r="1.1"/><circle cx="250.2" cy="68.6" r="1.9"/><circle cx="248.6" cy="76.9" r="1.9"/><circle cx="248.3" cy="85.8" r="1.5"/><circle cx="248.4" cy="95.7" r="1.7"/><circle cx="258.4" cy="61.2" r="1.2"/><circle cx="256.9" cy="68.1" r="1.2"/><circle cx="258.9" cy="78.3" r="1.1"/><circle cx="258" cy="85.9" r="1.7"/><circle cx="259.3" cy="93.6" r="1.8"/><circle cx="268.1" cy="62.1" r="1.6"/><circle cx="265.9" cy="69.3" r="2"/><circle cx="267.5" cy="78.8" r="1.7"/><circle cx="266.3" cy="86.2" r="2"/><circle cx="267.4" cy="95.3" r="1.5"/><circle cx="276" cy="62" r="1.4"/><circle cx="275.7" cy="70.8" r="1.2"/><circle cx="275.9" cy="78.8" r="1.8"/><circle cx="276.2" cy="87.8" r="1.4"/><circle cx="283.9" cy="60.7" r="1.5"/><circle cx="285" cy="71.2" r="1.5"/><circle cx="284.9" cy="79.4" r="1.8"/><circle cx="286" cy="86" r="1.4"/><circle cx="293.3" cy="61.7" r="1.9"/><circle cx="292.7" cy="72.4" r="1.5"/><circle cx="293.8" cy="80.5" r="1.1"/><circle cx="295.3" cy="88.2" r="1.2"/><circle cx="302.5" cy="65.4" r="1.2"/><circle cx="303.6" cy="73.1" r="1.5"/><circle cx="303.5" cy="83.3" r="1.7"/><circle cx="313.4" cy="68.3" r="1.2"/><circle cx="311" cy="74.5" r="1.2"/><circle cx="310.5" cy="83.3" r="1.9"/><circle cx="321.5" cy="70.4" r="1.4"/><circle cx="321.4" cy="76.8" r="2"/><circle cx="330.8" cy="72.9" r="1.8"/><circle cx="329.7" cy="79.8" r="1.9"/><circle cx="339.5" cy="72.5" r="1.4"/><circle cx="340.1" cy="80.9" r="1.5"/><circle cx="349.1" cy="76.5" r="1.9"/><circle cx="61" cy="74.3" r="1.3"/><circle cx="37.1" cy="85.6" r="1.2"/><circle cx="66.4" cy="85.8" r="1"/><circle cx="50.5" cy="78.1" r="1.3"/><circle cx="45" cy="88.8" r="1.4"/><circle cx="37.7" cy="94.1" r="0.9"/><circle cx="58.1" cy="78.2" r="0.9"/><circle cx="40.2" cy="89.3" r="1.1"/><circle cx="52.8" cy="83.1" r="1.3"/><circle cx="67.6" cy="85.2" r="1"/><circle cx="58.5" cy="75.6" r="0.8"/><circle cx="65.7" cy="84.7" r="1.2"/><circle cx="40.4" cy="80.3" r="1.2"/><circle cx="49.6" cy="82.3" r="1.2"/><circle cx="61.8" cy="84.4" r="1.4"/><circle cx="34.8" cy="86.1" r="1"/><circle cx="40.7" cy="83.6" r="1"/><circle cx="39.7" cy="85.3" r="1.3"/><circle cx="51.2" cy="79.5" r="1.2"/><circle cx="37.1" cy="92.5" r="1.3"/><circle cx="64.1" cy="76.6" r="0.8"/><circle cx="55.7" cy="87.2" r="0.9"/><circle cx="65.5" cy="83.8" r="1.3"/><circle cx="63.4" cy="85.6" r="1.3"/><circle cx="64.4" cy="76.2" r="1.2"/><circle cx="76.7" cy="82.9" r="1"/></g>
+          </svg>
+          <figcaption><span class="fig-no">Plate III.</span> <i>Rhincodon typus</i>, the whale shark. WSORC's namesake; megafauna monitoring was part of the work.</figcaption>
+        </figure>
+
+        <figure class="plate plate--sm ink-in">
+          <svg class="sketch sketch--lionfish" viewBox="0 0 300 230" role="img" aria-labelledby="lion-t">
+            <title id="lion-t">Line sketch of a lionfish with fanned fins and long spines</title>
+            <ellipse class="wash wash--rust" cx="150" cy="120" rx="110" ry="70" filter="url(#wash)"/>
+            <g class="ink-lines">
+              <path class="draw" pathLength="1" d="M40 114 C 50 98, 80 88, 120 88 C 160 88, 196 98, 222 110 M40 114 C 52 128, 80 138, 120 138 C 160 138, 196 128, 222 118"/>
+              <path class="draw d1" pathLength="1" d="M224 108 C 240 94, 262 88, 272 94 C 281 106, 281 124, 272 136 C 262 142, 240 134, 224 120"/>
+              <path class="draw d2 fine" pathLength="1" d="M226 113 L 270 96 M226 113 L 276 108 M226 114 L 277 120 M226 115 L 270 132"/>
+              <path class="draw d1" pathLength="1" d="M78 92 C 76 70, 70 50, 62 30 M90 89 C 90 66, 88 44, 82 22 M102 88 C 104 66, 104 44, 102 18 M114 88 C 118 66, 120 44, 122 18 M126 88 C 132 68, 138 48, 142 24 M138 89 C 146 72, 154 54, 162 34 M150 90 C 160 76, 172 60, 182 46 M162 92 C 174 80, 188 68, 200 60"/>
+              <path class="draw d2 fine" pathLength="1" d="M78 74 C 82 72, 86 72, 90 74 M90 66 C 94 64, 98 64, 103 66 M103 64 C 108 62, 112 62, 118 64 M120 66 C 126 64, 130 66, 134 68 M134 70 C 140 70, 144 72, 148 76 M148 78 C 154 78, 158 80, 162 84"/>
+              <path class="draw d2" pathLength="1" d="M178 96 C 190 82, 204 76, 216 80 C 218 90, 218 100, 216 106"/>
+              <path class="draw d2" pathLength="1" d="M98 124 C 84 150, 70 176, 58 204 M100 126 C 92 156, 86 186, 84 214 M104 126 C 104 158, 108 188, 114 216 M108 126 C 118 154, 130 180, 144 204 M112 124 C 130 146, 150 166, 172 184 M116 122 C 140 136, 162 150, 188 160"/>
+              <path class="draw d3 fine" pathLength="1" d="M70 178 C 80 186, 90 188, 98 186 C 106 190, 116 190, 124 186 C 134 186, 142 180, 150 176 C 160 174, 166 168, 172 160"/>
+              <path class="draw d3 fine" pathLength="1" d="M56 104 C 60 118, 60 128, 56 134 M70 94 C 76 110, 76 128, 70 138 M86 90 C 92 108, 92 126, 86 140 M104 89 C 110 106, 110 124, 104 140 M124 88 C 130 104, 130 124, 124 140 M146 90 C 152 106, 152 122, 146 138 M168 96 C 172 108, 172 122, 168 134 M190 102 C 194 110, 194 120, 190 128"/>
+              <path class="draw d3" pathLength="1" d="M176 126 C 180 140, 190 148, 202 150 C 204 140, 200 130, 196 124"/>
+              <path class="draw d3" pathLength="1" d="M56 100 C 54 92, 58 86, 54 78 C 52 72, 56 68, 54 62"/>
+              <circle class="eye-ring" cx="58" cy="108" r="5"/>
+              <circle class="eye" cx="58" cy="108" r="2.2"/>
+            </g>
+          </svg>
+          <figcaption><span class="fig-no">fig. a</span> Lionfish, <i>Pterois</i> sp. Invasive in the Caribbean; removed and dissected.</figcaption>
+        </figure>
+
+
+      </div>
+    </article>
+
+    <!-- Entry 3: Peru -->
+    <article class="entry entry--flip" id="peru" aria-labelledby="peru-h">
+      <div class="entry-head">
+        <p class="entry-meta"><span class="entry-no">Entry No. 3</span><span class="folio-sm" aria-hidden="true">p. 4</span></p>
+        <p class="entry-date hand"><time datetime="2026-03-16">16 Mar</time> – <time datetime="2026-04-25">25 Apr 2026</time></p>
+        <h3 id="peru-h">Peruvian Amazon, near Puerto Maldonado</h3>
+        <p class="entry-coords"><span class="coords">12.59° S, 69.19° W</span><span class="sep" aria-hidden="true"> · </span>Madre de Dios</p>
+        <p class="entry-role">Amazon Conservation &amp; Reforestation<span class="sep" aria-hidden="true"> · </span><a href="https://panthera-sanctuary.com/">Panthera Sanctuary</a></p>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-text">
+          <h4 class="obs-h">Work &amp; observations</h4>
+          <ul class="obs">
+            <li>Caiman monitoring, mammal monitoring, bird watching, herpetology</li>
+            <li>Reforestation; agroforestry and neotropical permaculture</li>
+            <li>Reserve patrols and rainforest expeditions</li>
+            <li>Trail maintenance and construction</li>
+          </ul>
+          <figure class="plate plate--sm plate--seed ink-in">
+            <svg class="sketch sketch--seedling" viewBox="0 0 200 250" role="img" aria-labelledby="seed-t">
+              <title id="seed-t">Line sketch of a rainforest tree seedling with roots</title>
+              <ellipse class="wash wash--leaf" cx="100" cy="96" rx="80" ry="66" filter="url(#wash)"/>
+              <g class="ink-lines">
+                <path class="draw" pathLength="1" d="M100 186 C 98 160, 102 130, 99 100 C 97 84, 100 70, 101 56"/>
+                <path class="draw d1" pathLength="1" d="M100 140 C 86 132, 62 130, 44 136 C 34 138, 26 144, 18 152 C 30 154, 40 152, 50 150 C 68 148, 86 146, 100 140 Z"/>
+                <path class="draw d1" pathLength="1" d="M100 116 C 116 104, 140 98, 160 100 C 170 100, 178 96, 186 90 C 182 102, 174 110, 162 114 C 144 120, 120 120, 100 116 Z"/>
+                <path class="draw d2" pathLength="1" d="M100 86 C 88 74, 70 66, 52 64 C 44 62, 38 58, 32 52 C 36 64, 44 72, 54 76 C 70 82, 86 86, 100 86 Z"/>
+                <path class="draw d2" pathLength="1" d="M101 58 C 108 46, 118 38, 130 34 C 126 44, 116 54, 101 58 Z M101 58 C 96 48, 90 42, 82 38 C 84 48, 92 56, 101 58"/>
+                <path class="draw d3 fine" pathLength="1" d="M100 140 C 76 140, 46 144, 22 151 M62 141 l-6 -6 M74 140 l-5 -6 M50 144 l-6 -5 M100 116 C 128 112, 160 104, 184 92 M140 108 l5 -7 M156 105 l5 -6 M124 112 l5 -7 M100 86 C 80 80, 56 70, 36 56 M72 76 l-2 7 M58 70 l-2 7 M84 81 l-2 6"/>
+                <path class="draw d3" pathLength="1" d="M20 188 C 60 182, 140 182, 182 188"/>
+                <path class="draw d4 fine" pathLength="1" d="M100 186 C 100 200, 98 214, 100 236 M100 196 C 90 204, 80 208, 66 212 M100 204 C 110 210, 122 214, 136 216 M99 216 C 92 222, 86 228, 78 230 M100 222 C 106 228, 112 232, 120 236 M66 212 C 60 214, 56 218, 52 222 M136 216 C 142 220, 146 224, 148 230"/>
+                <path class="draw d4 fine" pathLength="1" d="M30 194 l4 4 M48 196 l4 4 M150 194 l4 4 M168 196 l4 4 M60 202 l3 3 M144 204 l3 3"/>
+              </g>
+            </svg>
+            <figcaption><span class="fig-no">fig. c</span> A rainforest seedling, as planted for reforestation. Note the drip tips.</figcaption>
+          </figure>
+        </div>
+        <div class="entry-photos">
+          <figure class="snap snap--lg tilt-l">
+            <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
+            <img class="snap-img" src="../photos/peru-rainforest.jpg" data-slot="peru-rainforest" data-hint="Rainforest near Puerto Maldonado" alt="Rainforest in Madre de Dios, Peru" width="1200" height="900" loading="lazy">
+            <figcaption>Madre de Dios, 2026</figcaption>
+          </figure>
+          <figure class="snap snap--sm tilt-r2">
+            <span class="tape tape--t" aria-hidden="true"></span>
+            <img class="snap-img" src="../photos/peru-caiman.jpg" data-slot="peru-caiman" data-hint="Caiman during a monitoring survey" alt="Caiman seen during monitoring" width="900" height="900" loading="lazy">
+            <figcaption>Caiman survey</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="entry-plates">
+        <figure class="plate plate--wide ink-in">
+          <p class="plate-no" aria-hidden="true">Plate IV</p>
+          <svg class="sketch sketch--caiman" viewBox="0 0 430 180" role="img" aria-labelledby="caiman-t">
+            <title id="caiman-t">Line sketch of a caiman seen from above</title>
+            <ellipse class="wash wash--leaf" cx="200" cy="92" rx="180" ry="44" filter="url(#wash)"/>
+            <g class="ink-lines">
+              <!-- legs behind the body -->
+              <g class="legs">
+                <path class="draw d1" pathLength="1" d="M132 70 C 126 56, 118 46, 104 40 C 98 38, 94 34, 92 28 M92 28 l-9 -3 M92 28 l-5 -8 M93 29 l1 -9 M95 31 l6 -6"/>
+                <path class="draw d1" pathLength="1" d="M146 66 C 140 56, 130 50, 118 48"/>
+                <path class="draw d1" pathLength="1" d="M132 110 C 126 124, 118 134, 104 140 C 98 142, 94 146, 92 152 M92 152 l-9 3 M92 152 l-5 8 M93 151 l1 9 M95 149 l6 6"/>
+                <path class="draw d1" pathLength="1" d="M146 114 C 140 124, 130 130, 118 132"/>
+                <path class="draw d2" pathLength="1" d="M232 64 C 236 48, 244 36, 258 30 C 266 26, 272 22, 276 16 M276 16 l-2 -8 M276 16 l5 -6 M277 18 l8 -3 M277 20 l8 2"/>
+                <path class="draw d2" pathLength="1" d="M248 66 C 252 54, 258 46, 266 42"/>
+                <path class="draw d2" pathLength="1" d="M232 116 C 236 132, 244 144, 258 150 C 266 154, 272 158, 276 164 M276 164 l-2 8 M276 164 l5 6 M277 162 l8 3 M277 160 l8 -2"/>
+                <path class="draw d2" pathLength="1" d="M248 114 C 252 126, 258 134, 266 138"/>
+              </g>
+              <path class="draw" pathLength="1" d="M14 90 C 15 84, 20 81, 32 80 C 48 79, 60 77, 68 72 C 74 68, 84 67, 90 71 C 96 75, 100 75, 108 73 C 130 66, 170 61, 210 61 C 240 61, 258 67, 272 75 C 310 82, 360 87, 420 90"/>
+              <path class="draw" pathLength="1" d="M14 90 C 15 96, 20 99, 32 100 C 48 101, 60 103, 68 108 C 74 112, 84 113, 90 109 C 96 105, 100 105, 108 107 C 130 114, 170 119, 210 119 C 240 119, 258 113, 272 105 C 310 98, 360 93, 420 90"/>
+              <path class="draw d2 fine" pathLength="1" d="M118 78 C 122 84, 122 96, 118 102 M132 74 C 136 82, 136 98, 132 106 M146 72 C 150 80, 150 100, 146 108 M160 70 C 164 80, 164 100, 160 110 M174 69 C 178 80, 178 100, 174 111 M188 69 C 192 80, 192 100, 188 111 M202 69 C 206 80, 206 100, 202 111 M216 70 C 220 80, 220 100, 216 110 M230 71 C 234 80, 234 100, 230 109 M244 73 C 248 82, 248 98, 244 107 M258 76 C 261 84, 261 96, 258 104"/>
+              <path class="draw d3 fine" pathLength="1" d="M126 90 H 262"/>
+              <path class="draw d3" pathLength="1" d="M276 84 l4 -3 l4 3 M292 85 l4 -3 l4 3 M308 86 l4 -3 l3 3 M324 87 l3 -3 l3 3 M340 87 l3 -2 l3 2 M356 88 l3 -2 l3 2 M372 88 l2 -2 l2 2 M276 96 l4 3 l4 -3 M292 95 l4 3 l4 -3 M308 94 l4 3 l3 -3 M324 93 l3 3 l3 -3 M340 93 l3 2 l3 -2 M356 92 l3 2 l3 -2 M372 92 l2 2 l2 -2"/>
+              <path class="draw d3 fine" pathLength="1" d="M300 82 v16 M332 84 v12 M364 86 v8 M392 88 v4"/>
+              <ellipse class="eye-ring" cx="80" cy="73" rx="5" ry="3.4"/>
+              <ellipse class="eye-ring" cx="80" cy="107" rx="5" ry="3.4"/>
+              <circle class="eye" cx="20" cy="87" r="1.2"/><circle class="eye" cx="20" cy="93" r="1.2"/>
+              <path class="draw d3 fine" pathLength="1" d="M40 84 C 50 86, 60 86, 68 84 M40 96 C 50 94, 60 94, 68 96"/>
+            </g>
+          </svg>
+          <figcaption><span class="fig-no">Plate IV.</span> <i>Caiman</i> sp., seen from above. Caiman monitoring was part of the work.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Entry 2: Sodwana -->
+    <article class="entry" id="sodwana" aria-labelledby="sodwana-h">
+      <div class="entry-head">
+        <p class="entry-meta"><span class="entry-no">Entry No. 2</span><span class="folio-sm" aria-hidden="true">p. 5</span></p>
+        <p class="entry-date hand"><time datetime="2025-10-20">20 Oct</time> – <time datetime="2025-11-03">3 Nov 2025</time></p>
+        <h3 id="sodwana-h">Sodwana Bay, South Africa</h3>
+        <p class="entry-coords"><span class="coords">27.54° S, 32.68° E</span><span class="sep" aria-hidden="true"> · </span>Indian Ocean</p>
+        <p class="entry-role">Marine Conservation &amp; Indian Ocean Reef Ecology<span class="sep" aria-hidden="true"> · </span>Wildlife &amp; Ecological Investments (WEI)</p>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-text">
+          <h4 class="obs-h">Work &amp; observations</h4>
+          <ul class="obs">
+            <li>Marine conservation on an Indian Ocean reef</li>
+            <li>Reef ecology and survey techniques</li>
+          </ul>
+          <p class="pencil margin-note">WEI runs its research programmes with <a href="https://www.opwall.com/expeditions/research-expedition/south-africa-expedition-marine-and-terrestrial/">Operation Wallacea</a>.</p>
+          <p class="pencil margin-note">Same month: PADI Open Water Diver, my first certificate <a href="#certificates">(p. 7)</a></p>
+        </div>
+        <div class="entry-photos">
+          <figure class="snap snap--lg tilt-r">
+            <span class="corner corner--tl" aria-hidden="true"></span><span class="corner corner--tr" aria-hidden="true"></span><span class="corner corner--bl" aria-hidden="true"></span><span class="corner corner--br" aria-hidden="true"></span>
+            <img class="snap-img" src="../photos/sodwana-reef.jpg" data-slot="sodwana-reef" data-hint="Reef at Sodwana Bay" alt="Coral reef at Sodwana Bay" width="1200" height="900" loading="lazy">
+            <figcaption>Sodwana Bay, 2025</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="entry-plates entry-plates--one">
+        <figure class="plate plate--coral ink-in">
+          <p class="plate-no" aria-hidden="true">Plate V</p>
+          <svg class="sketch sketch--coral" viewBox="40 78 230 200" role="img" aria-labelledby="coral-t">
+            <title id="coral-t">Line sketch of a branching hard coral on a rock</title>
+            <ellipse class="wash wash--sea" cx="155" cy="190" rx="110" ry="80" filter="url(#wash)"/>
+            <g class="coral draw-group"><g class="c-ink"><path pathLength="1" d="M150.0 262.0Q146.4 232.5 151.9 208.0" style="stroke-width:18.6px"/><path pathLength="1" d="M151.9 208.0Q145.1 184.9 139.1 166.1" style="stroke-width:15.1px"/><path pathLength="1" d="M151.9 208.0Q159.3 187.3 166.6 170.9" style="stroke-width:15.1px"/><path pathLength="1" d="M146.0 260.0Q129.3 245.6 118.2 231.2" style="stroke-width:14.6px"/><path pathLength="1" d="M156.0 260.0Q170.1 243.1 184.8 232.2" style="stroke-width:14.6px"/><path pathLength="1" d="M139.1 166.1Q125.5 151.9 114.1 140.6" style="stroke-width:12.3px"/><path pathLength="1" d="M139.1 166.1Q137.3 148.4 132.4 134.4" style="stroke-width:12.3px"/><path pathLength="1" d="M139.1 166.1Q143.8 148.1 151.0 134.5" style="stroke-width:12.3px"/><path pathLength="1" d="M166.6 170.9Q161.9 153.3 162.4 138.1" style="stroke-width:12.3px"/><path pathLength="1" d="M166.6 170.9Q178.8 160.8 187.4 151.0" style="stroke-width:12.3px"/><path pathLength="1" d="M118.2 231.2Q104.8 219.7 92.4 211.9" style="stroke-width:12.0px"/><path pathLength="1" d="M118.2 231.2Q115.8 215.1 112.6 202.0" style="stroke-width:12.0px"/><path pathLength="1" d="M184.8 232.2Q188.0 215.6 188.2 201.6" style="stroke-width:12.0px"/><path pathLength="1" d="M184.8 232.2Q199.4 220.8 214.0 215.6" style="stroke-width:12.0px"/><path pathLength="1" d="M114.1 140.6Q99.4 133.7 88.5 125.9" style="stroke-width:10.2px"/><path pathLength="1" d="M114.1 140.6Q114.3 126.8 114.4 115.5" style="stroke-width:10.2px"/><path pathLength="1" d="M132.4 134.4Q126.4 122.8 121.9 113.1" style="stroke-width:10.2px"/><path pathLength="1" d="M132.4 134.4Q135.7 121.0 139.0 110.2" style="stroke-width:10.2px"/><path pathLength="1" d="M151.0 134.5Q149.2 120.7 148.4 109.4" style="stroke-width:10.2px"/><path pathLength="1" d="M151.0 134.5Q160.6 123.2 168.3 113.8" style="stroke-width:10.2px"/><path pathLength="1" d="M162.4 138.1Q159.1 125.9 153.1 117.2" style="stroke-width:10.2px"/><path pathLength="1" d="M162.4 138.1Q170.1 125.0 173.5 112.7" style="stroke-width:10.2px"/><path pathLength="1" d="M187.4 151.0Q189.8 139.8 189.3 130.2" style="stroke-width:10.2px"/><path pathLength="1" d="M187.4 151.0Q197.7 142.4 208.3 138.4" style="stroke-width:10.2px"/><path pathLength="1" d="M92.4 211.9Q83.2 203.5 73.9 199.0" style="stroke-width:9.9px"/><path pathLength="1" d="M92.4 211.9Q90.5 197.5 89.6 185.7" style="stroke-width:9.9px"/><path pathLength="1" d="M112.6 202.0Q105.3 191.0 99.7 181.7" style="stroke-width:9.9px"/><path pathLength="1" d="M112.6 202.0Q114.6 189.1 118.8 179.2" style="stroke-width:9.9px"/><path pathLength="1" d="M188.2 201.6Q183.2 191.1 180.3 182.0" style="stroke-width:9.9px"/><path pathLength="1" d="M188.2 201.6Q194.6 189.2 197.6 178.1" style="stroke-width:9.9px"/><path pathLength="1" d="M214.0 215.6Q218.4 203.4 224.7 194.6" style="stroke-width:9.9px"/><path pathLength="1" d="M214.0 215.6Q227.2 210.4 236.2 202.6" style="stroke-width:9.9px"/><path pathLength="1" d="M88.5 125.9Q75.7 122.7 66.4 116.9" style="stroke-width:8.5px"/><path pathLength="1" d="M88.5 125.9Q86.6 113.6 82.1 104.2" style="stroke-width:8.5px"/><path pathLength="1" d="M114.4 115.5Q108.7 106.1 103.6 98.7" style="stroke-width:8.5px"/><path pathLength="1" d="M114.4 115.5Q121.0 106.0 127.2 98.7" style="stroke-width:8.5px"/><path pathLength="1" d="M121.9 113.1Q115.0 105.5 108.4 100.3" style="stroke-width:8.5px"/><path pathLength="1" d="M121.9 113.1Q122.6 104.1 124.3 96.8" style="stroke-width:8.5px"/><path pathLength="1" d="M139.0 110.2Q136.0 101.2 134.4 93.6" style="stroke-width:8.5px"/><path pathLength="1" d="M139.0 110.2Q145.6 101.5 148.9 92.8" style="stroke-width:8.5px"/><path pathLength="1" d="M148.4 109.4Q142.5 100.1 139.2 91.6" style="stroke-width:8.5px"/><path pathLength="1" d="M148.4 109.4Q153.7 100.2 156.1 91.8" style="stroke-width:8.5px"/><path pathLength="1" d="M168.3 113.8Q167.9 101.3 168.4 91.0" style="stroke-width:8.5px"/><path pathLength="1" d="M168.3 113.8Q177.3 108.0 184.4 102.8" style="stroke-width:8.5px"/><path pathLength="1" d="M153.1 117.2Q147.3 110.4 142.7 104.7" style="stroke-width:8.5px"/><path pathLength="1" d="M153.1 117.2Q155.1 108.5 154.7 101.1" style="stroke-width:8.5px"/><path pathLength="1" d="M173.5 112.7Q168.6 102.7 167.4 93.4" style="stroke-width:8.5px"/><path pathLength="1" d="M173.5 112.7Q179.3 103.8 186.3 98.3" style="stroke-width:8.5px"/><path pathLength="1" d="M189.3 130.2Q185.5 121.4 184.4 113.4" style="stroke-width:8.5px"/><path pathLength="1" d="M189.3 130.2Q193.5 123.7 195.3 117.4" style="stroke-width:8.5px"/><path pathLength="1" d="M208.3 138.4Q211.9 127.5 214.4 118.5" style="stroke-width:8.5px"/><path pathLength="1" d="M208.3 138.4Q217.4 134.8 225.3 133.4" style="stroke-width:8.5px"/><path pathLength="1" d="M73.9 199.0Q64.1 195.3 57.3 189.8" style="stroke-width:8.3px"/><path pathLength="1" d="M73.9 199.0Q73.0 188.7 69.4 180.7" style="stroke-width:8.3px"/><path pathLength="1" d="M89.6 185.7Q83.4 175.2 79.0 166.3" style="stroke-width:8.3px"/><path pathLength="1" d="M89.6 185.7Q93.6 175.5 94.5 166.4" style="stroke-width:8.3px"/><path pathLength="1" d="M99.7 181.7Q93.6 172.1 86.1 166.2" style="stroke-width:8.3px"/><path pathLength="1" d="M99.7 181.7Q101.2 170.7 99.8 161.5" style="stroke-width:8.3px"/><path pathLength="1" d="M118.8 179.2Q117.5 168.6 113.8 160.4" style="stroke-width:8.3px"/><path pathLength="1" d="M118.8 179.2Q124.0 171.5 128.4 165.3" style="stroke-width:8.3px"/><path pathLength="1" d="M180.3 182.0Q174.3 174.7 170.2 168.1" style="stroke-width:8.3px"/><path pathLength="1" d="M180.3 182.0Q181.1 172.7 182.0 165.2" style="stroke-width:8.3px"/><path pathLength="1" d="M197.6 178.1Q195.0 167.2 190.1 159.2" style="stroke-width:8.3px"/><path pathLength="1" d="M197.6 178.1Q204.6 169.2 209.9 161.5" style="stroke-width:8.3px"/><path pathLength="1" d="M224.7 194.6Q223.5 183.7 224.3 174.6" style="stroke-width:8.3px"/><path pathLength="1" d="M224.7 194.6Q230.3 187.2 234.1 180.5" style="stroke-width:8.3px"/><path pathLength="1" d="M236.2 202.6Q238.9 191.3 241.8 182.3" style="stroke-width:8.3px"/><path pathLength="1" d="M236.2 202.6Q244.5 197.6 252.1 194.9" style="stroke-width:8.3px"/></g>
+<g class="c-in"><path pathLength="1" d="M150.0 262.0Q146.4 232.5 151.9 208.0" style="stroke-width:16.0px"/><path pathLength="1" d="M151.9 208.0Q145.1 184.9 139.1 166.1" style="stroke-width:12.5px"/><path pathLength="1" d="M151.9 208.0Q159.3 187.3 166.6 170.9" style="stroke-width:12.5px"/><path pathLength="1" d="M146.0 260.0Q129.3 245.6 118.2 231.2" style="stroke-width:12.0px"/><path pathLength="1" d="M156.0 260.0Q170.1 243.1 184.8 232.2" style="stroke-width:12.0px"/><path pathLength="1" d="M139.1 166.1Q125.5 151.9 114.1 140.6" style="stroke-width:9.7px"/><path pathLength="1" d="M139.1 166.1Q137.3 148.4 132.4 134.4" style="stroke-width:9.7px"/><path pathLength="1" d="M139.1 166.1Q143.8 148.1 151.0 134.5" style="stroke-width:9.7px"/><path pathLength="1" d="M166.6 170.9Q161.9 153.3 162.4 138.1" style="stroke-width:9.7px"/><path pathLength="1" d="M166.6 170.9Q178.8 160.8 187.4 151.0" style="stroke-width:9.7px"/><path pathLength="1" d="M118.2 231.2Q104.8 219.7 92.4 211.9" style="stroke-width:9.4px"/><path pathLength="1" d="M118.2 231.2Q115.8 215.1 112.6 202.0" style="stroke-width:9.4px"/><path pathLength="1" d="M184.8 232.2Q188.0 215.6 188.2 201.6" style="stroke-width:9.4px"/><path pathLength="1" d="M184.8 232.2Q199.4 220.8 214.0 215.6" style="stroke-width:9.4px"/><path pathLength="1" d="M114.1 140.6Q99.4 133.7 88.5 125.9" style="stroke-width:7.6px"/><path pathLength="1" d="M114.1 140.6Q114.3 126.8 114.4 115.5" style="stroke-width:7.6px"/><path pathLength="1" d="M132.4 134.4Q126.4 122.8 121.9 113.1" style="stroke-width:7.6px"/><path pathLength="1" d="M132.4 134.4Q135.7 121.0 139.0 110.2" style="stroke-width:7.6px"/><path pathLength="1" d="M151.0 134.5Q149.2 120.7 148.4 109.4" style="stroke-width:7.6px"/><path pathLength="1" d="M151.0 134.5Q160.6 123.2 168.3 113.8" style="stroke-width:7.6px"/><path pathLength="1" d="M162.4 138.1Q159.1 125.9 153.1 117.2" style="stroke-width:7.6px"/><path pathLength="1" d="M162.4 138.1Q170.1 125.0 173.5 112.7" style="stroke-width:7.6px"/><path pathLength="1" d="M187.4 151.0Q189.8 139.8 189.3 130.2" style="stroke-width:7.6px"/><path pathLength="1" d="M187.4 151.0Q197.7 142.4 208.3 138.4" style="stroke-width:7.6px"/><path pathLength="1" d="M92.4 211.9Q83.2 203.5 73.9 199.0" style="stroke-width:7.3px"/><path pathLength="1" d="M92.4 211.9Q90.5 197.5 89.6 185.7" style="stroke-width:7.3px"/><path pathLength="1" d="M112.6 202.0Q105.3 191.0 99.7 181.7" style="stroke-width:7.3px"/><path pathLength="1" d="M112.6 202.0Q114.6 189.1 118.8 179.2" style="stroke-width:7.3px"/><path pathLength="1" d="M188.2 201.6Q183.2 191.1 180.3 182.0" style="stroke-width:7.3px"/><path pathLength="1" d="M188.2 201.6Q194.6 189.2 197.6 178.1" style="stroke-width:7.3px"/><path pathLength="1" d="M214.0 215.6Q218.4 203.4 224.7 194.6" style="stroke-width:7.3px"/><path pathLength="1" d="M214.0 215.6Q227.2 210.4 236.2 202.6" style="stroke-width:7.3px"/><path pathLength="1" d="M88.5 125.9Q75.7 122.7 66.4 116.9" style="stroke-width:5.9px"/><path pathLength="1" d="M88.5 125.9Q86.6 113.6 82.1 104.2" style="stroke-width:5.9px"/><path pathLength="1" d="M114.4 115.5Q108.7 106.1 103.6 98.7" style="stroke-width:5.9px"/><path pathLength="1" d="M114.4 115.5Q121.0 106.0 127.2 98.7" style="stroke-width:5.9px"/><path pathLength="1" d="M121.9 113.1Q115.0 105.5 108.4 100.3" style="stroke-width:5.9px"/><path pathLength="1" d="M121.9 113.1Q122.6 104.1 124.3 96.8" style="stroke-width:5.9px"/><path pathLength="1" d="M139.0 110.2Q136.0 101.2 134.4 93.6" style="stroke-width:5.9px"/><path pathLength="1" d="M139.0 110.2Q145.6 101.5 148.9 92.8" style="stroke-width:5.9px"/><path pathLength="1" d="M148.4 109.4Q142.5 100.1 139.2 91.6" style="stroke-width:5.9px"/><path pathLength="1" d="M148.4 109.4Q153.7 100.2 156.1 91.8" style="stroke-width:5.9px"/><path pathLength="1" d="M168.3 113.8Q167.9 101.3 168.4 91.0" style="stroke-width:5.9px"/><path pathLength="1" d="M168.3 113.8Q177.3 108.0 184.4 102.8" style="stroke-width:5.9px"/><path pathLength="1" d="M153.1 117.2Q147.3 110.4 142.7 104.7" style="stroke-width:5.9px"/><path pathLength="1" d="M153.1 117.2Q155.1 108.5 154.7 101.1" style="stroke-width:5.9px"/><path pathLength="1" d="M173.5 112.7Q168.6 102.7 167.4 93.4" style="stroke-width:5.9px"/><path pathLength="1" d="M173.5 112.7Q179.3 103.8 186.3 98.3" style="stroke-width:5.9px"/><path pathLength="1" d="M189.3 130.2Q185.5 121.4 184.4 113.4" style="stroke-width:5.9px"/><path pathLength="1" d="M189.3 130.2Q193.5 123.7 195.3 117.4" style="stroke-width:5.9px"/><path pathLength="1" d="M208.3 138.4Q211.9 127.5 214.4 118.5" style="stroke-width:5.9px"/><path pathLength="1" d="M208.3 138.4Q217.4 134.8 225.3 133.4" style="stroke-width:5.9px"/><path pathLength="1" d="M73.9 199.0Q64.1 195.3 57.3 189.8" style="stroke-width:5.7px"/><path pathLength="1" d="M73.9 199.0Q73.0 188.7 69.4 180.7" style="stroke-width:5.7px"/><path pathLength="1" d="M89.6 185.7Q83.4 175.2 79.0 166.3" style="stroke-width:5.7px"/><path pathLength="1" d="M89.6 185.7Q93.6 175.5 94.5 166.4" style="stroke-width:5.7px"/><path pathLength="1" d="M99.7 181.7Q93.6 172.1 86.1 166.2" style="stroke-width:5.7px"/><path pathLength="1" d="M99.7 181.7Q101.2 170.7 99.8 161.5" style="stroke-width:5.7px"/><path pathLength="1" d="M118.8 179.2Q117.5 168.6 113.8 160.4" style="stroke-width:5.7px"/><path pathLength="1" d="M118.8 179.2Q124.0 171.5 128.4 165.3" style="stroke-width:5.7px"/><path pathLength="1" d="M180.3 182.0Q174.3 174.7 170.2 168.1" style="stroke-width:5.7px"/><path pathLength="1" d="M180.3 182.0Q181.1 172.7 182.0 165.2" style="stroke-width:5.7px"/><path pathLength="1" d="M197.6 178.1Q195.0 167.2 190.1 159.2" style="stroke-width:5.7px"/><path pathLength="1" d="M197.6 178.1Q204.6 169.2 209.9 161.5" style="stroke-width:5.7px"/><path pathLength="1" d="M224.7 194.6Q223.5 183.7 224.3 174.6" style="stroke-width:5.7px"/><path pathLength="1" d="M224.7 194.6Q230.3 187.2 234.1 180.5" style="stroke-width:5.7px"/><path pathLength="1" d="M236.2 202.6Q238.9 191.3 241.8 182.3" style="stroke-width:5.7px"/><path pathLength="1" d="M236.2 202.6Q244.5 197.6 252.1 194.9" style="stroke-width:5.7px"/></g>
+<g class="c-tips"><circle cx="88.5" cy="125.9" r="1.7"/><circle cx="114.4" cy="115.5" r="1.7"/><circle cx="121.9" cy="113.1" r="1.7"/><circle cx="139.0" cy="110.2" r="1.7"/><circle cx="148.4" cy="109.4" r="1.7"/><circle cx="168.3" cy="113.8" r="1.7"/><circle cx="153.1" cy="117.2" r="1.7"/><circle cx="173.5" cy="112.7" r="1.7"/><circle cx="189.3" cy="130.2" r="1.7"/><circle cx="208.3" cy="138.4" r="1.7"/><circle cx="73.9" cy="199.0" r="1.6"/><circle cx="89.6" cy="185.7" r="1.6"/><circle cx="99.7" cy="181.7" r="1.6"/><circle cx="118.8" cy="179.2" r="1.6"/><circle cx="180.3" cy="182.0" r="1.6"/><circle cx="197.6" cy="178.1" r="1.6"/><circle cx="224.7" cy="194.6" r="1.6"/><circle cx="236.2" cy="202.6" r="1.6"/><circle cx="66.4" cy="116.9" r="1.3"/><circle cx="82.1" cy="104.2" r="1.3"/><circle cx="103.6" cy="98.7" r="1.3"/><circle cx="127.2" cy="98.7" r="1.3"/><circle cx="108.4" cy="100.3" r="1.3"/><circle cx="124.3" cy="96.8" r="1.3"/><circle cx="134.4" cy="93.6" r="1.3"/><circle cx="148.9" cy="92.8" r="1.3"/><circle cx="139.2" cy="91.6" r="1.3"/><circle cx="156.1" cy="91.8" r="1.3"/><circle cx="168.4" cy="91.0" r="1.3"/><circle cx="184.4" cy="102.8" r="1.3"/><circle cx="142.7" cy="104.7" r="1.3"/><circle cx="154.7" cy="101.1" r="1.3"/><circle cx="167.4" cy="93.4" r="1.3"/><circle cx="186.3" cy="98.3" r="1.3"/><circle cx="184.4" cy="113.4" r="1.3"/><circle cx="195.3" cy="117.4" r="1.3"/><circle cx="214.4" cy="118.5" r="1.3"/><circle cx="225.3" cy="133.4" r="1.3"/><circle cx="57.3" cy="189.8" r="1.3"/><circle cx="69.4" cy="180.7" r="1.3"/><circle cx="79.0" cy="166.3" r="1.3"/><circle cx="94.5" cy="166.4" r="1.3"/><circle cx="86.1" cy="166.2" r="1.3"/><circle cx="99.8" cy="161.5" r="1.3"/><circle cx="113.8" cy="160.4" r="1.3"/><circle cx="128.4" cy="165.3" r="1.3"/><circle cx="170.2" cy="168.1" r="1.3"/><circle cx="182.0" cy="165.2" r="1.3"/><circle cx="190.1" cy="159.2" r="1.3"/><circle cx="209.9" cy="161.5" r="1.3"/><circle cx="224.3" cy="174.6" r="1.3"/><circle cx="234.1" cy="180.5" r="1.3"/><circle cx="241.8" cy="182.3" r="1.3"/><circle cx="252.1" cy="194.9" r="1.3"/></g></g>
+            <path class="rock draw d2" pathLength="1" d="M88 270 C 96 260, 120 256, 150 258 C 180 256, 206 260, 214 270"/>
+            <path class="rock draw d3 fine" pathLength="1" d="M60 272 C 100 268, 200 268, 250 272 M98 266 l6 6 M114 262 l8 8 M184 262 l8 8 M200 265 l6 6"/>
+          </svg>
+          <figcaption><span class="fig-no">Plate V.</span> A branching hard coral, typical of Indian Ocean reefs. Not to scale.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Entry 1: BUND -->
+    <article class="entry entry--flip entry--short" id="bund" aria-labelledby="bund-h">
+      <div class="entry-head">
+        <p class="entry-meta"><span class="entry-no">Entry No. 1</span><span class="folio-sm" aria-hidden="true">p. 6</span></p>
+        <p class="entry-date hand"><time datetime="2025-06">Jun</time> – <time datetime="2025-12">Dec 2025</time></p>
+        <h3 id="bund-h">Neukirchen-Vluyn &amp; Moers, Germany</h3>
+        <p class="entry-coords"><span class="coords">51.45° N, 6.63° E</span><span class="sep" aria-hidden="true"> · </span>Lower Rhine</p>
+        <p class="entry-role">Volunteer<span class="sep" aria-hidden="true"> · </span><a href="https://www.bund-nrw.de/">BUND</a> (Friends of the Earth Germany)</p>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-text">
+          <h4 class="obs-h">Work &amp; observations</h4>
+          <ul class="obs">
+            <li>Member of the BUND local group for Neukirchen-Vluyn and Moers</li>
+            <li>Volunteer work for nature and environmental conservation, alongside my job at LEMKEN</li>
+          </ul>
+          <p class="pencil margin-note">Entry No. 1: where these notes begin.</p>
+        </div>
+        <div class="entry-photos entry-photos--pair">
+          <figure class="snap snap--sm tilt-l2">
+            <span class="tape tape--t" aria-hidden="true"></span>
+            <img class="snap-img" src="../photos/bund-local.jpg" data-slot="bund-local" data-hint="With the BUND local group, Lower Rhine" alt="With the BUND local group on the Lower Rhine" width="900" height="900" loading="lazy">
+            <figcaption>BUND local group</figcaption>
+          </figure>
+          <figure class="plate plate--leaf ink-in">
+            <svg class="sketch sketch--oak" viewBox="10 10 160 250" role="img" aria-labelledby="oak-t">
+              <title id="oak-t">Line sketch of an oak leaf</title>
+              <ellipse class="wash wash--leaf" cx="90" cy="130" rx="62" ry="100" filter="url(#wash)"/>
+              <g class="ink-lines oak"><path class="draw" pathLength="1" d="M96 214C100 210 122 210 120 196C118 184 112 189 102 183C106 179 142 180 140 166C138 154 120 157 110 151C114 147 152 146 150 132C148 120 124 123 114 117C118 113 148 112 146 98C144 86 122 90 112 84C116 80 136 80 134 66C132 54 116 61 106 55C110 51 118 54 116 40C114 28 100 28 90 22"/><path class="draw" pathLength="1" d="M84 214C80 210 58 210 60 196C62 184 68 189 78 183C74 179 38 180 40 166C42 154 60 157 70 151C66 147 28 146 30 132C32 120 56 123 66 117C62 113 32 112 34 98C36 86 58 90 68 84C64 80 44 80 46 66C48 54 64 61 74 55C70 51 62 54 64 40C66 28 80 28 90 22"/><path class="draw" pathLength="1" d="M90 250 C90 236 90 224 90 214 L90 30"/><path class="draw" pathLength="1" d="M90 206Q105 203 114 197M90 182Q115 176 134 167M90 148Q120 142 144 133M90 114Q118 108 140 99M90 82Q112 76 128 67M90 50Q103 47 110 41M90 206Q75 203 66 197M90 182Q65 176 46 167M90 148Q60 142 36 133M90 114Q62 108 40 99M90 82Q68 76 52 67M90 50Q77 47 70 41"/></g>
+            </svg>
+            <figcaption><span class="fig-no">fig. d</span> <i>Quercus</i>, a Lower Rhine oak leaf.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ III: CERTIFICATES ============ -->
+  <section class="page certs" id="certificates" aria-labelledby="certs-h">
+    <div class="runhead" aria-hidden="true"><span>Certificates &amp; licences</span><span class="folio">7</span></div>
+    <p class="hand kicker">Section III</p>
+    <h2 id="certs-h">Certificates &amp; licences</h2>
+
+    <h3 class="sub-h">Diving</h3>
+    <ul class="stamps ink-in">
+      <li class="stamp-item">
+        <svg class="stamp stamp--1" viewBox="0 0 170 170" aria-hidden="true" focusable="false">
+          <defs><path id="ring1" d="M85 85 m-60 0 a60 60 0 1 1 120 0 a60 60 0 1 1 -120 0"/></defs>
+          <g filter="url(#distress)">
+            <circle cx="85" cy="85" r="78" class="s-thick"/><circle cx="85" cy="85" r="71" class="s-thin"/><circle cx="85" cy="85" r="47" class="s-thin"/>
+            <text class="s-ring"><textPath href="#ring1" textLength="372" lengthAdjust="spacing">PADI · RESCUE DIVER · EMERGENCY FIRST RESPONSE ·</textPath></text>
+            <text x="85" y="86" class="s-big" text-anchor="middle">VII</text>
+            <text x="85" y="106" class="s-yr" text-anchor="middle">2026</text>
+            <path class="s-wave" d="M60 116 c 6 -4, 12 4, 18 0 s 12 4, 18 0 s 12 4, 18 0"/>
+          </g>
+        </svg>
+        <p class="cert-name">PADI Rescue Diver <span class="plus">+</span> EFR</p>
+        <p class="cert-meta">Emergency First Response · <time datetime="2026-07">Jul 2026</time></p>
+      </li>
+      <li class="stamp-item">
+        <svg class="stamp stamp--2" viewBox="0 0 170 170" aria-hidden="true" focusable="false">
+          <defs><path id="ring2" d="M85 85 m-60 0 a60 60 0 1 1 120 0 a60 60 0 1 1 -120 0"/></defs>
+          <g filter="url(#distress)">
+            <circle cx="85" cy="85" r="78" class="s-thick"/><circle cx="85" cy="85" r="71" class="s-thin"/><circle cx="85" cy="85" r="47" class="s-thin"/>
+            <text class="s-ring"><textPath href="#ring2" textLength="372" lengthAdjust="spacing">PADI · ADVANCED OPEN WATER DIVER · PADI ·</textPath></text>
+            <text x="85" y="86" class="s-big" text-anchor="middle">V</text>
+            <text x="85" y="106" class="s-yr" text-anchor="middle">2026</text>
+            <path class="s-wave" d="M60 116 c 6 -4, 12 4, 18 0 s 12 4, 18 0 s 12 4, 18 0"/>
+          </g>
+        </svg>
+        <p class="cert-name">PADI Advanced Open Water Diver</p>
+        <p class="cert-meta"><time datetime="2026-05">May 2026</time></p>
+      </li>
+      <li class="stamp-item">
+        <svg class="stamp stamp--3" viewBox="0 0 170 170" aria-hidden="true" focusable="false">
+          <defs><path id="ring3" d="M85 85 m-60 0 a60 60 0 1 1 120 0 a60 60 0 1 1 -120 0"/></defs>
+          <g filter="url(#distress)">
+            <circle cx="85" cy="85" r="78" class="s-thick"/><circle cx="85" cy="85" r="71" class="s-thin"/><circle cx="85" cy="85" r="47" class="s-thin"/>
+            <text class="s-ring"><textPath href="#ring3" textLength="372" lengthAdjust="spacing">PADI · OPEN WATER DIVER · PADI · OPEN WATER ·</textPath></text>
+            <text x="85" y="86" class="s-big" text-anchor="middle">X</text>
+            <text x="85" y="106" class="s-yr" text-anchor="middle">2025</text>
+            <path class="s-wave" d="M60 116 c 6 -4, 12 4, 18 0 s 12 4, 18 0 s 12 4, 18 0"/>
+          </g>
+        </svg>
+        <p class="cert-name">PADI Open Water Diver</p>
+        <p class="cert-meta"><time datetime="2025-10">Oct 2025</time></p>
+      </li>
+    </ul>
+    <p class="pencil stamp-note">Stamped in the order earned, newest on the left. Roman numerals are the month.</p>
+
+    <h3 class="sub-h">Languages, method &amp; road</h3>
+    <div class="twine-wrap">
+      <svg class="twine" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 14 C 200 44, 400 50, 500 46 C 640 42, 820 30, 1000 12"/><path class="twine-2" d="M0 16 C 200 46, 400 52, 500 48 C 640 44, 820 32, 1000 14"/></svg>
+      <ul class="tags">
+        <li class="tag tag--1">
+          <span class="tag-string" aria-hidden="true"></span>
+          <p class="tag-k">Language</p>
+          <p class="tag-name">Cambridge C1 Advanced</p>
+          <p class="tag-meta">CEFR level C1 · <time datetime="2025-12">Dec 2025</time></p>
+        </li>
+        <li class="tag tag--2">
+          <span class="tag-string" aria-hidden="true"></span>
+          <p class="tag-k">Project method</p>
+          <p class="tag-name">PRINCE2 Agile Foundation</p>
+          <p class="tag-meta">PeopleCert · <time datetime="2025-08">Aug 2025</time></p>
+        </li>
+        <li class="tag tag--3">
+          <span class="tag-string" aria-hidden="true"></span>
+          <p class="tag-k">Licence</p>
+          <p class="tag-name">Driver's licence</p>
+          <p class="tag-meta">Class B</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ IV: STUDIES ============ -->
+  <section class="page studies" id="studies" aria-labelledby="studies-h">
+    <div class="runhead" aria-hidden="true"><span>Studies</span><span class="folio">8</span></div>
+    <p class="hand kicker">Section IV</p>
+    <h2 id="studies-h">Studies</h2>
+
+    <div class="studies-grid">
+      <div class="label-card" role="group" aria-label="Current studies">
+        <p class="label-head"><span>Specimen label</span><span class="label-no">No. 2026/27</span></p>
+        <dl class="label-rows">
+          <div><dt>Institution</dt><dd><a href="https://www.uni-goettingen.de/de/678052.html">Georg-August-Universität Göttingen</a></dd></div>
+          <div><dt>Programme</dt><dd><span lang="de">B.Sc. Biologische Diversität und Ökologie</span><br><span class="en">Biological Diversity &amp; Ecology</span></dd></div>
+          <div><dt>Since</dt><dd><time datetime="2026-10">October 2026</time>, winter semester 2026/27</dd></div>
+          <div><dt>Focus</dt><dd>Applied biodiversity research · ecology · evolution &amp; systematics</dd></div>
+          <div><dt>Locality</dt><dd>Göttingen, Lower Saxony <span class="coords">51.54° N, 9.93° E</span></dd></div>
+        </dl>
+        <p class="label-det">Det. C. Willemsen, first semester</p>
+      </div>
+      <figure class="snap snap--md tilt-r2">
+        <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--br" aria-hidden="true"></span>
+        <img class="snap-img" src="../photos/gottingen.jpg" data-slot="gottingen" data-hint="Göttingen campus or old town" alt="Göttingen" width="1000" height="800" loading="lazy">
+        <figcaption>Göttingen</figcaption>
+      </figure>
+    </div>
+
+    <div class="label-card label-card--old">
+      <p class="label-head"><span>Earlier specimen</span></p>
+      <p class="old-line"><strong>B.A. Business Administration</strong><span class="sep" aria-hidden="true"> · </span><a href="https://www.fom.de/">FOM University of Applied Sciences</a><span class="sep" aria-hidden="true"> · </span><span class="nw"><time datetime="2018-09">Sep 2018</time> – <time datetime="2023-01">Jan 2023</time></span></p>
+    </div>
+  </section>
+
+  <!-- ============ V: BACK POCKET ============ -->
+  <section class="page pocket-page" id="pocket" aria-labelledby="pocket-h">
+    <div class="runhead" aria-hidden="true"><span>Back pocket</span><span class="folio">9</span></div>
+    <p class="hand kicker">Section V</p>
+    <h2 id="pocket-h">In the back pocket: before biology</h2>
+    <!-- DRAFT copy: Celine to edit -->
+    <p class="lede">Before biology I spent about five years in business. It's not the headline, but it travels with me: field projects run on budgets, funding applications, contracts and clear writing, and I have worked on all of those.</p>
+
+    <div class="pocket">
+      <div class="card">
+        <p class="card-h">What else I bring to a field team</p>
+        <ul class="card-list">
+          <li><strong>Project coordination.</strong> I coordinated the finance (FI) sub-project of an SAP S/4HANA rollout.</li>
+          <li><strong>Budgets &amp; funding.</strong> Financial accounting, and help with funding applications.</li>
+          <li><strong>Contracts &amp; insurance.</strong> Contract management, insurance management, administration of subsidiaries.</li>
+          <li><strong>Clear writing.</strong> Freelance copywriting, useful for grant applications, reports and outreach.</li>
+          <li><strong>Method.</strong> PRINCE2 Agile Foundation.</li>
+        </ul>
+      </div>
+      <div class="pocket-front">
+        <p class="pocket-label">Before biology <span>2018 – 2026</span></p>
+        <dl class="pocket-rows">
+          <div><dt><time datetime="2021-02">Feb 2021</time> – <time datetime="2026-02">Feb 2026</time></dt><dd>Industrial clerk, <a href="https://lemken.com/en-en/">LEMKEN GmbH &amp; Co. KG</a>, Alpen. Financial Services &amp; Tax group, Financial Accounting. Assistant to management until Jul 2025.</dd></div>
+          <div><dt><time datetime="2018-09">Sep 2018</time> – <time datetime="2021-01">Jan 2021</time></dt><dd>Apprenticeship as industrial clerk, LEMKEN.</dd></div>
+          <div><dt><time datetime="2023-11">Nov 2023</time> – <time datetime="2025-01">Jan 2025</time></dt><dd>Freelance copywriter, after a Copywriting MBA programme (Oct 2023 – Oct 2024).</dd></div>
+          <div><dt><time datetime="2018-09">Sep 2018</time> – <time datetime="2023-01">Jan 2023</time></dt><dd>B.A. Business Administration, FOM.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VI: LANGUAGES & CONTACT ============ -->
+  <section class="page contact" id="contact" aria-labelledby="contact-h">
+    <div class="runhead" aria-hidden="true"><span>Correspondence</span><span class="folio">10</span></div>
+    <p class="hand kicker">Section VI</p>
+    <h2 id="contact-h">Languages &amp; correspondence</h2>
+
+    <div class="contact-grid">
+      <div class="contact-text">
+        <!-- DRAFT copy: Celine to edit -->
+        <p class="lede">If you run a field project, a monitoring programme or a research station and could use a hand, write to me. I'm looking for long-term field work.</p>
+        <dl class="langs">
+          <div><dt>German</dt><dd>native</dd></div>
+          <div><dt>English</dt><dd>C1, advanced</dd></div>
+        </dl>
+      </div>
+
+      <div class="envelope">
+        <svg class="postmark" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
+          <g filter="url(#distress)">
+            <circle cx="60" cy="60" r="44"/><circle cx="60" cy="60" r="38" class="pm-thin"/>
+            <text x="60" y="46" text-anchor="middle" class="pm-t">GÖTTINGEN</text>
+            <text x="60" y="66" text-anchor="middle" class="pm-d">X · 2026</text>
+            <text x="60" y="84" text-anchor="middle" class="pm-t pm-s">51.54 N</text>
+            <path d="M112 34 c 16 -8, 32 8, 48 0 s 32 8, 48 0 M112 52 c 16 -8, 32 8, 48 0 s 32 8, 48 0 M112 70 c 16 -8, 32 8, 48 0 s 32 8, 48 0 M112 88 c 16 -8, 32 8, 48 0 s 32 8, 48 0"/>
+          </g>
+        </svg>
+        <div class="postage" aria-hidden="true">
+          <svg viewBox="0 0 80 96" focusable="false">
+            <rect x="6" y="6" width="68" height="84" class="pg-bg"/>
+            <path class="pg-ink" d="M14 60 C 18 52, 30 46, 42 46 C 52 46, 60 50, 66 56 L 72 50 C 72 58, 72 64, 72 70 L 66 64 C 60 70, 52 72, 42 72 C 30 72, 18 66, 14 60 Z M26 54 l4 -2 M34 54 l4 -2 M44 54 l4 -2 M30 62 l4 -2 M40 62 l4 -2 M50 60 l4 -2"/>
+            <circle class="pg-ink-f" cx="20" cy="58" r="1.4"/>
+            <text x="40" y="24" text-anchor="middle" class="pg-t">FIELD POST</text>
+            <text x="40" y="84" text-anchor="middle" class="pg-t">1 C.W.</text>
+          </svg>
+        </div>
+        <p class="env-to">To</p>
+        <address class="env-addr">
+          <span class="env-name">Celine Willemsen</span>
+          <a class="env-mail" href="mailto:celinewillemsen@web.de">celinewillemsen@web.de</a>
+          <a class="env-li" href="https://www.linkedin.com/in/celine-willemsen/">linkedin.com/in/celine-willemsen</a>
+        </address>
+        <p class="pencil env-note">email is best</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="back-cover">
+    <div class="emboss" aria-hidden="true">C · W</div>
+    <p>Field journal of Celine Willemsen · Vol. I · begun 2025</p>
+    <p class="small">Plates drawn in ink; photographs to be pasted in. <a href="#top">Back to the first page</a></p>
+  </footer>
+
+</div>
+</div>
+</body>
+</html>
